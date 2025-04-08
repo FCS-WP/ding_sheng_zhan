@@ -1,0 +1,1118 @@
+p {
+	margin-top: 0;
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-content,
+.entry-header{
+	margin-bottom: 35px;
+}
+
+.fm-entry-date {
+	display: none;
+}
+
+.page-links {
+	clear: both;
+	margin: 1.5em 0 0;
+	width: 100%;
+	display: inline-block;
+
+	.post-page-numbers{
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		border: 1px solid #dddddd;
+		border-radius: 3px;
+		color: $color__dark;
+		margin: 0 4px;
+		background-color: transparent;
+		transition: ease .5s;
+
+		.farmart-svg-icon{
+			font-size: 10px;
+			color: $color__dark;
+			font-weight: 700;
+		}
+
+		&:hover:not(.current){
+			background-color: #eeeeee;
+		}
+
+		&.current{
+			border-color: var( --fm-color-primary );
+			color: var( --fm-color-primary );
+		}
+	}
+}
+
+.post-password-form{
+	label{
+		display: inline-block;
+	}
+	input[type=password],
+	input[type=submit]{
+		height: 48px;
+		line-height: 48px;
+		min-width: initial;
+	}
+
+	input[type=submit]{
+		margin-left: -5px;
+	}
+}
+
+.entry-title{
+	margin: 0 0 19px;
+
+	a{
+		color: $color__dark;
+	}
+}
+
+.entry-format{
+	&.format-gallery{
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	li {
+		list-style-type: none;
+	}
+}
+
+.entry-meta{
+	display: flex;
+	flex-wrap: wrap;
+
+	.meta{
+		padding: 0 3px;
+		position: relative;
+		color: #888888;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child:after{
+			display: none;
+		}
+
+		a {
+			font-weight: 700;
+		}
+	}
+
+	.meta-author{
+		a{
+			color: $color__blue;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.meta-cat{
+		a{
+			color: $color__dark;
+
+			&:hover {
+				color: var( --fm-color-primary );
+			}
+		}
+	}
+}
+
+.single-header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.farmart-social-share {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	li{
+		display: inline-block;
+		margin-right: 7px;
+		margin-bottom: 3px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	.farmart-svg-icon{
+		font-size: 15px;
+		color: #fff;
+	}
+
+	a{
+		display: block;
+		width: 38px;
+		height: 38px;
+		line-height: 40px;
+		text-align: center;
+
+		&.farmart-facebook {
+			background-color: #4267b2;
+		}
+		&.farmart-twitter {
+			background-color: #3eb0ff;
+		}
+		&.farmart-pinterest {
+			background-color: #b10c0c;
+		}
+		&.farmart-google-plus {
+			background-color: #cb1717;
+		}
+		&.farmart-linkedin {
+			background-color: #0271AE;
+		}
+		&.farmart-vkontakte {
+			background-color: #4C75A3;
+		}
+		&.farmart-whatsapp {
+			background-color: #2AB200;
+		}
+		&.farmart-email {
+			background-color: #cb1717;
+		}
+		&.farmart-tumblr {
+			background-color: #3C586D;
+		}
+
+		.text {
+			display: none;
+		}
+	}
+
+	&.farmart-social__text {
+		li{
+			margin-right: 4px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+
+		.farmart-svg-icon {
+			font-size: 12px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			width: auto;
+			height: auto;
+			line-height: 1;
+			padding: 5px 7px;
+			color: #fff;
+			border-radius: 3px;
+
+			.text {
+				display: inline-block;
+				margin: 1px 0 0 5px;
+				font-size: 10px;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.farmart-single-post__new{
+	.entry-title--new{
+		font-size: 28px;
+		margin-bottom: 16px;
+	}
+
+	.has-post-thumbnail{
+		.box-wrapper{
+			margin-top: 50px;
+		}
+	}
+
+	.entry-header--new{
+		padding-bottom: 30px;
+		border-bottom: 1px solid #eee;
+	}
+
+	.farmart-post__related .entry-format.format-link{
+		padding: 0;
+	}
+}
+
+.blog-wrapper,
+.blog-item{
+	margin-bottom: 47px;
+	position: relative;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+
+	.entry-format{
+		margin-bottom: 29px;
+	}
+
+	.entry-header{
+		margin-bottom: 23px;
+	}
+
+	&.no-content {
+		.entry-header{
+			margin-bottom: 0;
+		}
+	}
+
+	&.no-title {
+		.entry-meta {
+			margin-top: -5px;
+		}
+	}
+
+	.entry-meta{
+		font-size: 13px;
+		margin-top: 10px;
+
+		a {
+			&:hover {
+				color: var( --fm-color-primary );
+			}
+		}
+
+		.meta-author {
+			a {
+				color: $color__blue;
+			}
+		}
+	}
+
+	.entry-title{
+		margin-bottom: 0;
+
+		a:hover {
+			color: var( --fm-color-primary );
+		}
+	}
+
+	.entry-content p,
+	.entry-content{
+		margin: 0;
+	}
+
+	.link-no-title{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.post-author--box {
+	display: flex;
+}
+
+.post-author--avatar{
+	flex: none;
+	margin-right: 33px;
+
+	img{
+		border-radius: 50%;
+	}
+}
+
+.post-author{
+	background-color: #f7f7f7;
+	padding: 40px;
+}
+
+.post-author--info{
+	.author-name{
+		margin: 0;
+		padding-bottom: 10px;
+	}
+
+	.author-socials{
+		margin: 23px 0 0;
+		padding: 0;
+		list-style: none;
+
+		li{
+			display: inline-block;
+			margin-right: 7px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+
+		i{
+			font-size: 15px;
+			color: #fff;
+		}
+
+		a{
+			display: block;
+			width: 38px;
+			height: 38px;
+			line-height: 40px;
+			text-align: center;
+		}
+	}
+}
+
+.farmart-post__tag-list{
+	margin-bottom: 30px;
+
+	.label{
+		text-transform: uppercase;
+		color: $color__dark;
+		font-weight: 700;
+		margin-right: 17px;
+	}
+
+	a{
+		display: inline-block;
+		padding: 4px 15px;
+		background-color: #f7f7f7;
+		color: #666666;
+		border-radius: 5px;
+		transition: ease .5s;
+		margin: 0 7px 7px 0;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&:hover{
+			background-color: var( --fm-background-color-primary );
+			color: var( --fm-background-text-color-primary );
+		}
+	}
+}
+
+.entry-footer{
+	margin: 40px 0 65px;
+}
+
+.farmart-blog-shortcode,
+.farmart-post__related{
+	.list-post--wrapper{
+		padding: 15px 15px 45px;
+		background-color: #fff;
+	}
+
+	.list-post{
+		> .slick-dots{
+			bottom: 0;
+		}
+
+		&.slick-dotted.slick-slider{
+			padding-bottom: 60px;
+		}
+	}
+
+	.blog-wrapper{
+		margin-bottom: 0;
+		border-left: 1px solid #eeeeee;
+
+		&.slick-current{
+			border-left-color: transparent !important;
+		}
+	}
+
+	.meta-comment{
+		.text-after{
+			display: none;
+		}
+	}
+
+	.slick-prev-arrow{
+		left: -55px;
+	}
+
+	.slick-next-arrow{
+		right: -55px;
+	}
+
+	.slick-dotted.slick-slider{
+		margin-bottom: 0;
+     }
+
+	.format-gallery{
+		.slick-dots{
+			bottom: 16px;
+		}
+
+		.slick-next-arrow{
+			right: 0;
+		}
+
+		.slick-prev-arrow{
+			left: 0;
+		}
+	}
+
+	.format-quote blockquote{
+		padding: 10px 20px;
+	}
+}
+
+.farmart-post__related {
+	margin-top: 65px;
+	margin-bottom: 15px;
+
+	.heading{
+		margin: 0 0 20px;
+	}
+
+	.entry-footer{
+		display: none;
+	}
+
+	.list-post--wrapper{
+		border: 1px solid #eeeeee;
+	}
+
+	.entry-format.format-gallery {
+		.slick-dots {
+			display: none;
+		}
+	}
+
+	.slick-initialized {
+		.blog-wrapper {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.slick-active {
+			&:last-child {
+
+			}
+		}
+	}
+
+	.slick-dots {
+		button[aria-label="1 of 1"]{
+			display: none;
+		}
+	}
+
+}
+
+// Blog Page
+.farmart-blog-page--default{
+	.site-main{
+		.row-flex{
+			margin-right: -20px;
+			margin-left: -20px;
+		}
+
+		.blog-wrapper{
+			padding: 0 20px;
+		}
+	}
+}
+
+
+.entry-format {
+	position: relative;
+
+	.post-format-icon {
+		color: #000;
+		background-color: #fff;
+		font-size: 18px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+
+		&:after,&:before{
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			border-radius: 50%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			opacity: 0;
+			animation: anim-ripple 3s linear 0s infinite;
+		}
+
+		&:before{
+			animation-delay: .3s;
+		}
+
+		img,
+		i{
+			z-index: 9;
+			position: relative;
+			display: inline-block;
+		}
+	}
+}
+
+@keyframes anim-ripple {
+	0% {
+		transform: scale(1);
+		opacity: 0
+	}
+	30% {
+		transform: scale(1.2);
+		opacity: .5
+	}
+	to {
+		transform: scale(1.5);
+		opacity: 0
+	}
+}
+
+.fm-post-format.format-quote{
+	overflow: hidden;
+
+	blockquote,
+	blockquote:before,
+	.box-content{
+		position: relative;
+	}
+
+	blockquote:before,
+	.box-content{
+		z-index: 9;
+	}
+
+	blockquote{
+		position: relative;
+		padding: 47px 40px 56px;
+		font-size: 21px;
+		color: #fff;
+
+		&:before{
+			margin-bottom: 14px;
+		}
+
+		&:after{
+			content: '';
+			background-color: rgba(0,0,0,.6);
+		}
+
+		cite{
+			margin-top: 28px;
+		}
+	}
+
+	blockquote:after,
+	blockquote img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+.format-audio{
+	iframe{
+		width: 100%;
+	}
+}
+
+.farmart-blog-page--list .blog-wrapper,
+.single-post-wrapper{
+	.entry-format.format-link{
+		padding: 55px 60px 53px;
+		background-color: #f5f5f5;
+	}
+}
+
+.entry-format.format-link{
+	.title{
+		margin: 0 0 14px;
+	}
+
+	.desc{
+		margin: 0 5px 0 0;
+		display: contents;
+	}
+}
+
+.farmart-blog-page--small-thumb{
+	.blog-wrapper{
+		margin-bottom: 47px;
+		padding-bottom: 45px;
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 15px;
+			right: 15px;
+			width: calc( 100% - 30px );
+			height: 1px;
+			background-color: #d9d9d9;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&.sticky {
+			padding-bottom: 47px;
+			margin-bottom: 45px;
+			.blog-wrapper__inner {
+				border: 1px solid #d9d9d9;
+				padding: 30px;
+				background-color: #f6f6f6;
+			}
+
+		}
+
+		&.has-post-thumbnail {
+			padding-bottom: 45px;
+		}
+
+		.entry-content {
+			color: #000;
+			font-size: 16px;
+		}
+
+		.entry-meta {
+			margin-top: 7px;
+		}
+
+		.meta-cat a {
+			color: #000;
+		}
+
+		.entry-title {
+			a {
+				color: #000;
+				position: relative;
+				background: -webkit-gradient(linear,left top,right top,from(currentColor),to(currentColor)) no-repeat 0 95%;
+				background: linear-gradient(to right,currentColor 0,currentColor 100%) no-repeat 0 95%;
+				background-size: 0 2px;
+				-webkit-transition: background-size .25s cubic-bezier(0.215, 0.61, 0.355, 1);
+				transition: background-size .25s cubic-bezier(0.215, 0.61, 0.355, 1);
+				padding: 3px 0;
+				background-position: 0 95%;
+
+				&:hover {
+					background-size: 100% 2px;
+				}
+			}
+
+
+		}
+	}
+
+	.farmart-post-list .blog-wrapper:not(.no-flex).has-post-thumbnail{
+		.blog-wrapper__inner{
+			display: flex;
+		}
+
+		.entry-format{
+			flex: 0 0 auto;
+			margin:0 30px 0 0;
+			max-width: 33.75%;
+
+			&.format-gallery{
+				max-width: 33.75%;
+			}
+		}
+	}
+
+	.entry-summary{
+		margin-top: 0;
+
+		.entry-title {
+			font-size: 28px;
+			color: $color__darker;
+			margin-top: -8px;
+		}
+	}
+
+	.format-quote{
+		.entry-format {
+			margin-bottom: 0;
+		}
+
+		blockquote{
+			padding: 27px 40px 38px;
+		}
+	}
+
+	.format-audio {
+
+		&.blog-wrapper{
+			margin-bottom: 47px;
+		}
+
+		.entry-format{
+			margin-bottom: 22px;
+		}
+
+		iframe{
+			height: 380px;
+		}
+	}
+}
+
+.farmart-blog-page--list{
+	.blog-wrapper{
+		margin-bottom: 50px;
+
+		&:last-child,
+		.entry-format{
+			margin-bottom: 0;
+		}
+	}
+
+	.blog-wrapper:not(.no-flex).has-post-thumbnail{
+		.blog-wrapper__inner{
+			display: flex;
+			align-items: center;
+		}
+
+		.entry-format{
+			flex: 0 0 auto;
+			max-width: 65.8%;
+
+			&.format-audio{
+				width: 65.8%;
+			}
+		}
+	}
+
+	.blog-wrapper__inner{
+		background-color: #f7f7f7;
+	}
+
+	.format-link{
+		.entry-summary{
+			display: none;
+		}
+	}
+
+	.entry-summary{
+		padding: 60px;
+		margin: 0;
+	}
+
+	.entry-format{
+		&.format-video{
+			height: 385px;
+		}
+
+		iframe{
+			height: 100%;
+		}
+	}
+
+	.entry-format{
+		&.format-audio{
+			height: 366px;
+		}
+	}
+
+	.entry-summary > .entry-meta{
+		margin-top: 37px;
+		margin-bottom: 0;
+	}
+}
+
+.farmart-blog-page--grid{
+	.blog-wrapper{
+		margin-bottom: 47px;
+	}
+
+	.entry-header{
+		margin-bottom: 0;
+	}
+
+	.entry-title{
+		font-size: 20px;
+		line-height: 1.4;
+	}
+
+	.format-quote{
+		blockquote{
+			padding: 23px 40px 33px;
+
+			&:before{
+				margin-bottom: 5px;
+			}
+
+			cite{
+				margin-top: 16px;
+			}
+		}
+	}
+
+	.slick-prev-arrow{
+		left: 20px;
+	}
+
+	.slick-next-arrow{
+		right: 20px;
+	}
+}
+.farmart-blog-page--grid,
+.farmart-blog-page--small-thumb{
+	.format-gallery{
+		.slick-dots{
+			bottom: 16px;
+
+			li button:before{
+				background-color: #fff;
+				opacity: .5;
+			}
+
+			li.slick-active button:before{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+// Tax List
+.farmart-taxs-list{
+	margin-bottom: 43px;
+	text-align: center;
+
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li{
+			display: inline-block;
+			padding: 0 20px;
+		}
+
+		a{
+			color: #888888;
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+			display: block;
+
+			&.selected{
+				color: var( --fm-color-primary );
+			}
+		}
+	}
+}
+.content-sidebar,
+.sidebar-content {
+	.farmart-taxs-list{
+		text-align: left;
+
+		ul{
+			margin: 0 -20px;
+		}
+	}
+}
+
+.farmart-post-taxs-list {
+	background-color: #f7f7f7;
+	text-align: left;
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 60px;
+	padding: 0 15px;
+
+	&:before ,
+	&:after {
+		content: '';
+		position: absolute;
+		height: 60px;
+		background-color: #f7f7f7;
+		width: calc((100vw - 1190px)/2);
+	}
+
+	&:before {
+		left: calc((-100vw + 1190px)/2);
+	}
+
+	&:after {
+		right: calc((-100vw + 1190px)/2);
+	}
+
+	ul{
+		list-style: none;
+		padding: 0;
+		margin: 0 -17px;
+
+
+		li{
+			display: inline-block;
+			padding: 0 17px;
+		}
+
+		a{
+			color: #666;
+			text-transform: uppercase;
+			display: block;
+			transition: .5s;
+
+			&:hover {
+				color: var( --fm-color-primary );
+			}
+		}
+	}
+}
+
+.farmart-show-categories-filter {
+	.farmart-post-taxs-list {
+		margin-bottom: 50px;
+	}
+
+	.fm-post-format {
+		margin-top: 0;
+	}
+}
+.fm-post-format {
+	padding: 0 15px;
+}
+
+.farmart-post-list{
+	position: relative;
+}
+
+.farmart-post-list__loading{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: -50px;
+	right: 0;
+	z-index: 999;
+	background-color: #fff;
+	display: none;
+	text-align: center;
+
+	&.show{
+		display: block;
+	}
+}
+
+.farmartFadeInUp {
+	animation-name: farmartFadeInUp;
+	animation-duration: 0.8s;
+	animation-fill-mode: both;
+	animation-timing-function:cubic-bezier(0.65, 0.8, 0.44, 0.99);
+}
+
+@for $i from 1 through 20 {
+	.farmartFadeInUp:nth-child(#{$i}n) {
+		animation-delay: #{ $i * 0.1}s;
+	}
+}
+
+.farmart-post--breadcrumbs{
+	margin-bottom: 25px;
+
+	a {
+		color: #888;
+
+		&:hover {
+			color: var(--fm-color-primary);
+		}
+	}
+}
+
+.single-post {
+	&.content-sidebar,
+	&.sidebar-content {
+		.single-post-wrapper {
+			padding-top: 45px;
+
+			.entry-header {
+				border-bottom: 1px solid #eee;
+				padding-bottom: 30px;
+			}
+		}
+	}
+
+	.post-thumbnail{
+		margin-bottom: 20px;
+	}
+
+	.farmart-list,
+	ul.farmart-list{
+		li{
+			margin-bottom: 0;
+
+			span {
+				margin-left: 3px;
+			}
+		}
+	}
+
+	.entry-format{
+		&.format-video{
+			embed, iframe, object {width: 100%;}
+		}
+	}
+
+	.wp-block-archives-dropdown {
+		margin-bottom: 20px;
+	}
+}
+
+.no-results {
+	.page-title {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,203 @@
+// General
+.farmart-banner-larger,
+.farmart-banner-medium-3{
+	position: relative;
+
+	a.link{
+		z-index: 20;
+	}
+
+	a.link,
+	.banner-featured-image{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.banner-content{
+		position: relative;
+		z-index: 1;
+	}
+}
+
+// Each element
+.farmart-banner-medium-3 {
+	.banner-content{
+		height: 270px;
+		max-width: 81%;
+		display: flex;
+		margin: auto;
+	}
+
+	.highlight,.banner-title, .price-box{
+		color: #fff;
+	}
+
+	.banner-title{
+		margin: 0 0 14px;
+	    line-height: 1.43;
+	}
+
+	.highlight{
+		font-family: $font__secondary;
+		font-style: italic;
+		display: block;
+		font-size: 21px;
+		line-height: (30/21);
+
+		&.banner-display {
+			display: inline-block;
+		}
+	}
+
+	.after_highlight{
+		display: inline-block;
+		color: $color__darker;
+		text-shadow: 0 0 $color__darker;
+		margin-left: 15px;
+	}
+
+	.banner-desc{
+		color: rgba(255,255,255,.7);
+	}
+
+	.btn-button{
+		align-items: center;
+		display: inline-flex;
+		padding: 8px 19px;
+		color: var( --fm-background-text-color-secondary );
+		border-radius: 3px;
+		background-color: var( --fm-background-color-secondary );
+		font-size: 13px;
+		font-weight: 700;
+		margin-top: 28px;
+	}
+
+	.farmart-svg-icon{
+		font-size: 9px;
+		margin-left: 4px;
+	}
+
+	.price-box{
+		position: absolute;
+		right: 15px;
+		display: inline-block;
+		top: 50px;
+		font-size: 13px;
+		width: 44px;
+		height: 44px;
+		line-height: 44px;
+		background-color: #e84506;
+		border-radius: 50%;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+.farmart-banner-larger{
+	.banner-content {
+		height: 170px;
+		display: flex;
+	    margin: auto;
+        max-width: 62%;
+	}
+
+	.divider{
+		background-color: #e1e1e1;
+		width: 1px;
+		height: 57%;
+		margin: auto 40px auto 75px;
+	}
+
+	.title{
+		margin: 0;
+	}
+
+	.highlight{
+		color: var( --fm-color-primary );
+		margin: 0 0 20px;
+	}
+
+	.banner-content__sale{
+		flex:none;
+	}
+
+	.text-sale{
+		margin: 0 0 5px;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+
+	.number-sale{
+		font-size: 74px;
+		color: #e84506;
+		font-weight: 700;
+		line-height: 1;
+		position: relative;
+		display: inline-block;
+	}
+
+	.unit-sale{
+		font-size: 40px;
+		position: absolute;
+		top: 0;
+		right: -38px
+	}
+}
+
+// Position
+.farmart--v-position-top{
+	.farmart-banner-medium-3,
+	.farmart-banner-larger{
+		.banner-content{
+			align-items: flex-start;
+		}
+	}
+}
+
+.farmart--v-position-bottom{
+	.farmart-banner-medium-3,
+	.farmart-banner-larger{
+		.banner-content{
+			align-items: flex-end;
+		}
+	}
+}
+
+.farmart--v-position-middle{
+	.farmart-banner-medium-3,
+	.farmart-banner-larger{
+		.banner-content{
+			align-items: center;
+		}
+	}
+}
+
+.farmart--h-position-left{
+	.farmart-banner-medium-3,
+	.farmart-banner-larger{
+		.banner-content{
+			justify-content: flex-start;
+		}
+	}
+}
+
+.farmart--h-position-right{
+	.farmart-banner-medium-3,
+	.farmart-banner-larger{
+		.banner-content{
+			justify-content: flex-end;
+		}
+	}
+}
+
+.farmart--h-position-center{
+	.farmart-banner-medium-3,
+	.farmart-banner-larger{
+		.banner-content{
+			justify-content: center;
+		}
+	}
+}

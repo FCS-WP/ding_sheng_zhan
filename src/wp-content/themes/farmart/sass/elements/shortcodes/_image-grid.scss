@@ -1,0 +1,57 @@
+.farmart-image-grid,
+.farmart-image-grid .box-item {
+}
+
+.farmart-image-grid{
+	display: flex;
+	flex-wrap: wrap;
+
+	.box-item{
+		transition: ease-in-out .3s;
+		margin-right: 7px;
+
+		img{
+			margin: auto;
+			display: block;
+		}
+
+		&.image-left {
+			img {
+				margin: inherit;
+			}
+		}
+	}
+}
+
+@media (max-width: 1920px) and (min-width: 1025px) {
+	@for $i from 1 through 8 {
+		.elementor-widget-farmart-image-grid.columns-#{$i} {
+			.box-item{
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	@for $i from 1 through 8 {
+		.elementor-widget-farmart-image-grid.columns--tablet#{$i} {
+			.box-item{
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	@for $i from 1 through 8 {
+		.elementor-widget-farmart-image-grid.columns--mobile#{$i} {
+			.box-item{
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}

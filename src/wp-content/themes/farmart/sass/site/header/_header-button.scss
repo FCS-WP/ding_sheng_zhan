@@ -1,0 +1,27 @@
+// Header Button
+.header-element--button a {
+	display: block;
+	border-radius: 3px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.header-element--primary-button a{
+	background-color: var( --farmart-header-background-color-secondary );
+	color: var( --farmart-header-background-text-color-secondary );
+	border: 1px solid transparent;
+	padding: 3px 19px;
+
+	&:hover {
+		color: var( --farmart-header-background-text-color-secondary );
+	}
+}
+
+.header-element--secondary-button a{
+	background-color: transparent;
+	color: $color__dark;
+	font-size: 13px;
+	line-height: 18px;
+	border: 1px solid $color__dark;
+	padding: 2px 10px;
+}

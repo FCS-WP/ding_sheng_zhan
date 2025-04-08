@@ -1,0 +1,208 @@
+.fm-product-with-category {
+    .header-cat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+
+        h2 {
+            color: #000;
+            font-size: 21px;
+            margin: 0;
+
+            a {
+                color: #000;
+                display: flex;
+                align-items: center;
+            }
+
+            .farmart-svg-icon {
+                font-size: 20px;
+                margin-right: 9px;
+            }
+        }
+
+        .header-link {
+            display: none;
+        }
+    }
+    .content-wrapper {
+        display: flex;
+        background-color: #fff;
+    }
+
+    .sidebar-box {
+        flex: 0 0 (393/1170) * 100%;
+        max-width: (393/1170) * 100%;
+        display: flex;
+        flex-direction: column;
+        border-color: #eeeeee;
+    }
+
+    .images-list {
+
+        &.slick-dotted {
+            margin-bottom: 0;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        &:hover {
+            .slick-arrow {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .slick-arrow {
+            opacity: 0;
+            visibility: hidden;
+            transition: .5s;
+        }
+        .slick-prev-arrow {
+            left: 20px;
+        }
+        .slick-next-arrow {
+            right: 20px;
+        }
+        .slick-dots {
+            position: absolute;
+            bottom: 18px;
+
+            li {
+                button {
+                    &:before {
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+                &.slick-active {
+                    button {
+                        &:before {
+                            background-color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .categories-box {
+        padding: 26px 30px 24px;
+        flex-grow: 1;
+        background-color: #fff;
+        border: 1px solid #eee;
+        border-top: 0;
+        border-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h4 {
+            font-size: 14px;
+            margin: 0 0 8px;
+
+            a {
+                color: #000;
+            }
+        }
+
+        ul.extra-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 2px 0;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+            a {
+                color: #555;
+                &:hover {
+                    color: var( --fm-color-primary );
+                    text-shadow: 0 0 var( --fm-color-primary );
+                }
+            }
+        }
+
+        .categories-box--footer {
+            border-top: 1px solid #eee;
+            width: 100%;
+            padding-top: 25px;
+            margin-top: 20px;
+        }
+    }
+
+    .header-link {
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        transition: unset;
+
+        span {
+            color: #777;
+            transition: 0.5s;
+        }
+        .link-text {
+            display: block;
+            line-height: 1.2;
+        }
+        .farmart-svg-icon {
+            padding-left: 3px;
+            font-size: 10px;
+        }
+        &:hover {
+            span {
+                color: var( --fm-color-primary );
+            }
+            .link-text {
+                text-shadow: 0 0 var( --fm-color-primary );
+            }
+        }
+    }
+
+    .categories-box--columns-1 .category-box--1 {
+        margin-bottom: 20px;
+    }
+
+    .categories-box--columns-2 {
+        .quick-links-wrapper {
+            display: flex;
+        }
+
+        .category-box {
+            width: 50%;
+            padding-right: 20px;
+        }
+    }
+
+    .products-box {
+        flex-grow: 1;
+        order: 2;
+        background-color: #fff;
+        border-top: 1px solid #eee;
+        border-right: 1px solid #eee;
+        position: relative;
+    }
+
+    ul.products {
+        li.product {
+            margin-bottom: 0;
+            border-left: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            min-height: 340px;
+
+            .product-inner {
+                margin: 0 -1px;
+                padding-bottom: 18px;
+            }
+
+            .woocommerce-product-details__short-description {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.farmart-counter,
+.farmart-counter .counter-item{
+	border-color: #e5e5e5;
+	border-style: solid;
+}
+
+.farmart-counter {
+	border-width: 1px 0 0 1px ;
+
+	.counter-row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.farmart-svg-icon {
+		font-size: 55px;
+		color: var( --fm-color-primary );
+		line-height: 1;
+
+		svg{
+			width: 55px;
+			height: 55px;
+			fill: var( --fm-color-primary );
+		}
+	}
+
+	.title{
+		text-transform: uppercase;
+	}
+
+	.counter-value {
+		font-size: 36px;
+		color: $color__dark;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 7px;
+	}
+
+	.counter-item {
+		display: flex;
+		padding: 43px 50px 33px;
+		border-width: 0 1px 1px 0;
+		background-color: #fff;
+	}
+}
+
+.farmart-counter--icon-left {
+	.counter-item__icon {
+		padding-right: 44px;
+	}
+}
+
+.farmart-counter--icon-right {
+	.counter-item {
+		flex-direction: row-reverse;
+	}
+
+	.counter-item__icon {
+		padding-left: 44px;
+	}
+
+	.counter-item__content {
+		text-align: right;
+	}
+}
+
+.farmart-counter--icon-center {
+	.counter-item {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.counter-item__icon {
+		padding-bottom: 44px;
+	}
+}
+
+@media (max-width: 1920px) and (min-width: 1025px) {
+	@for $i from 1 through 5 {
+		.elementor-widget-farmart-counter.columns-#{$i} {
+			.counter-item {
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	@for $i from 1 through 5 {
+		.elementor-widget-farmart-counter.columns--tablet#{$i} {
+			.counter-item {
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	@for $i from 1 through 5 {
+		.elementor-widget-farmart-counter.columns--mobile#{$i} {
+			.counter-item {
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}

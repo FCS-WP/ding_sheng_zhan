@@ -1,0 +1,26 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include font-size(14/16);
+	color: var( --fm-background-text-color-secondary );
+	font-weight: 700;
+	line-height: 42px;
+	border: 0;
+	border-radius: 3px;
+	padding: 0 36px;
+	background-color: var( --fm-background-color-secondary );
+	transition: 0.5s;
+	outline: 0;
+
+	&.alt {
+		color: $color__dark;
+		border: 1px solid $color__dark;
+		background: transparent;
+
+		&:hover {
+			color: #fff;
+			background: $color__dark;
+		}
+	}
+}

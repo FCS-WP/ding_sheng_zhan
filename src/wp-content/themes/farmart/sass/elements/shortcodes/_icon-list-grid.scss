@@ -1,0 +1,70 @@
+.farmart-list-grid{
+	.farmart-svg-icon{
+		font-size: 60px;
+		color: var( --fm-color-primary );
+		line-height: 1;
+	}
+
+	.title{
+		margin: 0 0 12px;
+	}
+
+	.box-item__inner{
+		background-color: #f7f7f7;
+		padding: 36px 30px 30px;
+	}
+
+	.box-item__icon{
+		margin-bottom: 31px;
+	}
+
+	.box-item{
+		padding: 0 15px;
+		display: flex;
+		align-items: stretch;
+		height: auto;
+
+		&:last-child{
+			border-right: none;
+		}
+	}
+
+	&.add-space{
+		.box-item{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 1920px) and (min-width: 1025px) {
+	@for $i from 1 through 4 {
+		.elementor-widget-farmart-list-grid.columns-#{$i} {
+			.box-item {
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	@for $i from 1 through 4 {
+		.elementor-widget-farmart-list-grid.columns--tablet#{$i} {
+			.box-item {
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	@for $i from 1 through 4 {
+		.elementor-widget-farmart-list-grid.columns--mobile#{$i} {
+			.box-item {
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}

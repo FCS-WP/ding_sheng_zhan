@@ -1,0 +1,22 @@
+/*
+Theme Name: farmart
+
+Dokan Vendor styles override
+*/
+
+@import "variables-site/colors";
+@import "variables-site/typography";
+@import "variables-site/structure";
+@import "variables-site/columns";
+
+@import "mixins/mixins-master";
+
+/**
+ * Dokan Vendor
+ */
+@import "dokan/dokan";
+
+/**
+ * Dokan Vendor Responsive
+ */
+@import "dokan/responsive";

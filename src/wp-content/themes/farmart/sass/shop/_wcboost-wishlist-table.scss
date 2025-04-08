@@ -1,0 +1,176 @@
+.wcboost-wishlist-form {
+	table.shop_table {
+		tr {
+			th {
+				&.product-date,
+				&.product-quantity {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+			}
+		}
+
+		tr {
+			border-bottom: 1px solid #eeeeee;
+			td {
+				border-bottom: none;
+				&.product-date {
+					font-size: 14px;
+					padding-left: 10px;
+					padding-right: 10px;
+					width: 10%;
+				}
+
+				&.product-quantity {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				&.product-add-to-cart {
+					a {
+						padding: 0 15px !important;
+						white-space: nowrap;
+					}
+
+					.wc-forward {
+						display: none !important;
+					}
+				}
+			}
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.wcboost-wishlist-form {
+		table.shop_table {
+			tr {
+				th {
+					display: none;
+				}
+			}
+
+			tr {
+				padding-bottom: 30px;
+
+				td {
+					display: inline-flex;
+					padding-left: 0;
+					padding-right: 0;
+
+					&.product-price,
+					&.product-stock-status,
+					&.product-date {
+						display: none;
+					}
+
+					&.product-thumbnail {
+						width: auto;
+						padding-right: 15px;
+					}
+
+
+
+					&.product-name {
+						width: 100%;
+						max-width: 60%;
+						flex-direction: column;
+
+						.label {
+							display: inline-block;
+							width: 30%;
+						}
+
+						.product-price {
+							font-size: 14px;
+							color: $color__darker;
+
+							ins {
+								color: $color__primary;
+								margin-right: 5px;
+								font-weight: 700;
+								background-color: transparent;
+							}
+
+							del {
+								color: #a6a6a6;
+							}
+						}
+
+						.product-date {
+							font-size: 14px;
+							color: $color__darker;
+						}
+
+						.product-stock-status {
+							font-size: 14px;
+    						color: $color__darker;
+						}
+					}
+
+					&.product-quantity {
+						padding: 0 10px;
+
+						label {
+							display: none;
+						}
+					}
+
+					&.product-add-to-cart {
+						padding: 0;
+						text-align: left;
+
+						a {
+							display: flex !important;
+							text-align: center;
+							align-items: center;
+							position: relative;
+							transition: none;
+							font-weight: 500;
+							font-size: 12px;
+							line-height: 30px;
+							background-color: var(--fm-background-color-secondary);
+							color: var(--fm-background-text-color-secondary);
+							padding: 3px 25px !important;
+							margin: 0 !important;
+							text-decoration: none;
+
+							.farmart-svg-icon {
+								margin-right: 7px;
+								position: relative;
+								top: 2px;
+								font-size: 15px;
+							}
+						}
+
+						.wc-forward {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
+
+		.wcboost-wishlist__item {
+			position: relative;
+			display: block;
+
+			.product-remove {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding: 36px 15px !important;
+
+				a {
+					color: #555;
+					width: 30px;
+					height: 30px;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

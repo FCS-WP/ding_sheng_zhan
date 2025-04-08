@@ -1,0 +1,77 @@
+.fm-promotion {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    .content {
+        display: flex;
+        align-items: center;
+        padding: 30px 0 30px 170px;
+        max-width: 1170px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .left-content,
+    .right-content {
+        display: flex;
+    }
+
+    .left-content {
+        padding-right: 30px;
+    }
+
+    .right-content {
+        flex-direction: column;
+        position: relative;
+        padding-left: 30px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #36322f;
+        }
+    }
+
+    .box-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .percent {
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1;
+        color: #fcb800;
+    }
+
+    .unit {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 1;
+        color: #fcb800;
+    }
+
+    .text {
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .title {
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}

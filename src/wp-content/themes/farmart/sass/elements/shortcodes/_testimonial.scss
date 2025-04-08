@@ -1,0 +1,357 @@
+.farmart-testimonial,
+.farmart-testimonial-banner,
+.farmart-testimonial-2,
+.farmart-testimonial-3{
+	.slick-dotted.slick-slider{
+		margin-bottom: 0;
+	}
+}
+
+.farmart-testimonial{
+	.box-item--inner{
+		padding: 31px 50px 50px;
+		height: 343px;
+		border-radius: 5px;
+		box-shadow: 0 0 40px rgba(0,0,0,.1);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.box-item__quote{
+		margin-bottom: 29px;
+
+		.farmart-svg-icon{
+			font-size: 37px;
+			color: var( --fm-color-primary );
+			margin-bottom: 6px;
+			display: block;
+		}
+
+		.desc{
+			font-size: 16px;
+			color: $color__dark;
+			line-height: (26/16);
+		}
+	}
+
+	.box-item__author{
+		display: flex;
+		align-items: center;
+
+		.name{
+			margin: 0 0 3px;
+		}
+
+		img{
+			flex: none;
+			margin-right: 25px;
+			border-radius: 50%;
+			max-width: 60px;
+			max-height: 60px;
+		}
+	}
+
+	.slick-list{
+		padding: 55px 0 40px;
+	}
+
+	.box-dots {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 9;
+	}
+
+	.slick-dots{
+		text-align: right;
+		right: 0;
+		top: 0;
+		position: relative;
+	}
+
+	.slick-arrow{
+		width: 46px;
+		height: 46px;
+		line-height: 46px;
+	}
+
+	.slick-prev-arrow{
+		left: -23px;
+	}
+
+	.slick-next-arrow{
+		display: none !important;
+	}
+
+}
+
+.farmart-testimonial__wrapper{
+	position: relative;
+	margin-top: -43px;
+}
+
+.farmart-testimonial__heading{
+	padding-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 9;
+	position: relative;
+
+	.box-heading{
+		.subtitle{
+			font-size: 13px;
+			text-transform: uppercase;
+			color: var( --fm-color-secondary);
+			letter-spacing:  0.15em;;
+			display: block;
+		}
+
+		.title{
+			margin: 0 0 10px;
+		}
+	}
+}
+
+// Testi 2
+.farmart-testimonial-banner,
+.farmart-testimonial-2{
+	padding-bottom: 30px;
+
+	.row-flex{
+		margin: 0;
+	}
+
+	.box-item--inner{
+		display: flex;
+	}
+
+	.box-item{
+		padding: 0;
+	}
+
+	.box-item__image{
+		flex: none;
+		margin-right: 30px;
+
+		img{
+			border-radius: 50%;
+		}
+	}
+
+	.box-item__content{
+		margin-top: -4px;
+
+		.farmart-svg-icon{
+			font-size: 25px;
+			color: var( --fm-color-primary );
+			margin-bottom: 10px;
+			display: block;
+			line-height: 1;
+		}
+	}
+
+	.heading{
+		margin: 0 0 20px;
+	}
+
+	.box-text{
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+		flex-wrap: wrap;
+
+		.name{
+			margin: 0;
+		}
+
+		> *{
+
+			&:after{
+				content: '/';
+				display: inline-block;
+				margin: 0 6px;
+			}
+
+			&:last-child:after{
+				display: none;
+			}
+		}
+	}
+
+	.slick-list{
+		border-right: 1px solid transparent;
+	}
+
+	.slick-prev-arrow{
+		left: -50px;
+	}
+
+	.slick-next-arrow{
+		right: -50px;
+	}
+}
+
+.farmart-testimonial-2 {
+	.box-item--inner{
+		padding: 56px 30px 53px;
+	}
+
+	div.box-item{
+		border-right: 1px solid #eee;
+		display: table-cell;
+		float: initial;
+		vertical-align: top;
+	}
+
+	.box-item__image{
+		img{
+			max-width: 85px;
+			max-height: 85px;
+		}
+	}
+
+	.slick-track{
+		display: table;
+	}
+}
+
+.farmart-testimonial-2__wrapper{
+	border: 1px solid #eee;
+	background-color: #fff;
+}
+
+.farmart-testimonial-2__list{
+	display: flex;
+}
+
+.farmart-testimonial-3 {
+	.box-item {
+		position: relative;
+	}
+
+	.box-item--inner {
+		padding: 60px;
+		background-color: #fff;
+		border-radius: 10px;
+	}
+
+	.box-item__image {
+		display: flex;
+		align-items: center;
+		margin-bottom: 40px;
+
+		img {
+			height: 100%;
+			border-radius: 50%;
+			margin-right: 23px;
+			max-width: 60px;
+		}
+
+		.name {
+			font-size: 20px;
+			color: $color__darker;
+			margin: 0;
+		}
+
+		.meta {
+			color: #999;
+		}
+
+		.farmart-svg-icon {
+			position: absolute;
+			top: 60px;
+			right: 85px;
+			font-size: 36px;
+			color: #33ccff;
+		}
+	}
+
+	.desc {
+		font-size: 24px;
+		line-height: 36px;
+		color: $color__darker;
+	}
+
+	.slick-arrow {
+		font-size: 12px;
+		width: 26px;
+		height: 26px;
+		line-height: 26px;
+		color: $color__darker;
+		background-color: #fff;
+		border: none;
+		border-radius: 5px;
+
+		&:hover {
+			background-color: var( --fm-background-color-primary );
+		}
+	}
+}
+
+.farmart-testimonial-3__list {
+	display: flex;
+	margin-left: -25px;
+	margin-right: -25px;
+
+	.slick-slide  {
+		padding: 0 25px;
+	}
+}
+
+// Banner
+.farmart-testimonial-banner{
+	.box-item__image{
+		img{
+			max-width: 70px;
+			max-height: 70px;
+		}
+	}
+
+	span.slick-prev-arrow,
+	span.slick-next-arrow{
+		border: none;
+		width: auto;
+		height: auto;
+		line-height: 1;
+		background-color: transparent;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	span.slick-prev-arrow{
+		left: initial;
+		right: 20px;
+	}
+
+	span.slick-next-arrow{
+		right: 0;
+	}
+}
+
+.farmart-testimonial-banner__box-heading{
+	position: relative;
+}
+
+.farmart-testimonial-banner__wrapper{
+	overflow: hidden;
+	padding: 30px;
+}
+
+.farmart-testimonial-banner__list{
+	background-color: #fff;
+	width: 53%;
+	float: right;
+	padding: 40px 30px 28px 40px;
+
+	.slick-slide > *:not(:last-child){
+		.box-item {
+			padding-bottom: 32px;
+			margin-bottom: 40px;
+			border-bottom: 1px solid #eee;
+		}
+	}
+
+
+}

@@ -1,0 +1,74 @@
+/*
+Theme Name: farmart
+
+WooCommerce styles override
+*/
+
+/**
+ * WooCommerce color variables
+ */
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3D9CD2;
+
+/**
+ * Imports
+ */
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/**
+ * Shop tables
+ */
+@import "shop/catalog";
+
+/**
+ * Shop tables
+ */
+@import "shop/tables";
+
+/**
+ * Products
+ */
+@import "shop/products";
+
+/**
+ * Single product
+ */
+@import "shop/single-product";
+
+/**
+ * Cart
+ */
+ @import "shop/cart";
+
+/**
+ * Checkout
+ */
+@import "shop/checkout";
+
+/**
+ * Checkout
+ */
+ @import "shop/my-account";
+
+/**
+ * General WooCommerce components
+ */
+@import "shop/components";
+
+/**
+ * WCboost Wishlist
+ */
+ @import "shop/wcboost-wishlist-table";
+
+
+/**
+ * WooCommerce widgets
+ */
+@import "shop/widgets";
+
+/**
+ * WCBoost Products Compare
+ */
+ @import "shop/wcboost-compare-table";

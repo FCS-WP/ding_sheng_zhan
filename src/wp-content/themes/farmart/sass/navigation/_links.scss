@@ -1,0 +1,13 @@
+a {
+	color: var( --fm-color-primary );
+	text-decoration: none;
+	outline: none;
+	transition: .5s;
+
+	&:focus,
+	&:hover,
+	&:active {
+		outline: 0;
+		text-decoration: none;
+	}
+}

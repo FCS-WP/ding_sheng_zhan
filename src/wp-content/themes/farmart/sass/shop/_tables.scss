@@ -1,0 +1,399 @@
+.woocommerce {
+	table.wishlist_table {
+		font-size: 100%;
+		border-color: #e5e5e5;
+		margin-bottom: 26px;
+
+		tr {
+			td,
+			th.wishlist-delete,
+			th.product-checkbox {
+				text-align: left;
+			}
+		}
+
+		th, td {
+			border-width: 0 0 1px 0;
+		}
+
+		td {
+			&.product-thumbnail {
+				a {
+					max-width: 74px;
+				}
+			}
+
+			&.product-name {
+				a {
+					color: #000;
+				}
+			}
+
+			&.product-price {
+				color: #000;
+				font-weight: 700;
+				font-size: 16px;
+
+				.woocs_price_code {
+					display: flex;
+    				align-items: center;
+				}
+
+				ins {
+					color: #2f8a33;
+					margin-right: 4px;
+					order: 1;
+				}
+
+				del {
+					font-weight: 400;
+					margin-right: 4px;
+					order: 2;
+					font-size: 14px;
+				}
+
+				.sale {
+					color: #e84506;
+					font-weight: 400;
+					order: 3;
+					font-size: 14px;
+				}
+			}
+
+			&.product-stock-status {
+				font-weight: 700;
+
+				span.wishlist-in-stock {
+					color: #2f8a33;
+				}
+
+				span.wishlist-out-of-stock {
+					color: #e84506;
+				}
+			}
+
+			&.product-add-to-cart {
+				span.dateadded {
+					margin-bottom: 7px;
+				}
+
+				a {
+					color: var( --fm-background-text-color-secondary );
+					font-weight: 700;
+					background-color: var( --fm-background-color-secondary );
+					display: block !important;
+					border-radius: 3px;
+					padding: 0 25px !important;
+					height: 40px;
+					line-height: 38px;
+					text-align: center;
+					margin-bottom: 0;
+					position: relative;
+
+					.farmart-svg-icon {
+						margin-right: 5px;
+					}
+
+					&.loading {
+						.farmart-svg-icon {
+							display: none;
+						}
+
+						&:before {
+							content: " ";
+							width: 10px;
+							height: 10px;
+							border-radius: 50%;
+							border-width: 1px;
+							border-style: solid;
+							border-color: #fff transparent #fff transparent;
+							animation: lds-dual-ring 0.5s linear infinite;
+							display: inline-block;
+							margin-right: 5px;
+						}
+					}
+
+					&.product_type_grouped,
+					&.product_type_external {
+						color: #000;
+						background-color: #f5f5f5;
+						border: 1px solid #e5e5e5;
+						padding: 9px 14px;
+
+						&:before {
+							display: none;
+						}
+					}
+
+
+				}
+
+				&.out-of-stock {
+					a {
+						color: #000;
+						background-color: #f5f5f5;
+						border: 1px solid #e5e5e5;
+						padding: 9px 14px;
+
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		thead {
+			th {
+				background-color: #f5f5f5;
+				font-weight: 400;
+				color: #555;
+				border-color: #eeeeee;
+				padding: 11px 30px;
+			}
+		}
+
+		tbody {
+			td {
+				border-color: #eeeeee;
+				padding: 36px 30px;
+
+				&.product-thumbnail {
+					padding: 3px;
+				}
+
+				&.product-remove {
+					padding: 36px 30px;
+
+					a {
+						font-size: 20px;
+						color: #555 !important;
+						width: 20px;
+						height: 24px;
+						line-height: 25px;
+						display: block;
+						text-align: center;
+						overflow: hidden;
+
+						&:before {
+							content: "\e681";
+							font-family: 'FarmartIcon';
+							width: 19px;
+							height: 19px;
+							display: block;
+						}
+
+						&:hover {
+							color: #000 !important;
+							border-color: #ccc !important;
+							background-color: #fafafa !important;
+						}
+					}
+
+				}
+			}
+		}
+
+		tfoot {
+			td {
+				padding: 17px 30px;
+			}
+
+			.yith-wcwl-share {
+				display: flex;
+				align-items: center;
+				margin-bottom: 0;
+				justify-content: flex-start;
+
+				h4.yith-wcwl-share-title {
+					font-size: 14px;
+					font-weight: 400;
+					color: #555;
+					padding-right: 17px;
+
+				}
+			}
+
+			.socials-with-background {
+				.yith-wcwl-share {
+					ul {
+						height: auto;
+
+						li {
+							height: auto;
+
+							a {
+								color: #fff;
+								background-image: none;
+								border-radius: 3px;
+								width: 30px;
+								height: 30px;
+								text-align: center;
+								line-height: 31px;
+								font-size: 12px;
+								font-weight: 400;
+
+								&:before {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Wishlist mobile table
+.woocommerce .wishlist_table.mobile {
+	padding-left: 0;
+	margin: 0 0 40px;
+
+	li {
+		margin-bottom: 25px;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 25px;
+
+		&:last-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.item-wrapper {
+			width: 100%;
+			margin-bottom: 0;
+
+			.item-details {
+				width: calc(100% - 75px);
+
+				h3 {
+					font-size: 15px;
+					margin: 0 0 5px 0;
+					font-weight: 600;
+					color: #222;
+
+					a {
+						color: #222;
+					}
+				}
+
+				table.item-details-table {
+					width: 100%;
+					margin: 0;
+					color: #555;
+
+					tr {
+						padding: 5px 0;
+						border: 0;
+					}
+
+					td {
+						padding: 0;
+						font-size: 13px;
+						text-align: left;
+
+						&.label {
+							font-weight: 400;
+						}
+
+						ins {
+							color: #2f8a33;
+							margin-right: 4px;
+							font-weight: 700;
+						}
+
+						del {
+							color: #000;
+						}
+
+						.sale {
+							color: #e84506;
+						}
+					}
+				}
+			}
+		}
+
+		.additional-info-wrapper {
+			margin-left: 75px;
+
+			&:after {
+				content : '';
+				display: table;
+				clear: both;
+			}
+
+			table.additional-info {
+				width: 100%;
+				margin: 0 0 10px 0;
+				color: #777;
+
+				tr {
+					padding: 5px 0;
+					border: 0;
+				}
+
+				td {
+					padding: 0;
+					font-size: 13px;
+
+					&.label {
+						font-weight: 400;
+					}
+				}
+			}
+
+			.product-add-to-cart {
+				margin-bottom: 0;
+				float: left;
+				margin-right: 10px;
+
+				a {
+					color: var( --fm-background-text-color-secondary );
+					padding: 7px 15px !important;
+					margin: 0 !important;
+					display: block !important;
+					border-radius: 3px;
+					background-color: var( --fm-background-color-secondary );
+					font-weight: 700;
+
+					.farmart-svg-icon {
+						margin-right: 5px;
+						font-size: 14px;
+					}
+				}
+			}
+
+			.product-remove {
+				float: left;
+
+				a {
+					color: #555;
+					display: block;
+					width: 31px;
+					height: 31px;
+					text-align: center;
+					line-height: 30px;
+					font-size: 16px;
+
+					&:before {
+						content: "\e681";
+						font-family: 'FarmartIcon';
+					}
+
+					.farmart-svg-icon {
+						display: none;
+					}
+				}
+			}
+		}
+
+		table.additional-info {
+			td.value {
+				text-align: left;
+			}
+		}
+	}
+}

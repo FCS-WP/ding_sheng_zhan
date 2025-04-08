@@ -1,0 +1,60 @@
+@import "slides";
+@import "simple-text";
+@import "blog";
+@import "testimonial";
+@import "counter";
+@import "image-grid";
+@import "team-grid";
+@import "service-box";
+@import "icon-list-box";
+@import "icon-list-grid";
+@import "quotes";
+@import "tab-list";
+@import "faq";
+@import "heading";
+@import "icon-box";
+@import "banner";
+@import "countdown";
+@import "contact-form";
+@import "image-carousel";
+@import "image-box";
+@import "produc-cat-carousel";
+@import "product-cat-list";
+@import "product-cat-grid";
+@import "product-tab-carousel";
+@import "product-carousel";
+@import "banner-carousel";
+@import "banner-video";
+@import "recently-viewed";
+@import "product-deals-carousel";
+@import "product-deals-grid";
+@import "brands-carousel";
+@import "products-brands";
+@import "promotion";
+@import "products-with-category";
+@import "trending-search";
+@import "hide-icon-button";
+
+
+.fm-overflow-y {
+    overflow-y: hidden;
+}
+
+.farmart-nav-outside {
+	.cat-header ,
+	.heading {
+		justify-content: flex-start;
+	}
+
+	span.slick-prev-arrow,
+	span.slick-next-arrow {
+		top: -50px;
+		left: auto;
+		right: 0;
+		transform: translate(0);
+	}
+
+	span.slick-prev-arrow {
+		right: 32px;
+	}
+}

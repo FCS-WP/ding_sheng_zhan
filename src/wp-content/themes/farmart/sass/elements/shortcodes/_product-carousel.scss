@@ -1,0 +1,556 @@
+.fm-elementor-product-carousel {
+	.tabs-header{
+		position: relative;
+	}
+
+	ul.products li.product{
+		pointer-events: auto;
+	}
+
+	.slick-list{
+		padding: 0 0 80px;
+		margin-bottom: -80px;
+		pointer-events: none;
+		z-index: 7;
+
+		&:hover{
+			z-index: 9;
+		}
+	}
+
+	.slick-dots {
+		z-index: 8;
+	}
+
+	&:not( .fm-product-tab-carousel-3 ) {
+		.fm-show-qty & {
+			.slick-list {
+				padding-bottom: 157px;
+				margin-bottom: -157px;
+			}
+		}
+	}
+}
+
+.fm-product-tab-carousel-2,
+.fm-products-carousel {
+	.slick-track {
+		display: flex;
+
+		.slick-slide {
+			height: inherit;
+
+			.product-inner {
+				height: 100%;
+			}
+		}
+	}
+
+	ul.products {
+		li.product {
+			.product-inner {
+				position: relative;
+				border-width: 1px 1px 1px 0;
+				border-color: #c9c9c9;
+				height: 100%;
+			}
+
+			&.slick-current {
+				.product-inner {
+					border-left-width: 1px;
+				}
+			}
+		}
+	}
+}
+
+.fm-product-tab-carousel-2 .tabs-content,
+.fm-products-carousel .products-content {
+	ul.products {
+		li.product {
+
+		}
+	}
+
+	.slick-list {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.slick-prev-arrow{
+		left: -53px;
+	}
+
+	.slick-next-arrow{
+		right: -53px;
+	}
+
+	.slick-track {
+		background-color: #fff;
+	}
+}
+
+.fm-products-carousel-2,
+.fm-products-carousel{
+	ul.products{
+		display: block;
+	}
+
+
+	.products-header {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		align-items: center;
+
+		h3 {
+			margin: 0;
+
+			.farmart-svg-icon{
+				font-size: 21px;
+				color: var( --fm-color-primary );
+				margin-right: 14px;
+			}
+		}
+	}
+
+	.header-link {
+		margin-top: 4px;
+		color: #888888;
+		transition: ease .3s;
+
+		.farmart-svg-icon {
+			padding-left: 3px;
+		}
+
+		.farmart-svg-icon {
+			font-size: 9px;
+		}
+	}
+
+	&.product-type-grid {
+		ul.products{
+			display: flex;
+		}
+	}
+}
+
+.fm-products-carousel {
+	.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
+
+	.slick-dots-wrapper {
+		.slick-dots {
+			position: relative;
+			bottom: auto;
+			margin-top: 10px;
+		}
+	}
+}
+
+.fm-products-carousel-2{
+	.products-content{
+		background-color: #ffffff;
+		border: 1px solid #eeeeee;
+	}
+
+	ul.products {
+		padding: 20px 39px 31px;
+	}
+
+	.slick-arrow{
+		font-size: 20px;
+		border-color: transparent;
+		background-color: transparent;
+	}
+
+	.slick-prev-arrow{
+		left: 15px;
+	}
+
+	.slick-next-arrow{
+		right: 15px;
+	}
+}
+
+.fm-elementor-product-carousel ::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #eeeeee;
+}
+
+.fm-elementor-product-carousel ::-webkit-scrollbar
+{
+	height: 7px;
+}
+
+.fm-elementor-product-carousel ::-webkit-scrollbar-thumb
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var( --fm-background-color-primary );
+}
+
+.fm-products-carousel-with-category {
+    .header-cat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #eeeeee;
+        padding: 20px 30px;
+        background-color: #fff;
+        flex-wrap: wrap;
+
+        h2 {
+            color: #000;
+            font-size: 21px;
+			margin: 0;
+
+            a {
+                color: #000;
+                display: flex;
+                align-items: center;
+			}
+
+            .farmart-svg-icon {
+                font-size: 20px;
+                margin-right: 9px;
+            }
+        }
+
+        .extra-links-wrapper {
+            max-width: 100%;
+        }
+
+        .extra-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 4px 0;
+            margin: 0;
+            flex-wrap: nowrap;
+			overflow: scroll;
+
+            li {
+                padding: 0 16px;
+                position: relative;
+                flex-shrink: 0;
+
+                &:after {
+                    content: '';
+                    background-color: #dddddd;
+                    height: 15px;
+                    width: 1px;
+                    position: absolute;
+                    right: -1px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+				&.view-all-btn {
+					text-shadow: 0 0 #000;
+				}
+            }
+            a.extra-link {
+                color: #777777;
+                display: block;
+                line-height: 1.2;
+                &:hover {
+                    color: var( --fm-color-primary );
+                    text-shadow: 0 0 $color__darker;
+                }
+            }
+            .header-link {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                transition: unset;
+				padding: 7px 17px;
+				border-radius: 3px;
+
+                span {
+                    color: #777;
+                    transition: 0.5s;
+                }
+                .link-text {
+                    display: block;
+                    line-height: 1.2;
+                }
+                .farmart-svg-icon {
+                    font-size: 9px;
+                    padding-left: 4px;
+                }
+                &:hover {
+					color: var( --fm-background-text-color-primary );
+
+                    .link-text {
+                        text-shadow: 0 0 var( --fm-background-text-color-primary );
+                    }
+                }
+            }
+        }
+
+        .extra-links::-webkit-scrollbar {
+            display: none;
+        }
+	}
+
+    .content-wrapper {
+        display: flex;
+		background-color: #fff;
+    }
+
+    .images-box {
+        flex: 0 0 15.15%;
+        max-width: 15.15%;
+	}
+
+    .products-box {
+		width: 100%;
+		padding: 15px;
+		border: 1px solid #eee;
+		border-top: 0;
+	}
+
+	.slick-list {
+	}
+
+	.slick-active {
+		&:last-child {
+			.product-inner {
+				&:after {
+					right: 2px;
+				}
+			}
+		}
+	}
+
+    ul.products {
+		margin-bottom: 0;
+
+        &.slick-slider {
+            display: block;
+		}
+
+        li.product {
+			pointer-events: auto;
+
+            .woocommerce-product-details__short-description {
+                display: none;
+            }
+
+			.product-inner {
+				position: relative;
+				border-width: 1px 1px 1px 0;
+				border-color: #c9c9c9;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 1px;
+					background-color: transparent;
+				}
+			}
+
+			.product-thumbnail {
+				margin-top: 20px;
+			}
+
+			&:first-child {
+				&.slick-current {
+					.product-inner {
+						&:before {
+							background-color: #c9c9c9;
+						}
+
+						&:hover {
+							&:before {
+								left: -1px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.slick-track {
+		display: flex;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		.slick-slide {
+			height: inherit;
+
+			.product-inner {
+				height: 100%;
+			}
+		}
+	}
+
+	.slick-list {
+		padding: 0 2px 80px;
+		margin: 0 -2px -80px;
+		pointer-events: none;
+		z-index: 30;
+
+		&:hover {
+			z-index: 9;
+		}
+	}
+
+	.slick-dots {
+		z-index: 8;
+		position: relative;
+		bottom: auto;
+	}
+
+	.slick-arrow {
+		top: 44%;
+	}
+
+	.slick-prev-arrow {
+		left: -15px;
+	}
+
+	.slick-next-arrow {
+		right: -15px;
+	}
+}
+
+.fm-show-qty {
+	.fm-products-carousel-with-category {
+		.slick-list {
+			padding-bottom: 157px;
+			margin-bottom: -157px;
+		}
+	}
+}
+
+.farmart-border-type-2 {
+	ul.products {
+		li.product {
+			.product-inner {
+				border-width: 1px;
+				border-color: transparent;
+
+				&:hover {
+					border-color: #c9c9c9;
+				}
+			}
+
+			&:first-child.slick-current {
+				.product-inner:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// Products List Carousel
+.fm-products-list-carousel {
+	.products-header {
+		border: 1px solid #eee;
+		border-bottom: 0;
+		padding: 35px 20px 15px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+
+		h3 {
+			font-size: 16px;
+			margin: 0;
+		}
+	}
+
+	.products-content {
+		border: 1px solid #eee;
+		border-top: 0;
+		padding: 20px;
+		background-color: #fff;
+	}
+
+	ul.products {
+		li.product {
+			.product-inner {
+				padding: 0;
+				border: 0;
+				display: flex;
+
+				&:hover {
+					.product-bottom-box {
+						display: none !important;
+					}
+				}
+			}
+
+			.product-thumbnail {
+				flex: 0 0 30.5%;
+				max-width: 30.5%;
+				margin-bottom: 0;
+			}
+
+			.product-details {
+				flex-grow: 1;
+				padding-left: 20px;
+			}
+		}
+	}
+
+	.slick-slider {
+		margin: 0 -10px;
+
+		.slick-slide {
+			padding: 0 10px;
+
+			> div:not(:last-child) {
+				border-bottom: 1px solid #eee;
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+			}
+		}
+
+		&.slick-dotted {
+			margin-bottom: 0;
+		}
+	}
+
+	.slick-arrows-wrapper {
+		display: flex;
+		align-items: center;
+
+		.slick-arrow {
+			position: static;
+			transform: unset;
+			border: 0;
+			width: 15px;
+			height: 25px;
+			line-height: 25px;
+		}
+	}
+
+	.slick-dots {
+		position: static;
+		margin: 25px 0;
+	}
+}

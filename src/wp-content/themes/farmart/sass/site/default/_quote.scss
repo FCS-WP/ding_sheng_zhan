@@ -1,0 +1,59 @@
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large,
+.wp-block-quote{
+	border-left: none;
+	padding: 26px 100px 33px;
+}
+
+.wp-block-quote.has-text-align-right{
+	padding: 26px 100px 33px;
+	border-right: none;
+}
+
+hr.wp-block-separator {
+	background-color: #bbb;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+.wp-block-pullquote:not(.is-style-solid-color){
+	background-color: #f7f7f7;
+}
+
+.wp-block-pullquote {
+	text-align: left;
+	background-color: #f7f7f7;
+	padding: 26px 50px 33px;
+
+	blockquote {
+		margin: 0;
+		padding: 0;
+	}
+
+	&.alignleft{
+		text-align: left;
+	}
+
+	&.alignright{
+		text-align: right;
+
+		blockquote:before{
+			right: 0;
+			left: auto;
+		}
+	}
+}
+
+.wp-block-pullquote.is-style-solid-color{
+
+	blockquote {
+		background-color: transparent;
+		max-width: 100%;
+
+		p {
+			font-size: 32px;
+		}
+	}
+}

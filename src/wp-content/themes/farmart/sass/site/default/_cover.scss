@@ -1,0 +1,32 @@
+.wp-block-cover-image.has-background-dim::before, .wp-block-cover.has-background-dim::before {
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 1;
+}
+
+.wp-block-cover-image.has-background-dim a, .wp-block-cover.has-background-dim a{
+	color: #fff;
+}
+
+.wp-block-cover,
+.wp-block-media-text {
+	margin-bottom: 1.5em;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+.wp-block-cover p:not(.has-text-color){
+	color:#fff;
+}
+
+.wp-block-cover-image.alignleft,
+.wp-block-cover-image.alignright,
+.wp-block-cover.alignleft,
+.wp-block-cover.alignright{
+	margin-bottom: 20px;
+}
+
+.wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, section.wp-block-cover-image>h2 {
+	font-size: 36px;
+}

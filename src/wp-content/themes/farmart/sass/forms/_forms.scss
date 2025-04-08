@@ -1,0 +1,21 @@
+.mc4wp-form {
+	.mc4wp-form-fields {
+		display: flex;
+	}
+
+	input[type="email"],
+	input[type="text"] {
+		flex-grow: 1;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	input[type="submit"] {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+@import "buttons";
+
+@import "fields";

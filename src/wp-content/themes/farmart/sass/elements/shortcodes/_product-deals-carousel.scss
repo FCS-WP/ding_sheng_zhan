@@ -1,0 +1,528 @@
+.fm-product-deals-day {
+	position: relative;
+
+	&.fm-product-deals-query-sale,
+	&.fm-product-deals-query-deals,
+	&.fm-product-deals-query-day {
+		.farmart-countdown {
+			.days {
+				display: none;
+			}
+		}
+	}
+
+	// Countdown
+	.header-countdown {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.ends-text {
+		display: flex;
+		align-items: center;
+		margin-right: 8px;
+		line-height: 1;
+
+		.farmart-svg-icon {
+			font-size: 18px;
+			margin-right: 10px;
+		}
+	}
+
+	.header-countdown {
+		color: #fff;
+		font-size: 13px;
+		background-color: #e84506;
+		padding: 4px 13px;
+		border-radius: 3px;
+	}
+
+	.farmart-countdown {
+		.digits {
+			font-size: 16px;
+			font-weight: 700;
+		}
+
+		.text {
+			margin-left: 5px;
+		}
+
+		.divider {
+			margin: 0 4px;
+		}
+	}
+
+	.cat-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.header-content {
+			display: flex;
+			align-items: center;
+		}
+
+		.cat-title {
+			margin: 0;
+			display: flex;
+			align-items: center;
+
+			.farmart-svg-icon{
+				margin-right: 5px;
+			}
+		}
+
+		.countdown-wrapper {
+			display: flex;
+			align-items: center;
+			margin-left: 39px;
+		}
+
+		.header-link {
+			display: flex;
+			align-items: center;
+			transition: unset;
+
+			span {
+				color: #777;
+				transition: 0.5s;
+			}
+
+			.link-text {
+				display: block;
+				line-height: 1.2;
+			}
+
+			.farmart-svg-icon {
+				padding-left: 3px;
+				font-size: 10px;
+			}
+
+			&:hover {
+				span {
+					color: var( --fm-color-primary );
+				}
+			}
+		}
+
+	}
+
+	.products-content {
+		border: 1px solid #c9c9c9;
+		border-right: none;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1px;
+			height: 100%;
+			background-color: #c9c9c9;
+			z-index: 9;
+		}
+	}
+
+	&.fm-elementor-product-deals-carousel {
+		.slick-list {
+			padding-left: 0;
+			padding-right: 0;
+			margin-right: -1px;
+			margin-left: -1px;
+		}
+	}
+
+	.slick-track {
+		background-color: #fff;
+	}
+
+	.slick-dots {
+		bottom: -20px;
+	}
+
+	.slick-prev-arrow {
+		left: -50px;
+	}
+
+	.slick-next-arrow {
+		right: -50px;
+	}
+
+	ul.products {
+		border: none;
+
+		li.product {
+			clear: none;
+			margin-bottom: 0;
+			pointer-events: auto;
+			float: left;
+
+			.woocommerce-product-details__short-description {
+				display: none;
+			}
+
+			.tawc-deal {
+				display: block;
+				margin-top: 15px;
+				margin-bottom: 0;
+				width: 100%;
+
+				.progress-bar,
+				.progress-value {
+					height: 8px;
+				}
+
+				.progress-bar {
+					background-color: #eeeeee;
+				}
+
+				.progress-value {
+					background-color: #fab528;
+				}
+
+				.deal-text {
+					color: #000;
+					font-size: 13px;
+					margin-bottom: 0;
+					margin-top: 3px;
+				}
+			}
+
+			.sold-by-meta {
+				margin-bottom: 6px;
+			}
+
+			.product-thumbnail {
+				margin-bottom: 30px;
+			}
+
+			.product-inner {
+				&:hover {
+					border-top-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+.fm-elementor-product-deals-carousel{
+	ul.products {
+		margin: 0;
+		li.product {
+			.product-inner {
+				.product-deals-price {
+					.price {
+						display: flex;
+					}
+				}
+
+				.price {
+					margin-bottom: 5px;
+				}
+
+				.woocommerce-loop-product__title {
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+
+	.slick-list {
+		padding: 0 0 125px;
+		margin-right: -6px;
+	}
+
+	.slick-slider .slick-arrow {
+		opacity: 1;
+	}
+
+	.slick-dots {
+		bottom: 45px;
+	}
+
+	&.farmart-nav-outside {
+		.cat-header {
+			.header-link {
+				font-size: 14px;
+				color: #666666;
+				margin-left: 35px;
+
+				.farmart-svg-icon {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+body:not(.catalog-view-list) {
+	.fm-elementor-product-deals-carousel-2{
+		ul.products{
+			li.product{
+				.product-inner:hover .product-bottom-box,
+				.product-bottom-box {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.fm-elementor-product-deals-carousel-2{
+	.products-content {
+		border: none;
+		background-color: transparent;
+	}
+
+	ul.products{
+		background-color: #fff;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		line-height: 1;
+
+		li.product{
+			.product-inner{
+				display: flex;
+				padding: 30px;
+				border-width: 1px;
+				transition: 0.3s;
+
+				&:hover{
+					border-color: #c9c9c9;
+
+					.tawc-deal{
+						opacity: 1;
+					}
+				}
+
+				.product-thumbnail{
+					width: 42.33%;
+					flex: none;
+					margin: 0 20px 0 0;
+				}
+
+				.product-details{
+					width: 66.66%;
+				}
+			}
+
+			.product-deals-price {
+				.price {
+					display: flex;
+				}
+			}
+
+			.price {
+				display: none;
+				font-size: 17px;
+				margin-bottom: 17px;
+
+				.sale {
+					font-size: 13px;
+				}
+			}
+
+			.unit-text {
+				margin-bottom: 14px;
+			}
+
+			.fm-rating {
+				margin-bottom: 22px;
+			}
+
+			.product-bottom-box {
+				display: none;
+			}
+
+			.tawc-deal{
+				position: initial;
+
+				.deal-progress {
+					margin-bottom: 14px;
+				}
+			}
+
+			.product-details-hover{
+				position: initial;
+				display: block;
+				z-index: 1;
+				border: none;
+				padding: 0;
+			}
+
+			.box-price,
+			.product-button .group{
+				display: none;
+			}
+
+			form.cart{
+				display: flex;
+				margin-top: 20px;
+
+				.quantity{
+					flex: none;
+					width: 40%;
+					margin-bottom: 0;
+					margin-right: 10px;
+				}
+
+				.quantity_button{
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	.slick-list{
+		margin: 0;
+		padding: 0;
+		margin-right: -1px;
+	}
+
+	.slick-dots{
+		z-index: 4;
+	}
+
+	.slick-prev-arrow{
+		left: 0;
+	}
+
+	.slick-next-arrow{
+		right: 0;
+	}
+
+	.slick-arrow{
+		opacity: 1;
+		top: 38.5%;
+	}
+
+	.slick-track{
+		display: flex;
+
+		.slick-slide{
+			display: flex;
+			height: auto;
+			align-items: stretch; //optional
+			flex-direction: column;
+
+			 > div {
+				 display: flex;
+				 align-items: stretch;
+				 height: 100%;
+			 }
+		}
+	}
+
+	.slick-slide{
+		position: relative;
+		border-color: #eeeeee;
+		border-style: solid;
+		border-width: 1px 1px 0 0;
+
+		&.slick-current{
+			border-width: 1px 1px 0 0;
+		}
+	}
+}
+
+.woocommerce-products-header .fm-elementor-product-deals-carousel-3 ul.products li.product .product-inner:hover .product-bottom-box,
+body:not(.catalog-view-list) .fm-elementor-product-deals-carousel-3 ul.products li.product .product-inner:hover .product-bottom-box {
+	display: none;
+}
+
+.fm-elementor-product-deals-carousel-3 {
+	border: 2px solid var( --fm-color-primary );
+	background-color: #fff;
+	padding: 32px 0 8px;
+	overflow: hidden;
+
+	.header-content{
+		display: flex;
+		justify-content: space-between;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.cat-title{
+		margin: 0;
+	}
+
+	.box-nav{
+		.prev-arrow,
+		.next-arrow{
+			cursor: pointer;
+		}
+
+		.prev-arrow{
+			margin-right: 10px;
+		}
+	}
+
+	.products-content{
+		border: none;
+	}
+
+	ul.products{
+		padding-bottom: 0;
+
+		li.product{
+			.product-thumbnail{
+				img{
+					margin: auto;
+				}
+			}
+
+			.tawc-deal{
+				position: relative;
+
+				.progress-value {
+					background-color: #fcb800;
+				}
+			}
+
+			.farmart-countdown{
+				margin-top: 25px;
+			}
+
+			.price{
+				margin-bottom: 14px;
+				font-size: 18px;
+				display: none;
+
+				.sale {
+					font-size: 13px;
+				}
+			}
+
+			.product-deals-price {
+				.price {
+					display: flex;
+				}
+			}
+
+			.product-inner{
+				padding: 26px;
+				border-width: 0;
+
+				&:hover{
+					border: none;
+
+					.tawc-deal {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.product-button{
+		display: none;
+	}
+
+	.slick-list{
+		margin: 0;
+		padding: 0;
+	}
+}

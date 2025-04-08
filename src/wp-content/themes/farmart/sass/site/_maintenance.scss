@@ -1,0 +1,16 @@
+.maintenance-mode  {
+	.site-header,
+	.site-footer,
+	.page-header{
+		display: none;
+	}
+
+	.site-content{
+		padding: 0;
+	}
+
+	.hentry,
+	.entry-content{
+		margin: 0;
+	}
+}

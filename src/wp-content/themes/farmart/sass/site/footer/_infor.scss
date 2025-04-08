@@ -1,0 +1,35 @@
+.footer-infor__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	padding: 57.5px 0 47.5px;
+	margin: 0 -15px;
+}
+
+.footer-infor__item {
+    display: flex;
+    align-items: center;
+	padding: 7.5px 15px;
+}
+
+.footer-infor__image {
+    margin-right: 23px;
+
+    .farmart-svg-icon {
+        font-size: 34px;
+    }
+}
+
+.footer-infor__content--title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: var( --farmart-footer-heading-color );
+    margin: 0 0 3px;
+}
+
+.footer-infor__content--desc {
+    color: var( --farmart-footer-text-color );
+    letter-spacing: -.5px;
+}

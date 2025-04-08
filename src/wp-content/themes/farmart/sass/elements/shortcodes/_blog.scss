@@ -1,0 +1,111 @@
+.farmart-blog-shortcode{
+
+	.entry-footer,
+	.heading{
+		display: flex;
+		align-items: center;
+	}
+
+	.list-post--wrapper{
+		border-width: 1px;
+		border-color:#eeeeee;
+	}
+
+	.box-title{
+		display: inline-block;
+
+		span{
+			margin-bottom: 5px;
+		}
+
+		h3{
+			margin: 0;
+		}
+	}
+
+	.heading{
+		justify-content: space-between;
+		padding: 20px 0;
+	}
+
+	.extra-link{
+		color: #888888;
+
+		.farmart-svg-icon{
+			font-size: 10px;
+			margin-left: 3px;
+		}
+	}
+
+	.blog-wrapper{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.entry-header {
+		margin-bottom: 18px;
+	}
+
+	.entry-format {
+		margin-bottom: 22px;
+	}
+
+	.entry-title {
+		a {
+			font-size: 16px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.entry-image ,
+	.entry-image img {
+		border-radius: 10px;
+	}
+
+	.entry-content{
+		margin-bottom: 21px;
+	}
+
+	.entry-meta {
+		.meta-cat {
+			a {
+				font-size: 13px;
+			}
+		}
+
+		.meta {
+			color: #333;
+		}
+	}
+
+	.fm-entry-date {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 13px;
+		margin-top: 20px;
+
+		.meta-date {
+			position: relative;
+			margin-right: 5px;
+		}
+
+		.farmart-svg-icon {
+			margin-right: 10px;
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	.entry-footer{
+		margin-bottom: 0;
+
+		.farmart-svg-icon{
+			margin-right: 7px;
+		}
+	}
+
+}

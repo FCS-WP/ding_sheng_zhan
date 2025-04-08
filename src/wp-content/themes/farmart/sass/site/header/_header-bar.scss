@@ -1,0 +1,30 @@
+// Header Bar
+.header-element--header-bar {
+	display: flex;
+	align-items: center;
+
+	span,
+	a {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 22px;
+		margin-bottom: 5px;
+    	color: var( --farmart-header-text-color );
+	}
+
+	p {
+		color: #999;
+		font-size: 13px;
+		font-weight: 400;
+		margin: 0;
+	}
+}
+
+.header-bar__box-icon {
+	font-size: 24px;
+	margin-right: 20px;
+}
+
+.header-bar__box-content {
+	text-align: right;
+}

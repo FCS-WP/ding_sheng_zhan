@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	font-family: $font__main;
+	color: $color__dark;
+	line-height: (44/35);
+}
+
+h1 {
+	@include font-size(48/16);
+}
+
+h2 {
+	@include font-size(35/16);
+}
+
+h3 {
+	@include font-size(21/16);
+}
+
+h4 {
+	@include font-size(18/16);
+}
+
+h5 {
+	@include font-size(16/16);
+}
+
+h6 {
+	@include font-size(14/16);
+}

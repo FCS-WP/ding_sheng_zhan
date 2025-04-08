@@ -1,0 +1,364 @@
+.woocommerce-account {
+	// Login & Register Form
+
+	.farmart-login-layout-1 {
+		.farmart-login-tabs {
+			max-width: 400px;
+			margin: auto;
+			padding: 0 25px;
+			background-color: #f5f5f5;
+		}
+	}
+
+	.tabs-nav {
+		display: flex;
+		justify-content: center;
+		border-bottom: 1px solid #dddddd;
+
+		li {
+			a {
+				display: block;
+				color: #999999;
+				font-size: 20px;
+				font-weight: 700;
+				padding: 10px 15px;
+				text-align: center;
+				text-transform: uppercase;
+
+				span {
+					display: inline-block;
+					position: relative;
+					padding: 8px 0;
+				}
+
+				&.active {
+					color: #000000;
+				}
+			}
+
+			&:last-child {
+				a {
+					border-right-width: 0;
+				}
+			}
+		}
+	}
+
+	.tabs-panel {
+		padding: 30px 0 20px;
+
+		h2 {
+			text-transform: capitalize;
+			color: #555555;
+			font-size: 14px;
+		    font-weight: 400;
+			margin: 7px 0 20px;
+		}
+	}
+
+	form.login,
+	form.register {
+		button {
+			display: block;
+			width: 100%;
+			margin-top: 17px;
+			height: 50px;
+		}
+	}
+
+	form.login {
+		.form-row-password {
+			position: relative;
+
+			a.lost-password {
+				position: absolute;
+				top: 9px;
+				right: 50px;
+			}
+		}
+
+		.woocommerce-form-login__rememberme {
+			display: block;
+			padding-top: 5px;
+		}
+	}
+
+	form.register {
+		.woocommerce-privacy-policy-text {
+			margin: 25px 0;
+
+			a {
+				box-shadow: inset 0 0 0 transparent, inset 0 -1px 0 var( --fm-color-primary );
+			}
+		}
+	}
+
+	// Socials Login
+	.fm-social-login {
+		.login-text {
+			text-align: center;
+			position: relative;
+			margin: 15px 0 10px;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				height: 1px;
+				width: 34%;
+				background-color: #e5e5e5;
+			}
+
+			&:after {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
+	div.nsl-container-block,
+	.the_champ_outer_login_container {
+		margin-bottom: 10px;
+	}
+
+	div.nsl-container-block .nsl-container-buttons a {
+		max-width: 100%;
+	}
+
+	// Dashboard
+	.account-info {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		.account-avatar {
+			margin-right: 15px;
+
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		.account-name {
+			span {
+				font-size: 18px;
+				line-height: 1;
+				display: block;
+			}
+
+			h3 {
+				font-size: 18px;
+				margin: 5px 0 0;
+				display: block;
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-navigation {
+		width: 25%;
+		float: left;
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border: 1px solid #eaeaea;
+			text-transform: uppercase;
+
+			li {
+				border-bottom: 1px solid #eaeaea;
+				background-color: #f5f5f5;
+
+				a {
+					color: #000;
+					display: block;
+					padding: 10px 30px;
+				}
+
+				&.is-active {
+					a {
+						font-weight: 700;
+					}
+				}
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-content {
+		width: 70%;
+		float: right;
+
+		.woocommerce-Addresses {
+			.woocommerce-Address-title {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 10px;
+
+				h3 {
+					font-size: 24px;
+					margin: 10px 0;
+				}
+			}
+		}
+
+		form.edit-account {
+			fieldset {
+				border: 0;
+				margin: 0;
+				padding: 0;
+
+				legend {
+					display: none;
+				}
+			}
+
+			button {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.nsl-container-buttons {
+		width: 100%;
+	}
+
+	&.farmart-not-login {
+		.site-content {
+			padding-top: 90px;
+			padding-top: 150px;
+		}
+	}
+}
+
+@media ( min-width : 992px ) {
+	.farmart-login-layout-2 {
+		.col-login {
+			padding-right: 85px;
+		}
+
+		.col-login-content {
+			padding-left: 85px;
+		}
+	}
+}
+
+.account-page-promotion {
+    .col-login-promotion {
+        padding-left: 0;
+    }
+
+    .login-promotion {
+        .pro-title {
+            font-size: 21px;
+            margin: 0 0 20px;
+        }
+
+        .pro-text {
+			margin-bottom: 30px;
+
+			b, strong {
+				color: #222;
+			}
+        }
+
+        .pro-list {
+			margin-bottom: 45px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    font-size: 16px;
+                    color: #222;
+                    display: flex;
+                    align-items: center;
+                    padding: 7px 0;
+                    margin-bottom: 0;
+
+                    .farmart-svg-icon {
+                        font-size: 21px;
+                        color: var( --fm-color-primary );
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+        .promotion-ads-content {
+            border: 1px dashed #ddd;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            padding: 30px 40px;
+        }
+
+        .promotion-ads-title {
+			display: flex;
+            font-size: 60px;
+            color: var( --fm-color-primary );
+			margin: 0 40px 0 0;
+
+			.unit {
+				font-size: 35px;
+				top: 5px;
+				position: relative;
+			}
+        }
+
+        .promotion-ads-text {
+            h4 {
+				font-size: 16px;
+				text-transform: uppercase;
+            }
+
+            h2, h3, h4, h5, h6 {
+                margin: 0 0 10px;
+            }
+        }
+
+    }
+
+}
+
+.woocommerce {
+	.password-input {
+		position: relative;
+		display: block;
+	}
+
+	.show-password-input {
+		transition: .35s;
+		cursor: pointer;
+		opacity: .5;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 20px !important;
+		height: 20px !important;
+		background: no-repeat center center;
+		background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPgo8c3ZnIGZpbGw9ImN1cnJlbnRDb2xvciIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaWNvbiI+CiAgPHBhdGggZD0iTTk0Mi4yIDQ4Ni4yUTg4OS40NyAzNzUuMTEgODE2LjcgMzA1bC01MC44OCA1MC44OEM4MDcuMzEgMzk1LjUzIDg0My40NSA0NDcuNCA4NzQuNyA1MTIgNzkxLjUgNjg0LjIgNjczLjQgNzY2IDUxMiA3NjZxLTcyLjY3IDAtMTMzLjg3LTIyLjM4TDMyMyA3OTguNzVRNDA4IDgzOCA1MTIgODM4cTI4OC4zIDAgNDMwLjItMzAwLjNhNjAuMjkgNjAuMjkgMCAwIDAgMC01MS41em0tNjMuNTctMzIwLjY0TDgzNiAxMjIuODhhOCA4IDAgMCAwLTExLjMyIDBMNzE1LjMxIDIzMi4yUTYyNC44NiAxODYgNTEyIDE4NnEtMjg4LjMgMC00MzAuMiAzMDAuM2E2MC4zIDYwLjMgMCAwIDAgMCA1MS41cTU2LjY5IDExOS40IDEzNi41IDE5MS40MUwxMTIuNDggODM1YTggOCAwIDAgMCAwIDExLjMxTDE1NS4xNyA4ODlhOCA4IDAgMCAwIDExLjMxIDBsNzEyLjE1LTcxMi4xMmE4IDggMCAwIDAgMC0xMS4zMnpNMTQ5LjMgNTEyQzIzMi42IDMzOS44IDM1MC43IDI1OCA1MTIgMjU4YzU0LjU0IDAgMTA0LjEzIDkuMzYgMTQ5LjEyIDI4LjM5bC03MC4zIDcwLjNhMTc2IDE3NiAwIDAgMC0yMzguMTMgMjM4LjEzbC04My40MiA4My40MkMyMjMuMSA2MzcuNDkgMTgzLjMgNTgyLjI4IDE0OS4zIDUxMnptMjQ2LjcgMGExMTIuMTEgMTEyLjExIDAgMCAxIDE0Ni4yLTEwNi42OUw0MDEuMzEgNTQ2LjJBMTEyIDExMiAwIDAgMSAzOTYgNTEyeiIvPjxwYXRoIGQ9Ik01MDggNjI0Yy0zLjQ2IDAtNi44Ny0uMTYtMTAuMjUtLjQ3bC01Mi44MiA1Mi44MmExNzYuMDkgMTc2LjA5IDAgMCAwIDIyNy40Mi0yMjcuNDJsLTUyLjgyIDUyLjgyYy4zMSAzLjM4LjQ3IDYuNzkuNDcgMTAuMjVhMTExLjk0IDExMS45NCAwIDAgMS0xMTIgMTEyeiIvPgo8L3N2Zz4=");
+		border: none;
+		padding: 0;
+		margin: 0 !important;
+
+		&.display-password {
+			background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMxMTExMTEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWV5ZSI+PHBhdGggZD0iTTEgMTJzNC04IDExLTggMTEgOCAxMSA4LTQgOC0xMSA4LTExLTgtMTEtOHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIj48L2NpcmNsZT48L3N2Zz4=");
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

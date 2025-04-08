@@ -1,0 +1,60 @@
+.footer-newsletter {
+	--fm-newsletter-background-color: #ffffff;
+	--fm-newsletter-text-color: #000000;
+
+	background-color: var(--fm-newsletter-background-color);
+	background-size: cover;
+
+	> * {
+		border: none;
+	}
+}
+
+.footer-newsletter__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 0 32px;
+
+	form {
+		width: 46%;
+		.mc4wp-form-fields {
+			label {
+				flex: auto;
+				input {
+					width: 100%;
+				}
+			}
+			input[type="email"] {
+				color: #000000;
+				background-color: #ffffff;
+				&::placeholder {
+					color: #aaaaaa;
+				}
+			}
+			input[type="submit"] {
+				background-color: #000000;
+				color: #ffffff;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 14px;
+				padding: 0 45.28px;
+			}
+		}
+	}
+}
+
+.footer-newsletter__title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--fm-newsletter-text-color);
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 32px;
+	.farmart-svg-icon {
+		font-size: 52px;
+		font-weight: normal;
+		margin-right: 27px;
+	}
+}

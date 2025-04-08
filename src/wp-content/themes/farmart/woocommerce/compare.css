@@ -1,0 +1,502 @@
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+h1 {
+	background-color: transparent;
+	font-size: 22px;
+	color: #000;
+	font-weight: 400;
+	font-family: 'Muli', sans-serif;
+}
+
+h1 .close {
+	display: none;
+}
+
+body {
+	font-family: 'Muli', sans-serif;
+	font-size: 14px;
+	color: #666;
+	margin: 25px 30px;
+}
+
+body ::-webkit-scrollbar {
+	background: transparent;
+	width: 10px;
+}
+
+body ::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+}
+
+.dataTables_scrollHead table.compare-list {
+	margin: 0;
+	width: 100%;
+}
+
+table.compare-list.full-width {
+	width: 100%;
+}
+
+table.compare-list {
+	margin: 10px 0;
+	table-layout: fixed;
+	border-right: 1px solid #e5e5e5;
+	border-top: 1px solid #e5e5e5;
+}
+
+table.compare-list tr:nth-child(odd) {
+
+}
+
+table.compare-list tr:nth-child(even) {
+	background-color: #f5f5f5;
+}
+
+table.compare-list th {
+	border-left: 1px solid #e5e5e5;
+}
+
+table.compare-list thead,
+table.compare-list tfoot {
+	display: none;
+}
+
+table.compare-list tr th,
+table.compare-list tr td {
+	border-bottom: 1px solid #e5e5e5;
+	vertical-align: top !important;
+	padding: 10px 20px;
+}
+
+table.compare-list tr.image td {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+table.compare-list div.remove {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+table.compare-list div.remove a {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	position: relative;
+}
+
+table.compare-list div.remove a:before,
+table.compare-list div.remove a:after {
+	content: '';
+	background-color: #000;
+	position: absolute;
+	transform: translate(-50%, -50%) rotate(45deg);
+	top: 50%;
+	left: 50%;
+}
+
+table.compare-list div.remove a:before {
+	width: 13px;
+	height: 1px;
+}
+
+table.compare-list div.remove a:after {
+	height: 13px;
+	width: 1px;
+}
+/**************
+* Image Start *
+**************/
+table.compare-list tr.image h4 {
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 11px;
+}
+
+table.compare-list tr.image .price {
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: flex-end;
+	line-height: 1;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+table.compare-list tr.image .price ins {
+	color: #2f8a33;
+	margin-right: 4px;
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-moz-box-ordinal-group: 2;
+	-ms-flex-order: 1;
+	order: 1;
+	text-decoration: none;
+}
+table.compare-list tr.image .price del {
+	font-size: 14px;
+	font-weight: 400;
+	margin-right: 4px;
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-moz-box-ordinal-group: 3;
+	-ms-flex-order: 2;
+	order: 2;
+}
+table.compare-list tr.image .price .sale {
+	font-size: 14px;
+	color: #e84506;
+	font-weight: 400;
+	-webkit-box-ordinal-group: 4;
+	-webkit-order: 3;
+	-moz-box-ordinal-group: 4;
+	-ms-flex-order: 3;
+	order: 3;
+}
+table.compare-list tr.image .button,
+table.compare-list tr.image .added_to_cart {
+	color: #000;
+	font-size: 13px;
+	font-weight: 700;
+	background-color: #fab528;
+	display: block;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 12px 15px;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	margin-top: 20px;
+}
+
+table.compare-list tr.image .button .farmart-svg-icon svg {
+	display: none;
+}
+
+table.compare-list tr.image .button .farmart-svg-icon {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	position: relative;
+	margin-right: 4px;
+}
+
+table.compare-list tr.image .button .farmart-svg-icon:before,
+table.compare-list tr.image .button .farmart-svg-icon:after {
+	content: '';
+	background-color: #000;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+table.compare-list tr.image .button .farmart-svg-icon:before {
+	width: 9px;
+	height: 1px;
+}
+
+table.compare-list tr.image .button .farmart-svg-icon:after {
+	height: 9px;
+	width: 1px;
+}
+
+table.compare-list tr.image .button.loading .farmart-svg-icon:before {
+	content: " ";
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000 transparent #000 transparent;
+	animation: lds-dual-ring 0.5s linear infinite;
+	display: inline-block;
+	background-color: transparent;
+	top: 0;
+	left: 0;
+}
+
+table.compare-list tr.image .button.loading .farmart-svg-icon:after {
+	display: none;
+}
+
+/**************
+*  Image End  *
+**************/
+/**************
+* Button Start *
+**************/
+
+table.compare-list tr.add-to-cart .button,
+table.compare-list tr.add-to-cart .added_to_cart {
+	color: #000;
+	font-size: 13px;
+	font-weight: 700;
+	background-color: #fab528;
+	display: block;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 12px 15px;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+}
+
+table.compare-list tr.add-to-cart .button .farmart-svg-icon svg{
+	display: none;
+}
+
+table.compare-list tr.add-to-cart .button .farmart-svg-icon {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	position: relative;
+	margin-right: 4px;
+}
+
+table.compare-list tr.add-to-cart .button .farmart-svg-icon:before,
+table.compare-list tr.add-to-cart .button .farmart-svg-icon:after {
+	content: '';
+	background-color: #000;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+table.compare-list tr.add-to-cart .button .farmart-svg-icon:before {
+	width: 9px;
+	height: 1px;
+}
+
+table.compare-list tr.add-to-cart .button .farmart-svg-icon:after {
+	height: 9px;
+	width: 1px;
+}
+
+table.compare-list tr.add-to-cart .button.loading .farmart-svg-icon:before {
+	content: " ";
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000 transparent #000 transparent;
+	animation: lds-dual-ring 0.5s linear infinite;
+	display: inline-block;
+	background-color: transparent;
+	top: 0;
+	left: 0;
+}
+
+table.compare-list tr.add-to-cart .button.loading .farmart-svg-icon:after {
+	display: none;
+}
+/**************
+* Button End *
+**************/
+/**************
+* Price Start *
+**************/
+table.compare-list tr.price {
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+}
+table.compare-list tr.price ins {
+	color: #2f8a33;
+	margin-right: 4px;
+	text-decoration: none;
+}
+table.compare-list tr.price del {
+	font-size: 14px;
+	font-weight: 400;
+	margin-right: 4px;
+}
+table.compare-list tr.price .sale {
+	font-size: 14px;
+	color: #e84506;
+	font-weight: 400;
+}
+/**************
+* Price End *
+**************/
+table.compare-list .description ul {
+	padding-left: 20px;
+	margin: 0;
+}
+
+table.compare-list .description ul li {
+	margin-bottom: 7px;
+}
+
+table.compare-list .description td {
+	line-height: 1.5;
+}
+
+table.compare-list .description p {
+	margin-top: 0;
+}
+
+table.compare-list .yith-woocompare-widget ul.products-list a.remove {
+	float: left;
+}
+
+table.compare-list .stock td span {
+	color: #2f8a33;
+}
+
+table.compare-list .stock td.outofstock span {
+	color: #e84506;
+}
+
+table.compare-list tr th .fixed-th {
+	width: 195px;
+}
+
+table.compare-list tr th {
+	text-align: left;
+	font-size: 14px;
+	color: #000;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+table.compare-list tr td.odd,
+table.compare-list tr td.even {
+	border-left: 1px solid #ddd;
+}
+
+table.compare-list tr td img {
+	background: none repeat scroll 0 0 #fff;
+	height: auto;
+	max-width: 100%;
+}
+
+table.compare-list tr td .image-wrap {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+table.compare-list tr.title {
+	color: #000;
+}
+
+.table-wrapper {
+	width: 100%;
+}
+
+.dataTables_scroll .dataTables_scrollHead table.compare-list {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.dataTables_scroll .dataTables_scrollBody table.compare-list {
+	border-left: 0;
+}
+
+.dataTables_scroll .dataTables_scrollFoot table.compare-list {
+	border: none;
+}
+
+.DTFC_LeftWrapper .DTFC_LeftBodyWrapper table.compare-list {
+	border-top: 0;
+	border-right: 0;
+	color: #000;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.DTFC_LeftWrapper .DTFC_LeftBodyWrapper table.compare-list .image th .fixed-th {
+	min-height: 154px;
+}
+
+.DTFC_LeftFootWrapper table.compare-list {
+	border: none;
+}
+
+.woocommerce .notifyjs-corner {
+	z-index: 9999;
+}
+
+.notifyjs-farmart-base {
+	font-weight: 400;
+	position: relative;
+	padding: 15px 40px 15px 60px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+	box-shadow: 0 4px 10px 0 rgba(3, 3, 3, 0.1);
+	max-width: 450px;
+}
+
+.notifyjs-farmart-base .message-icon {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	font-size: 20px;
+}
+
+.notifyjs-farmart-base .button.wc-forward {
+	display: none;
+}
+
+.notifyjs-farmart-base .btn-button {
+	padding-left: 5px;
+	color: #299c77;
+	text-decoration: underline;
+}
+
+.notifyjs-farmart-base .close {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	font-size: 10px;
+}
+
+.notifyjs-farmart-success {
+	color: #299c77;
+	background-color: #bff9d0;
+}
+
+.notifyjs-farmart-success .message-icon {
+	fill: #299c77;
+	stroke: #299c77;
+}
+
+.notifyjs-farmart-error {
+	color: #d45757;
+	background-color: #ffd0d0;
+}
+
+.notifyjs-farmart-error .message-icon {
+	fill: #d45757;
+	stroke: #d45757;
+}
+
+.notifyjs-farmart-error li {
+	list-style: none;
+}
+
+.notifyjs-farmart-error .btn-button {
+	color: #d45757;
+}

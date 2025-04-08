@@ -1,0 +1,1313 @@
+/**
+ * Header cart
+ */
+.site-header-cart {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	@include clearfix;
+
+	.cart-contents {
+		text-decoration: none;
+	}
+
+	.widget_shopping_cart {
+		display: none;
+	}
+
+	.product_list_widget {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// Video
+.i-video {
+	width: 30px;
+	height: 30px;
+	border: 4px solid rgba(255, 255, 255, .3);
+	border-radius: 50%;
+	position: relative;
+
+	.i-inner {
+		width: 22px;
+		height: 22px;
+		background-color: #fff;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	.i-play {
+		width: 0;
+		height: 0;
+		border-top: 4px solid transparent;
+		border-bottom: 4px solid transparent;
+		border-left: 5px solid #000;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+
+/**
+ * Star rating
+ */
+/**
+ * Star rating
+ */
+ .star-rating {
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+
+	.rating-stars {
+		display: block;
+		line-height: 0;
+	}
+
+	.max-rating .farmart-svg-icon{
+		color: #999;
+	}
+
+	.user-rating {
+		position: absolute;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+
+		.farmart-svg-icon {
+			color: #fab528;
+		}
+	}
+}
+
+p.stars {
+	line-height: 1;
+	display: block;
+	margin: 0 0 15px;
+
+	> span {
+		display: flex;
+		height: 15px;
+	}
+
+	a {
+		position: relative;
+		height: 15px;
+		width: 15px;
+		text-indent: -999em;
+		font-size: 0;
+		color: #999;
+		display: inline-block;
+		text-decoration: none;
+		margin-right: 1px;
+		font-weight: 400;
+		transition: none;
+
+		&:hover {
+			~ a {
+				color: #999;
+			}
+		}
+
+		span {
+			text-indent: 0;
+			display: block;
+			font-size: 15px;
+		}
+	}
+
+	&:hover {
+		a {
+			color: #fab528;
+		}
+	}
+
+	&.selected {
+		a.active {
+			color: #fab528;
+
+			~ a {
+				color: #999;
+			}
+		}
+
+		a:not(.active) {
+			color: #fab528;
+		}
+	}
+}
+
+// Ribbons
+.woocommerce {
+	.ribbons .ribbon {
+		color: #fff;
+		font-size: 13px;
+		font-weight: 700;
+		text-align: center;
+		display: block;
+		margin: 0;
+		position: absolute;
+		background-color: #26901b;
+		top: 0;
+		left: 0;
+		height: 20px;
+		line-height: 19px;
+		padding: 0 7px;
+		min-width: inherit;
+		min-height: inherit;
+		border-radius: 3px;
+
+		&.onsale {
+			background-color: #ff7200;
+		}
+
+		&.featured {
+			background-color: #ff8c46;
+		}
+
+		&.out-of-stock {
+			background-color: #222222;
+		}
+	}
+}
+
+// wishlist
+  .yith-wcwl-add-to-wishlist {
+	  margin-top: 0;
+
+	  .yith-wcwl-add-button,
+	  .yith-wcwl-wishlistaddedbrowse,
+	  .yith-wcwl-wishlistexistsbrowse {
+		  & > a {
+			  display: block;
+			  color: var( --fm-color-primary );
+			  border-radius: 0;
+			  text-align: center;
+			  background-color: transparent;
+			  padding: 0;
+
+			  i {
+				  margin: 0;
+
+				  &.fa-heart-o {
+					  font-family: 'FarmartIcon' !important;
+					  font-weight: 400;
+
+					  &:before {
+						  content: "\e68c";
+					  }
+				  }
+
+				  &.icon-heart {
+					  font-weight: 400;
+				  }
+			  }
+
+			  .blockOverlay {
+				  display: none !important;
+			  }
+		  }
+	  }
+
+	  .yith-wcwl-add-button .add_to_wishlist.loading {
+		  position: relative;
+
+		  .farmart-svg-icon {
+			  display: none;
+		  }
+
+		  &:before {
+			  content: " ";
+			  width: 11px;
+			  height: 11px;
+			  border-radius: 50%;
+			  border-width: 1px;
+			  border-style: solid;
+			  border-color: #777777 transparent #777777 transparent;
+			  animation: lds-dual-ring 0.5s linear infinite;
+			  display: inline-block;
+			  margin-right: 2px;
+			  position: relative;
+			  top: 1px;
+		  }
+	  }
+
+	  .yith-wcwl-wishlistaddedbrowse,
+	  .yith-wcwl-wishlistexistsbrowse {
+		  & > a {
+			  color: var( --fm-color-primary );
+
+			  .farmart-svg-icon {
+				  color: var( --fm-color-primary );
+			  }
+
+			  &:hover {
+				  color: var( --fm-color-primary );
+
+				  .farmart-svg-icon {
+					  color: var( --fm-color-primary );
+				  }
+			  }
+		  }
+	  }
+
+	  .feedback {
+		  display: none;
+	  }
+
+	  .ajax-loading {
+		  display: none !important;
+	  }
+  }
+
+.woocommerce {
+	.fm-rating {
+		display: flex;
+		align-items: center;
+
+		.star-rating {
+			margin-right: 2px;
+		}
+
+		.count {
+			font-size: 11px;
+			margin-left: 5px;
+			color: #999;
+		}
+	}
+}
+
+
+// Quantity
+.woocommerce {
+	.quantity {
+		float: none;
+
+		label.label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.qty-box {
+			border: 1px solid #dddddd;
+			position: relative;
+			border-radius: 3px;
+			width: 105px;
+		}
+
+		.qty {
+			font-size: 15px;
+			color: #000;
+			font-weight: 700;
+			border-width: 0;
+			width: 100%;
+			padding: 10px 0;
+			-moz-appearance: textfield;
+			appearance: textfield;
+			-webkit-appearance: textfield;
+			text-align: center;
+			display: inline-block;
+			background-color: #fff;
+			height: 38px;
+			line-height: 38px;
+			border-radius: 3px;
+
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+		}
+
+		.decrease,
+		.increase {
+			font-size: 10px;
+			color: #000;
+			font-weight: 700;
+			cursor: pointer;
+			transition: 0.5s;
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 100%;
+			line-height: 40px;
+			text-align: center;
+			background-color: #fff;
+		}
+
+		.increase {
+			right: 0;
+			left: auto;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+
+		.decrease {
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+	}
+}
+
+
+/**
+ * Tabs
+ */
+ .fm-woo-tabs,
+.woocommerce-tabs {
+	ul.tabs {
+		list-style: none;
+		margin: 0 0 40px 0;
+		padding: 22px 35px;
+		text-align: left;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		background-color: #f5f5f5;
+
+		li {
+			display: block;
+			margin: 0 35px 0 0;
+			position: relative;
+
+			a {
+				font-size: 15px;
+				color: #888;
+				font-weight: 700;
+				display: block;
+				text-transform: uppercase;
+			}
+
+			&.active {
+				a {
+					color: var( --fm-color-primary );
+				}
+			}
+
+			&:nth-last-child(2),
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.fm-wc-tab__magic-line {
+			background-color: var( --fm-background-color-primary );
+			height: 3px;
+			position: absolute;
+			bottom: 0;
+			padding: 0;
+		}
+	}
+
+	ul.tabs::-webkit-scrollbar {
+		display: none;
+	}
+
+	.panel {
+		h2:first-of-type {
+			margin-bottom: 1em;
+		}
+	}
+
+	// Product Information
+
+	table.shop_attributes {
+		border-color: #eeeeee;
+
+		th, td {
+			border-color: #eeeeee;
+			padding: 9px 20px;
+		}
+
+		th {
+			color: #555;
+			background-color: #f5f5f5;
+			font-weight: 400;
+		}
+
+		td {
+			color: #000;
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+
+			a {
+				color: var( --fm-color-primary );
+			}
+		}
+	}
+
+	// Review
+	#reviews {
+		.col-review_form {
+			padding-left: 70px;
+
+			&.rating-disabled {
+				padding-left: 15px;
+			}
+		}
+
+		#comments {
+			margin-top: 50px;
+
+			.woocommerce-Reviews-title {
+				font-size: 18px;
+				color: #000;
+				font-weight: 700;
+				margin: 0 0 50px;
+			}
+
+			ol.commentlist {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+
+				li {
+					padding: 0 0 17px;
+					margin: 0 0 30px;
+					border-bottom: 1px solid #e5e5e5;
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					img.avatar {
+						width: 70px;
+						border: none;
+						padding: 0;
+						background-color: transparent;
+						border-radius: 50%;
+						float: left;
+					}
+
+					.comment-text {
+						margin: 0 0 0 115px;
+						border-radius: 0;
+						padding: 0;
+						border: none;
+
+						.fm-rating {
+							margin-bottom: 13px;
+
+							.count {
+								display: none;
+							}
+						}
+
+						p {
+							margin: 0 0 1em;
+						}
+
+						p.meta {
+							font-size: 13px;
+							color: #777;
+							margin-bottom: 3px;
+
+							.author-name {
+								color: #000;
+							}
+						}
+
+						.woocommerce-review__author {
+							position: relative;
+							color: #000;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+
+		.average-rating {
+			padding: 30px;
+			border: 1px solid #eeeeee;
+
+			.average-label {
+				font-size: 14px;
+				color: #777;
+				line-height: 1;
+			}
+
+			.average-value {
+				font-size: 50px;
+				font-weight: 700;
+				color: #e84506;
+				line-height: 1;
+				margin: 0 0 10px;
+			}
+		}
+
+		.woocommerce-product-rating {
+			line-height: 1.4;
+
+			.fm-rating {
+				.count {
+					display: none;
+				}
+			}
+
+			a.woocommerce-review-link {
+				color: #000;
+				font-weight: 700;
+			}
+
+			.star-rating {
+				font-size: 14px;
+				width: 79px;
+				margin-bottom: 7px;
+			}
+		}
+
+		.bar-rating {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #eeeeee;
+
+			.star-item {
+				display: flex;
+				align-items: center;
+				line-height: 1;
+				margin-bottom: 10px;
+				color: #000;
+
+				.slabel {
+					min-width: 47px;
+				}
+
+				.sbar {
+					margin-left: 10px;
+					margin-right: 15px;
+					flex-grow: 1;
+				}
+
+				.svalue {
+					font-size: 13px;
+					border-radius: 3px;
+					padding: 2px 5px;
+					width: 47px;
+					text-align: center;
+				}
+
+				.bar-content {
+					position: relative;
+					width: 100%;
+					height: 8px;
+					background-color: #eee;
+
+					span {
+						background-color: var( --fm-background-color-secondary );
+						display: block;
+						height: 100%;
+					}
+				}
+			}
+		}
+
+		.comment-respond {
+			.comment-reply-title {
+				font-size: 16px;
+				font-weight: 700;
+				text-transform: uppercase;
+				display: block;
+				text-align: left;
+			}
+		}
+
+		.comment-form {
+			.comment-form-rating {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				color: #000;
+				margin-bottom: 10px;
+
+				label,
+				.stars {
+					margin: 0 !important;
+				}
+
+				.stars {
+					padding-left: 14px;
+				}
+			}
+		}
+
+		#respond {
+			.form-submit {
+				text-align: left;
+			}
+		}
+
+	}
+
+	#review_form {
+		#respond {
+			position: static;
+			margin: 0;
+			width: auto;
+			padding: 0 0 0;
+			background: transparent none;
+			border: 0;
+
+			.comment-reply-title {
+				padding-bottom: 0;
+				margin-bottom: 5px;
+			}
+
+			.required {
+				color: #cc0000;
+			}
+
+			.comment-notes {
+				display: block;
+				margin-bottom: 18px;
+				font-size: 13px;
+			}
+
+			label {
+				margin-bottom: 4px;
+				display: block;
+			}
+
+			p {
+				margin: 0 0 10px;
+			}
+
+			p.clear {
+				clear: both;
+				margin-bottom: 0;
+			}
+
+			.comment-form-cookies-consent {
+				position: relative;
+				margin: 10px 0 15px;
+
+				label {
+					position: relative;
+					padding-left: 25px;
+					cursor: pointer;
+
+					&:before {
+						content: '';
+						width: 14px;
+						height: 14px;
+						border: 1px solid #cccccc;
+						border-radius: 3px;
+						position: absolute;
+						left: 0;
+						top: 5px;
+					}
+
+					&:after {
+						font-size: 10px;
+						content: '\e934';
+						font-family: 'FarmartIcon';
+						position: absolute;
+						top: 3px;
+						left: 2px;
+						color: var( --fm-color-primary );
+						opacity: 0;
+						font-weight: 700;
+					}
+				}
+
+				input {
+					position: absolute;
+					opacity: 0;
+
+					&:checked + label {
+						&:before {
+							border-color: var( --fm-color-primary );
+						}
+
+						&:after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			.form-submit {
+				margin-top: 10px;
+				padding-top: 3px;
+
+				input {
+					left: auto;
+					padding: 0 30px;
+				}
+			}
+
+			input[type=text],
+			input[type=email],
+			textarea {
+				border: 1px solid #cccccc;
+				transition: 0.5s;
+				outline: none;
+				padding: 12px 15px;
+				width: 100%;
+				color: #000;
+			}
+
+			.comment-form-author,
+			.comment-form-email {
+				width: 50%;
+				float: left;
+				padding-right: 15px;
+			}
+
+			.comment-form-email {
+				padding-left: 15px;
+				padding-right: 0;
+			}
+
+			textarea {
+				box-sizing: border-box;
+				width: 100%;
+				min-height: 144px;
+			}
+		}
+	}
+}
+
+.woocommerce-tabs {
+	margin-bottom: 50px;
+}
+
+.fm-woo-tabs {
+	.tab-title {
+		font-size: 18px;
+		color: #333;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #eee;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.tab-toggle {
+			transition: .3s;
+		}
+
+		&.active {
+			.tab-toggle {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	.fm-Tabs-panel {
+		margin: 0;
+		padding-bottom: 20px;
+		position: relative;
+	}
+
+	.tab-content-wrapper {
+		&.closed {
+			opacity: 0;
+			position: absolute;
+			margin-top: 30px;
+			transition: 0s;
+		}
+
+		> h2 {
+			display: none;
+		}
+
+		.seller-rating {
+			display: flex;
+		}
+
+		&.opened {
+			opacity: 1;
+			position: relative;
+			margin-top: 0;
+			transition: .5s;
+
+
+		}
+	}
+
+	&.product-collapse-tab-open {
+		.tab-content-wrapper.opened {
+			opacity: 0;
+			position: absolute;
+			margin-top: 30px;
+			transition: 0s;
+		}
+	}
+}
+
+/**
+ * Password strength meter
+ */
+.woocommerce-password-strength {
+	text-align: right;
+
+	&.strong {
+		color: $woocommerce__color-success;
+	}
+
+	&.short {
+		color: $woocommerce__color-error;
+	}
+
+	&.bad {
+		color: $woocommerce__color-error;
+	}
+
+	&.good {
+		color: $woocommerce__color-info;
+	}
+}
+
+.required {
+	color: red;
+}
+
+/**
+ * Notices
+ */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments {
+	@include clearfix;
+	background-color: $woocommerce__color-success;
+	clear: both;
+	color: #fff;
+	padding: 15px 30px;
+	width: 100%;
+	border-radius: 3px;
+	margin-bottom: 25px;
+
+	&:before {
+		content: '\e959';
+		font-family: 'FarmartIcon';
+		padding-right: 5px;
+	}
+
+	a {
+		color: #fff;
+		float: right;
+		display: inline-block;
+		margin-left: 10px;
+		box-shadow: inset 0 0 0 transparent, inset 0 -1px 0 #fff;
+	}
+}
+
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments {
+	background-color: $woocommerce__color-info;
+}
+
+.woocommerce-noreviews,p.no-comments {
+	&:before {
+		display: none;
+	}
+}
+
+.woocommerce-error {
+	background-color: $woocommerce__color-error;
+	list-style: none;
+
+	li {
+		padding-left: 20px;
+	}
+
+	&:before {
+		content: '\e955';
+		position: absolute;
+	}
+}
+
+p.woocommerce-notice {
+	background-color: #ccc;
+	color: #fff;
+	padding: 15px 30px;
+	border-radius: 3px;
+}
+
+p.woocommerce-notice--success {
+	background-color: $woocommerce__color-success;
+}
+
+.demo_store {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	padding: 1em;
+	background-color: $woocommerce__color-info;
+	z-index: 9999;
+}
+
+// Excerpt
+.woocommerce {
+	.woocommerce-product-details__short-description {
+		.farmart-list {
+			li {
+				margin-bottom: 2px;
+
+				&:before {
+					margin-right: 7px;
+				}
+			}
+		}
+	}
+}
+
+// WC Form
+.woocommerce {
+	form {
+		.form-row {
+			margin-bottom: 10px;
+
+			input {
+				width: 100%;
+				color: #000;
+				padding: 7px 15px;
+			}
+
+			input[type=radio] ,
+			input[type=checkbox] {
+				width: auto;
+			}
+
+			.select2-container--default {
+				.select2-selection--single {
+					border-color: #ddd;
+					height: 50px;
+					border-radius: 3px;
+
+					.select2-selection__rendered {
+						line-height: 50px;
+						padding-left: 15px;
+						color: #000;
+					}
+
+					.select2-selection__arrow {
+						height: 48px;
+						right: 10px;
+					}
+
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+		}
+
+		.form-row-first,
+		.form-row-last {
+			width: 50%;
+			float: left;
+		}
+
+		.form-row-first {
+			padding-right: 15px;
+		}
+
+		.form-row-last {
+			padding-left: 15px;
+		}
+
+		&.woocommerce-form-register {
+			.form-row {
+				> * {
+					display: block;
+				}
+
+				input[type=radio] ,
+				input[type=checkbox] {
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+// Label for checkbox
+.woocommerce {
+	.woocommerce-form__label-for-checkbox {
+		position: relative;
+		color: #000;
+		cursor: pointer;
+
+		input {
+			position: absolute;
+			opacity: 0;
+
+			&:checked + span {
+				&:before {
+					border-color: var( --fm-color-primary );
+				}
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+		span:not(.required) {
+			position: relative;
+		//	display: inline-block;
+			padding-left: 25px;
+
+			&:before {
+				content: '';
+				width: 14px;
+				height: 14px;
+				border: 1px solid #cccccc;
+				position: absolute;
+				left: 0;
+				top: 2px;
+			}
+
+			&:after {
+				font-size: 9px;
+				content: '\e934';
+				font-family: 'FarmartIcon';
+				position: absolute;
+				top: 2px;
+				left: 3px;
+				color: var( --fm-color-primary );
+				opacity: 0;
+				font-weight: 700;
+			}
+		}
+	}
+
+	ul.payment_methods,
+	ul.woocommerce-shipping-methods {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		> li {
+			> label {
+				position: relative;
+				padding-left: 25px;
+				cursor: pointer;
+
+				&:before {
+					content: '';
+					width: 14px;
+					height: 14px;
+					border: 1px solid #cccccc;
+					position: absolute;
+					left: 0;
+					top: 2px;
+				}
+
+				&:after {
+					font-size: 9px;
+					content: '\e934';
+					font-family: 'FarmartIcon';
+					position: absolute;
+					top: 2px;
+					left: 3px;
+					color: var( --fm-color-primary );
+					opacity: 0;
+					font-weight: 700;
+				}
+
+				&.input-type-hidden {
+					padding-left: 20px;
+
+					&:before {
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+						top: 7px;
+						left: 5px;
+					}
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+
+			> input {
+				position: absolute;
+				opacity: 0;
+
+				&:checked + label {
+					&:before {
+						border-color: var( --fm-color-primary );
+					}
+
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Wishlist
+.woocommerce-wishlist .wishlist-title {
+	display: none;
+}
+
+#yith-wcwl-popup-message {
+	display: none !important;
+}
+
+.yith_wcwl_wishlist_footer {
+	> div {
+		margin-bottom: 0;
+	}
+
+	h4.yith-wcwl-share-title {
+		font-size: 14px;
+		color: #555;
+		margin: 0 14px 0 0;
+	}
+
+	.yith-wcwl-share {
+		float: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: 0;
+
+		ul {
+			li {
+				margin-left: 3px;
+
+				a {
+					font-size: 15px;
+					min-width: 35px;
+					min-height: 35px;
+					line-height: 25px;
+				}
+			}
+		}
+	}
+}
+
+// Order Tracking
+.woocommerce {
+	.woocommerce-form-track-order {
+		background-color: #f7f7f7;
+		border-radius: 3px;
+		padding: 35px 30px 40px;
+	}
+
+	p.form-row {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 18px;
+
+		label {
+			font-size: 14px;
+			color: #666666;
+		}
+
+		button {
+			margin-top: 8px;
+			height: 50px;
+			width: 100%;
+		}
+	}
+}
+
+// Compare
+// Compare
+.yith_woocompare_colorbox {
+	border-radius: 3px;
+
+	#cboxTopCenter,
+	#cboxTopLeft,
+	#cboxTopRight,
+	#cboxMiddleLeft,
+	#cboxMiddleRight,
+	#cboxBottomLeft,
+	#cboxBottomCenter,
+	#cboxBottomRight {
+		display: none;
+	}
+
+	#cboxClose {
+		background: none;
+		top: 10px;
+		right: 20px;
+		height: 30px;
+		bottom: auto;
+		text-indent: inherit;
+		overflow: hidden;
+		color: #ffffff;
+		position: fixed;
+
+		&:before {
+			content: '\e92a';
+			font: normal normal normal 18px/1 FarmartIcon;
+		}
+	}
+}
+
+.admin-bar {
+	.yith_woocompare_colorbox {
+		#cboxClose {
+			top: 40px;
+		}
+	}
+}
+
+// Woocommerce Loading
+.woocommerce {
+	.blockUI.blockOverlay {
+		background-color: rgba(255, 255, 255, 0.7) !important;
+		opacity: 1 !important;
+		background-image: none !important;
+		&:after {
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-image: none;
+			z-index: 999;
+			color: transparent !important;
+			font-size: 0;
+			border-width: 1px;
+			border-color: var( --fm-color-primary ) transparent var( --fm-color-primary ) transparent;
+			-webkit-border-radius: 50%;
+			border-style: solid;
+			-webkit-animation: lds-dual-ring 0.5s linear infinite;
+			animation: lds-dual-ring 0.5s linear infinite;
+			content: "";
+			width: 30px;
+			height: 30px;
+			font-weight: 400;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+}

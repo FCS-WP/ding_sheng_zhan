@@ -1,0 +1,1080 @@
+// Table screen
+@media (max-width: 1680px) and (min-width: 1340px) {
+	.fm-header-recently-viewed {
+		position: static;
+
+		.recently-viewed-inner {
+			padding: 0;
+		}
+
+		&:hover {
+			.recently-viewed-inner {
+				top: calc(100% - 14px);
+			}
+		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.fm-elementor-product-deals-carousel-3,
+	.farmart-testimonial-banner,
+	.farmart-testimonial,
+	.farmart-slides-wrapper {
+		&.navigation-dots,
+		&.navigation-none {
+			.slick-arrow {
+				display: none !important;
+			}
+		}
+
+		&.navigation-arrows,
+		&.navigation-none {
+			.slick-dots {
+				display: none !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.farmart-testimonial .box-item--inner{
+		box-shadow: none;
+		border: 1px solid #eee;
+	}
+
+	.farmart-product-categories-list .product-cats--big{
+		flex-basis: 33.33%;
+	}
+
+	.farmart-faqs{
+		margin: 0 -15px;
+	}
+
+	.farmart-testimonial-2 {
+		.slick-dots {
+			background-color: #fff;
+			padding: 40px 0 30px;
+			position: relative;
+		}
+	}
+
+	.fm-content-recently-viewed .slick-dots {
+		bottom: -50px;
+	}
+
+	.fm-product-deals-day {
+		.slick-dots {
+			bottom: 30px;
+		}
+	}
+
+	.farmart-tab-list {
+		.tab__nav {
+			.box-nav{
+				&:nth-last-child(2),
+				&:nth-last-child(3){
+					.box-content {
+						left: auto;
+						right: -53px;
+
+						&:before,
+						&:after {
+							right: 0;
+							left: auto;
+							margin-right: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.farmart-testimonial-3 {
+		.row-flex {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.farmart-testimonial-3__list {
+			margin-left: -7.5px;
+			margin-right: -7.5px;
+		}
+
+		.box-item {
+			padding-left: 7.5px;
+			padding-right: 7.5px;
+		}
+
+		.box-item--inner {
+			padding: 30px;
+		}
+
+		.box-item__image {
+			.farmart-icon {
+				top: 30px;
+				right: 40px;
+			}
+		}
+
+		&.farmart-nav-outside {
+			span.slick-prev-arrow,
+			span.slick-next-arrow {
+				top: -75px;
+			}
+		}
+	}
+
+	.farmart-image-box__wrapper {
+		justify-content: flex-start;
+	}
+
+	.farmart-product-categories-carousel {
+		.slick-slide {
+			min-height: 150px;
+		}
+	}
+}
+
+@media (max-width: 1024px){
+	.farmart-tab-list{
+		.tab__nav{
+			overflow: auto;
+			overflow-y: hidden;
+			white-space: nowrap;
+			position: static;
+			padding-bottom: 20px;
+		}
+
+		.box-nav{
+			display: inline-block;
+			margin-right: 30px;
+			vertical-align: text-top;
+
+			&.active{
+				display: inline-block;
+			}
+		}
+	}
+
+	.fm-product-deals-day {
+		ul.products.slick-dotted {
+			padding-bottom: 70px;
+		}
+	}
+
+	.fm-product-with-category .header-cat .header-link {display: inline-flex;}
+
+}
+
+// Table screen
+@media (max-width: 1024px) and (min-width: 768px) {
+	.farmart-testimonial{
+		&.navigation-tablet-dots,
+		&.navigation-tablet-none {
+			.box-arrow {
+				display: none !important;
+			}
+		}
+	}
+
+	.farmart-testimonial-banner,
+	.farmart-testimonial,
+	.farmart-slides-wrapper {
+		&.navigation-tablet-dots,
+		&.navigation-tablet-none {
+			.slick-arrow {
+				display: none !important;
+			}
+		}
+
+		&.navigation-tablet-arrows,
+		&.navigation-tablet-none {
+			.slick-dots {
+				display: none !important;
+			}
+		}
+	}
+
+	.fm-product-tab-carousel{
+		.tabs-banner{
+			flex-basis: 33.33%;
+		}
+	}
+
+	.fm-product-tab-carousel--vertical.has-banner .tabs-content{
+		max-width: 66.66%;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.farmart-list-links.fm-link-style-horizontal {
+		flex-direction: column;
+	}
+
+	.farmart-faqs{
+		.tabs-nav{
+			overflow: auto;
+			overflow-y: hidden;
+			white-space: nowrap;
+			display: block;
+			position: static;
+			padding-bottom: 20px;
+
+			li{
+				display: inline-block;
+				margin-right: 30px;
+			}
+		}
+
+		.button-wrapper{
+			margin-top: 0;
+		}
+
+		.col-left{
+			padding-right: 10px;
+		}
+
+		.col-right{
+			padding-left: 10px;
+		}
+
+		.tabs-content{
+			margin-top: 35px;
+		}
+	}
+
+	.fm-product-deals-day,
+	.fm-products-carousel-with-category {
+		.products-content {
+			ul.products.slick-dotted {
+				padding: 0 0 35px 0;
+			}
+		}
+
+		.farmart-countdown {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+
+	.fm-product-deals-day {
+		.products-content{
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	.fm-product-deals-day {
+		.products-content {
+			border: none;
+		}
+	}
+
+	.fm-product-with-category {
+		ul.products {
+			border-top-color: #c9c9c9;
+
+			li.product {
+				border-right: none;
+				border-bottom: none;
+				border-color: #c9c9c9;
+
+				.product-inner {
+					border-width: 0 1px 1px 0;
+				}
+			}
+		}
+	}
+
+	.fm-product-deals-grid {
+		ul.products {
+			li.product {
+				.product-inner {
+					padding-bottom: 0;
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		.products-content .tabs-nav{
+			display: flex;
+			white-space: nowrap;
+			overflow: auto;
+		}
+	}
+
+	.woocommerce-products-header .fm-elementor-product-deals-carousel-3 ul.products li.product .product-bottom-box,
+	body:not(.catalog-view-list) .fm-elementor-product-deals-carousel-3 ul.products li.product .product-bottom-box {
+		padding: 0;
+	}
+
+	.fm-elementor-product-deals-carousel-3 {
+		ul.products {
+			li.product {
+				.farmart-countdown {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.fm-products-carousel-with-category {
+		.slick-list {
+			padding-right: 2px;
+			padding-left: 0;
+		}
+
+		ul.products li.product{
+			&:first-child.slick-current,
+			&.slick-current {
+				.product-inner {
+					border-left: 1px solid #c9c9c9;
+				}
+			}
+
+			&:last-child.slick-current {
+				.product-inner {
+					border-left: none;
+				}
+			}
+		}
+
+		.products-box {
+			border-left: 1px solid #c9c9c9;
+		}
+
+		&.farmart-border-type-2 {
+			.header-cat {
+				border: none;
+			}
+
+			.slick-list {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	.fm-elementor-product-deals-carousel,
+	.fm-products-carousel-with-category,
+	.fm-elementor-product-carousel {
+		.slick-track{
+			display: flex;
+
+			&:before,
+			&:after {
+				display: none;
+			}
+
+			.slick-slide {
+				height: inherit;
+
+				.product-inner {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.farmart-border-type-2 {
+		ul.products {
+			border: none;
+
+			li.product {
+				.product-inner {
+					border-width: 1px 1px 1px 0;
+					border-color: #c9c9c9;
+				}
+			}
+		}
+
+		.products-box {
+			border: none;
+		}
+	}
+
+	.farmart-testimonial-2 {
+		.box-item--inner {
+			flex-direction: column;
+		}
+
+		.box-item__image {
+			margin: 0 0 30px 0;
+		}
+	}
+
+	.fm-elementor-product-deals-carousel {
+		.slick-list {
+			padding-bottom: 90px;
+		}
+	}
+
+	.fm-product-tab-carousel,
+	.fm-product-tab-carousel-2,
+	.fm-product-tab-carousel-3 {
+		.tabs-panel {
+			ul.products {
+				border-left: 0;
+			}
+		}
+	}
+
+	.fm-product-tab-carousel-3 {
+		.slick-slide > div:not(:last-child) li.product:after {
+			background-color: #c9c9c9;
+		}
+
+		ul.products li.product .product-inner {
+		}
+
+		ul.products {
+			li.product {
+				.product-inner {
+					border-width: 1px 1px 0 0;
+					border-color: transparent;
+
+					&:hover {
+						border-color: #c9c9c9;
+					}
+				}
+			}
+		}
+	}
+
+	.fm-products-carousel-2 {
+		ul.products {
+			li.product {
+				&.slick-current {
+					.product-inner {
+						border-left: 1px solid #c9c9c9;
+					}
+				}
+			}
+		}
+	}
+
+	.fm-show-qty {
+		.fm-elementor-product-deals-carousel {
+			.slick-list {
+				padding-bottom: 180px;
+			}
+		}
+	}
+
+	.farmart-testimonial-banner__list {
+		width: 65%;
+	}
+
+	.farmart-tab-list {
+		.tab__nav {
+			white-space: normal;
+			flex-direction: column;
+			width: auto;
+			height: 500px;
+
+			&:before {
+				width: 4px;
+				height: 100%;
+				top: 0;
+				left: 8px;
+			}
+
+			.box-nav{
+				&:first-child,
+				&:last-child,
+				&:nth-last-child(2),
+				&:nth-last-child(3),
+				&:nth-last-child(4),
+				&:nth-last-child(5),
+				&:nth-last-child(6) {
+					.box-content {
+						left: auto;
+						right: 15px;
+						bottom: auto;
+
+						&:before,
+						&:after {
+							right: auto;
+							left: -45px;
+							bottom: auto;
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				&:last-child {
+					.tab-pointer {
+						right: auto;
+					}
+				}
+
+				.box-content {
+					left: 170px;
+					right: auto;
+					bottom: auto;
+
+					&:before,
+					&:after {
+						right: auto;
+						left: -45px;
+						bottom: auto;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.box-nav {
+			width: 100%;
+			margin-right: 0;
+
+			.circle {
+				width: 20px;
+    			height: 20px;
+				border-width: 3px;
+			}
+
+			.nav-title {
+				font-size: 14px;
+				margin: 0;
+			}
+		}
+
+		.box-content {
+			padding: 20px;
+			width: 60%;
+			flex-direction: column;
+			left: 100px;
+			top: -10px;
+
+			.box-img {
+				margin: 0 0 30px 0;
+				text-align: center;
+			}
+
+			&:before ,
+			&:after {
+				border-bottom-width: 20px;
+				border-left-width: 10px;
+				border-right-width: 10px;
+			}
+
+			&.active {
+				&:before,
+				&:after {
+					top: 10px;
+					margin-top: 0;
+					left: -35px;
+					transform: rotate(90deg);
+				}
+
+				&:after {
+					margin-left: 17px;
+				}
+			}
+		}
+
+		.tab-pointer {
+			top: 0;
+			left:auto;
+			display: flex;
+			text-align: left;
+			width: auto;
+
+			.nav-title {
+				width: 90px;
+			}
+
+			.circle {
+				margin: 0 10px 0 0;
+			}
+		}
+
+		br {
+			display: none;
+		}
+	}
+
+	.farmart-testimonial-3 {
+		.desc {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 782px){
+	.admin-bar {
+		.fm-search-form--mobile .top-content {
+			padding-top: 61px;
+		}
+
+		.farmart-menu-mobile .top-content {
+			padding-top: 69px;
+		}
+
+		.fm-cart--click {
+			.top-content {
+				padding-top: 74px;
+			}
+
+			.box-cart-wrapper {
+				.box-cart-content {
+					height: calc( 100vh - 146px);
+				}
+			}
+		}
+	}
+}
+
+// Mobile screen
+@media (max-width: 767px) {
+	.farmart-testimonial{
+		&.navigation-mobile-dots,
+		&.navigation-mobile-none {
+			.box-arrow {
+				display: none !important;
+			}
+		}
+	}
+
+	.fm-elementor-product-deals-carousel-3,
+	.farmart-testimonial-banner,
+	.farmart-testimonial,
+	.farmart-slides-wrapper {
+		&.navigation-mobile-dots,
+		&.navigation-mobile-none {
+			.slick-arrow {
+				display: none !important;
+			}
+		}
+
+		&.navigation-mobile-arrows,
+		&.navigation-mobile-none {
+			.slick-dots {
+				display: none !important;
+			}
+		}
+	}
+
+	.fm-elementor-product-deals-carousel-2 .products-content .woocommerce{
+		display: block;
+
+		> *{
+			width: 100%;
+		}
+	}
+
+	.fm-elementor-product-deals-carousel-2 {
+		ul.products {
+			li.product {
+				.product-inner {
+    				flex-direction: column;
+					border-width: 1px 0 0 1px;
+
+					.product-details,
+					.product-thumbnail {
+						width: 100%;
+					}
+				}
+				.product-bottom-box {
+					display: block;
+				}
+
+				.quantity {
+					margin-bottom: 0;
+					margin-right: 10px;
+					.qty-box {
+						width: 105px;
+					}
+				}
+
+				.product-button {
+					display: flex;
+					flex-wrap: inherit;
+					margin-top: 10px;
+
+					.quantity_button {
+						line-height: 40px;
+						padding: 0 8px;
+					}
+				}
+
+				&:hover {
+					border: none;
+				}
+			}
+
+			.slick-current {
+				> div:last-child {
+					.product-inner {
+						border-bottom: 1px solid #c9c9c9;
+					}
+				}
+			}
+		}
+
+		.slick-slide {
+			border: none;
+		}
+	}
+
+
+	body:not(.catalog-view-list) {
+		.fm-elementor-product-deals-carousel-2 {
+			ul.products {
+				li.product {
+					.product-bottom-box {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	.fm-elementor-product-deals-carousel-3 {
+		ul.products {
+			li.product {
+				.price {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+
+	.farmart-heading .title{
+		font-size: 24px;
+	}
+
+	.fm-promotion {
+		.content {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.left-content {
+			margin-bottom: 10px;
+		}
+
+		.right-content {
+			padding: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	.farmart-team-carousel .row {
+		margin: 0;
+	}
+
+	.fm-product-deals-grid .products-content ul.products{
+		overflow: hidden !important;
+	}
+
+	.fm-product-deals-day {
+		.cat-header {
+			.header-content {
+				justify-content: space-between;
+				width: 100%;
+			}
+		}
+
+		ul.products {
+			li.product {
+				position: relative;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 1px;
+					width: 1px;
+					height: 100%;
+					background-color: #eee;
+				}
+
+				&.slick-current {
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.fm-content-recently-viewed {
+		.slick-dots {
+			bottom: -40px;
+		}
+	}
+
+	.fm-product-categories-carousel-2,
+	.farmart-product-categories-list,
+	.farmart-product-mutil-categories-carousel,
+	.farmart-product-categories-carousel{
+		.cat-header {
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			h3 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.fm-products-carousel {
+		ul.products {
+			display: flex;
+		}
+	}
+
+	.farmart-product-categories-list {
+		.product-cats--big {
+			.cat-item a {
+				flex-direction: initial;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			.cat-thumb {
+				margin: 0 30px 0 0;
+			}
+		}
+
+		.product-cats--lists{
+			.cat-item {
+				.cat-text{
+					margin: 0;
+				}
+			}
+		}
+
+		.product-cats {
+			.cat-item:hover {
+				.cat-name:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.farmart-brands-carousel {
+		.brand-item {
+			padding: 0 5px;
+		}
+
+		.slick-dots {
+			bottom: 30px;
+		}
+	}
+
+	.farmart-testimonial-2 .slick-dots {
+		padding: 0 0 20px 0;
+	}
+
+	.farmart-testimonial-banner {
+		.box-item--inner {
+			flex-direction: column;
+		}
+
+		.box-item__image {
+			margin: 0 0 20px 0;
+		}
+	}
+
+	.farmart-testimonial-banner__list {
+		width: 100%;
+	}
+
+	.farmart-product-categories-grid {
+		.cat-item__inner {
+			flex-direction: column;
+
+			.cat-text {
+				order: 2;
+
+				.farmart-icon {
+					display: none;
+				}
+			}
+
+			.cat-thumb {
+				order: 1;
+				margin-bottom: 15px;
+			}
+		}
+
+		.categories-box {
+			padding-left: 7px;
+			padding-right: 7px;
+		}
+
+		.cat-item {
+			padding-left: 7px;
+			padding-right: 7px;
+			margin-bottom: 15px;
+
+			&.cat-item--link {
+				width: 100%;
+				max-width: 100%;
+
+				.link-all--text {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.fm-product-with-category {
+		.content-wrapper {
+			flex-direction: column;
+		}
+
+		.sidebar-box {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.fm-vertical-tab {
+		display: none !important;
+	}
+
+	.fm-product-tab-carousel-3 {
+		.tabs-header {
+			.title {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.farmart-testimonial {
+        .box-item--inner {
+            height: 100%;
+        }
+
+        .box-dots {
+            top: auto;
+            bottom: 0;
+            width: 100%;
+
+            .slick-dots {
+                text-align: center;
+            }
+        }
+	}
+
+
+	.farmart-testimonial-banner,
+	.farmart-testimonial-2 {
+		padding-bottom: 0;
+	}
+
+	.farmart-testimonial-3 {
+		.box-item__image {
+			.farmart-svg-icon {
+				display: none;
+			}
+		}
+	}
+
+	.fm-content-recently-viewed .product-list li.product{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.farmart-image-carousel {
+		.heading {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.slick-list {
+			margin-left: -7.5px;
+			margin-right: -7.5px;
+		}
+
+		.slick-slide {
+			margin-left: 7.5px;
+			margin-right: 7.5px;
+		}
+	}
+
+	.fm-product-deals-day {
+		.cat-header {
+			.cat-title {
+				align-items: flex-start;
+			}
+		}
+
+		ul.products {
+			li.product {
+				&.slick-current {
+					.product-inner {
+						border-left: 1px solid #c9c9c9;
+					}
+				}
+			}
+		}
+	}
+
+	.farmart-hover-box-shadow {
+		.slick-list {
+			padding-bottom: 35px;
+		}
+	}
+
+	.fm-products-carousel-with-category {
+		ul.products {
+			li.product {
+				.product-inner {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.farmart-image-box__wrapper {
+		flex-wrap: wrap;
+	}
+
+	.farmart-image-box__items {
+		margin-bottom: 15px;
+	}
+
+	.farmart-team-carousel {
+		.box-member--inner {
+			padding: 0;
+		}
+	}
+
+	.farmart-product-categories-carousel {
+		.slick-slide {
+			min-height: auto;
+			height: inherit;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.farmart-tab-list {
+		.box-nav {
+			.nav-title {
+				font-size: 12px;
+			}
+
+			.box-content{
+				&:before,
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

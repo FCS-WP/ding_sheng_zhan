@@ -1,0 +1,292 @@
+/* Slider */
+.slick-slider {
+	position: relative;
+
+	display: block;
+	box-sizing: border-box;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+
+	.slick-arrow{
+		transition: ease .3s;
+	}
+
+	&:hover{
+		.slick-arrow{
+			opacity: 1;
+		}
+	}
+}
+
+.slick-list {
+	position: relative;
+
+	display: block;
+	overflow: hidden;
+
+	margin: 0;
+	padding: 0;
+}
+
+.slick-list:focus {
+	outline: none;
+}
+
+.slick-list.dragging {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	top: 0;
+	left: 0;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+	display: table;
+
+	content: '';
+}
+
+.slick-track:after {
+	clear: both;
+}
+
+.slick-loading .slick-track {
+	visibility: hidden;
+}
+
+.slick-slide {
+	display: none;
+	float: left;
+
+	height: 100%;
+	min-height: 1px;
+}
+
+.slick-slide:hover,
+.slick-slide:focus {
+	outline: 0;
+}
+
+[dir='rtl'] .slick-slide {
+	float: right;
+}
+
+.slick-slide img {
+	display: block;
+}
+
+.slick-slide.slick-loading img {
+	display: none;
+}
+
+.slick-slide.dragging img {
+	pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+	display: block;
+}
+
+.slick-loading .slick-slide {
+	visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+	display: block;
+	height: auto;
+	border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+	display: none;
+}
+
+/* Arrows */
+span.slick-prev-arrow,
+span.slick-next-arrow {
+	font-size: 11px;
+	position: absolute;
+	top: 50%;
+	display: block;
+	transition: ease 0.5s;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	padding: 0;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: #222222;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	background-color: #ffffff;
+	outline: none;
+	z-index: 99;
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&.slick-disabled{
+		cursor: not-allowed;
+	}
+
+	&.farmart-svg-icon {
+		svg {
+			position: relative;
+			top: -1px;
+		}
+	}
+
+}
+
+.slick-prev-arrow {
+	left: 30px;
+}
+
+[dir='rtl'] .slick-prev-arrow {
+	right: 30px;
+	left: auto;
+}
+
+[dir='rtl'] .slick-prev-arrow:before {
+	content: '\e93c';
+}
+
+.slick-next-arrow {
+	right: 30px;
+}
+
+[dir='rtl'] .slick-next-arrow {
+	right: auto;
+	left: 30px;
+}
+
+[dir='rtl'] .slick-next-arrow:before {
+	content: '\e93b';
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+	margin-bottom: 30px;
+}
+
+.slick-dots {
+	position: absolute;
+	display: none;
+	//display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	bottom: 20px;
+
+	li {
+		position: relative;
+		display: inline-block;
+		margin: 0 7px;
+		padding: 0;
+		cursor: pointer;
+
+		button {
+			font-size: 0;
+			line-height: 0;
+			display: block;
+			width: 8px;
+			height: 8px;
+			padding: 0;
+			cursor: pointer;
+			color: transparent;
+			border: 0;
+			outline: none;
+			background: transparent;
+
+			&:hover,
+			&:focus {
+				outline: none;
+				background: transparent;
+			}
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: #dddddd;
+				transition: 0.5s;
+				content: '';
+				text-align: center;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			&:hover:before {
+				background-color: var( --fm-background-color-primary );
+			}
+		}
+
+		&.slick-active button:before {
+			background-color: var( --fm-background-color-primary );
+		}
+	}
+}
+
+// Custom Option
+.farmart-slides-wrapper {
+	.slick-dots{
+		bottom: 30px;
+
+		li {
+			margin: 0 5px;
+
+			button:before{
+				background-color: #fff;
+			}
+
+			&.slick-active button:before {
+				background-color: var( --fm-background-color-primary );
+			}
+		}
+	}
+
+	span.slick-prev-arrow,
+	span.slick-next-arrow{
+		&:hover{
+			background-color: var( --fm-background-color-primary );
+			color: var( --fm-background-text-color-primary );
+			border-color: transparent;
+		}
+	}
+}

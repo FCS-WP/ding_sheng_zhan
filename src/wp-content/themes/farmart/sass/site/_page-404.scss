@@ -1,0 +1,29 @@
+.error404{
+	.site-content {
+		padding-top: 150px;
+		padding-bottom: 140px;
+	}
+
+	.error-404{
+		max-width: 570px;
+		margin: auto;
+		text-align: center;
+	}
+
+	.page-title{
+		margin: 0 0 15px;
+	}
+
+	.description{
+		margin-bottom: 25px;
+
+		a {
+			color: var( --fm-color-primary );
+		}
+	}
+
+	.search-form{
+		max-width: 370px;
+		margin: auto;
+	}
+}

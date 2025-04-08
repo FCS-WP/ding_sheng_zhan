@@ -1,0 +1,281 @@
+.farmart-slides .slick-slide > div:not(.slick-slide-inner) {
+	flex-basis: 100%;
+	width: 100%;
+}
+
+.farmart-slides .slick-slide:focus {
+	outline: 0;
+}
+
+.farmart-slides  {
+	.item-slider {
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		height: 400px;
+		width: 100%;
+
+		&:not(:first-child){
+			display: none;
+		}
+
+		&.slick-slide{
+			display: flex;
+		}
+	}
+
+	.slick-slide-bg {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		min-width: 100%;
+		min-height: 100%;
+		transition-property: transform;
+	}
+
+	.slick-slide-inner {
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+	}
+}
+
+// Element
+.farmart-slide-content {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+
+	.animated {
+		-webkit-animation-duration: 1.5s;
+		animation-duration: 1.5s;
+		animation-timing-function: cubic-bezier(0.65, 0.8, 0.44, 0.99);
+	}
+}
+
+.farmart-slide-subtitle {
+	color: var( --fm-color-primary );
+	margin-bottom: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.farmart-slide-heading {
+	color: $color__dark;
+	font-size: 30px;
+	line-height: (40/30);
+	margin-bottom: 11px;
+	font-weight: 700;
+}
+
+.farmart-slide-description {
+	margin-bottom: 34px;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.farmart-slide-button {
+	color: var( --fm-background-text-color-secondary );
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 14px 23px;
+	text-align: center;
+	background-color: var( --fm-background-color-secondary );
+	border-radius: 3px;
+	display: inline-flex;
+	align-items: center;
+	transition: ease .5s;
+
+	.farmart-svg-icon{
+		font-size: 10px;
+		padding-left: 10px;
+	}
+
+	&:hover,
+	&:focus {
+		color: var( --fm-background-text-color-secondary );
+	}
+}
+
+.farmart-slide-price-box {
+	font-size: 42px;
+	line-height: 1;
+	color: #e84506;
+	font-weight: 700;
+	position: relative;
+	width: fit-content;
+	margin-bottom: 30px;
+
+	.field-price{
+		display: inline-block;
+	}
+
+	.unit{
+		position: absolute;
+		font-size: 24px;
+	}
+}
+
+// Arrow content
+.farmart-slides-wrapper {
+	.slick-prev-arrow{
+		left: 0;
+	}
+	.slick-next-arrow{
+		right: 0;
+	}
+
+	.arrows-container {
+		height: 100%;
+		position: relative;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+
+	.arrows-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.slick-prev-arrow,
+	.slick-next-arrow{
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
+	}
+
+	&.align-icon-left {
+		.farmart-slide-button {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.slick-dotted.slick-slider{
+		margin-bottom: 0;
+	}
+}
+
+.farmart-arrow-bottom {
+	span.slick-prev-arrow,
+	span.slick-next-arrow {
+		top: auto;
+		bottom: 5px;
+		left: auto;
+		right: 22px;
+	}
+
+	span.slick-prev-arrow {
+		right: 60px;
+	}
+}
+
+
+.farmart-slides-wrapper--tabs{
+	position: relative;
+}
+
+.farmart-slides__tab{
+	border-width: 1px 0 0 1px ;
+	border-color: #eee;
+	border-style: solid;
+
+	&.slick-slider{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		padding: 0;
+		background-color: #fff;
+	}
+
+	li.tab-item{
+	    display: table-cell;
+    	float: initial;
+		padding: 15px 20px;
+		border-width: 0 1px 1px 0;
+		border-color: #eee;
+		border-style: solid;
+		cursor: pointer;
+		text-align: center;
+
+		&.slick-current{
+			font-weight: 700;
+			color: #222222;
+		}
+	}
+}
+
+
+@media (min-width: 1200px){
+	.farmart-slides__tab{
+		width: 1170px;
+	}
+}
+
+@media (max-width: 1200px){
+	.farmart-slides__tab{
+		width: auto;
+		padding: 0 15px;
+	}
+}
+
+@media (min-width: 768px){
+	.farmart-slides-wrapper--tabs{
+		&.farmart-slides-wrapper .slick-dots{
+			bottom: 65px;
+		}
+
+		span.slick-prev-arrow,
+		span.slick-next-arrow{
+			top: calc(50% - 65px);
+    		transform: translate(0, calc(-50% + 35px));
+		}
+	}
+}
+
+@media (max-width: 767px){
+	ul.farmart-slides__tab{
+		display: none;
+	}
+}
+
+
+
+
+// Position
+.farmart--v-position-top .slick-slide-inner {
+	align-items: flex-start;
+}
+
+.farmart--v-position-bottom .slick-slide-inner {
+	align-items: flex-end;
+}
+
+.farmart--v-position-middle .slick-slide-inner {
+	align-items: center;
+}
+
+.farmart--h-position-left .slick-slide-inner {
+	justify-content: flex-start;
+}
+
+.farmart--h-position-right .slick-slide-inner {
+	justify-content: flex-end;
+}
+
+.farmart--h-position-center .slick-slide-inner {
+	justify-content: center;
+}

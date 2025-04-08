@@ -1,0 +1,117 @@
+.farmart-list-box,
+.farmart-list-box__wrapper .box-item {
+	border-color: #ececec;
+	border-style: solid;
+}
+
+.farmart-list-box__wrapper{
+	display: flex;
+	flex-wrap: wrap;
+
+	.box-item{
+		padding: 24px 50px 31px;
+		flex: 0 0 33.3333333333%;
+		max-width: 33.3333333333%;
+		border-width: 0 1px 1px 0;
+		transition: ease .5s;
+		&:hover{
+			box-shadow: 0 0 40px rgba(0,0,0,.1);
+		}
+	}
+
+	.box-item__icon{
+		margin-bottom: 14px;
+		position: relative;
+
+		.farmart-svg-icon{
+			font-size: 55px;
+			color: var( --fm-color-primary );
+		}
+
+		.number{
+			font-size: 45px;
+			color: #eeeeee;
+			font-weight: 700;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	.box-item__content{
+		.title{
+			margin: 0 0 13px;
+		}
+	}
+}
+
+.farmart-list-box{
+	border-width: 1px 0 0 1px;
+
+	&.content-horizontal{
+		.farmart-svg-icon{
+			font-size: 34px;
+		}
+
+		.box-item{
+			display: flex;
+			align-items: center;
+			padding: 30px 37px 26px;
+
+			&:hover{
+				box-shadow: none;
+			}
+		}
+
+		.box-item__icon{
+			flex: none;
+			margin-right: 20px;
+			margin-bottom: 0;
+		}
+
+		.box-item__content{
+			.title{
+				text-transform: uppercase;
+				margin: 0 0 3px;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 1920px) and (min-width: 1025px) {
+	@for $i from 1 through 4 {
+		.elementor-widget-farmart-list-box-2.columns-#{$i},
+		.elementor-widget-farmart-list-box.columns-#{$i} {
+			.box-item{
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	@for $i from 1 through 4 {
+		.elementor-widget-farmart-list-box-2.columns--tablet#{$i},
+		.elementor-widget-farmart-list-box.columns--tablet#{$i} {
+			.box-item{
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	@for $i from 1 through 4 {
+		.elementor-widget-farmart-list-box-2.columns--mobile#{$i},
+		.elementor-widget-farmart-list-box.columns--mobile#{$i} {
+			.box-item{
+				flex: 0 0 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}

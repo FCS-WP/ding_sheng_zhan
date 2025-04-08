@@ -1,0 +1,84 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+/*--------------------------------------------------------------
+# Page Header
+--------------------------------------------------------------*/
+@import "page-header/page-header";
+
+/*--------------------------------------------------------------
+# Coming soon
+--------------------------------------------------------------*/
+@import "maintenance";
+
+/*--------------------------------------------------------------
+# 404
+--------------------------------------------------------------*/
+@import "page-404";
+
+/*--------------------------------------------------------------
+## Default
+--------------------------------------------------------------*/
+@import "default/default";
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "header/header";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "footer/footer";
+
+.primary-color {
+	color: var( --fm-color-primary );
+}
+
+.backtotop{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	display: block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	background-color: #222222;
+	border-radius: 3px;
+	opacity: 0;
+	z-index: -99;
+	transition: ease .3s;
+
+	&.show{
+		opacity:1;
+		z-index: 999;
+	}
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.farmart-svg-icon {
+	display: inline-flex;
+
+	svg {
+		vertical-align: -0.125em;
+		width: 1em;
+		height: 1em;
+		display: inline-block;
+		fill: currentColor;
+	}
+}

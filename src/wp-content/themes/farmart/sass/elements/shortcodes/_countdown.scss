@@ -1,0 +1,36 @@
+.farmart-time-countdown{
+	display: flex;
+	flex-wrap: wrap;
+
+	.timer{
+		display: block;
+		margin: 0 18px;
+		position: relative;
+
+		.text{
+			display: block;
+			text-align: center;
+		}
+
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+
+	.digits{
+		font-size: 45px;
+		font-weight: 700;
+		color: var( --fm-color-primary );
+		display: block;
+		line-height: 1;
+		margin-bottom: 3px;
+	}
+
+	.divider{
+		position: absolute;
+		top: 0;
+		right: -17px;
+		font-size: 26px;
+		color: #aaaaaa;
+	}
+}

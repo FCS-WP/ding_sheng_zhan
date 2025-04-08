@@ -1,0 +1,40 @@
+.farmart-quotes{
+	.farmart-svg-icon{
+		font-size: 28px;
+		color: var( --fm-color-primary );
+		line-height: 1;
+		margin-bottom: 23px;
+		display: block;
+	}
+
+	.box-content{
+		font-size: 18px;
+		color: $color__dark;
+		font-weight: 700;
+		line-height: (26/18);
+		margin-bottom: 12px;
+	}
+
+	.author{
+		display: flex;
+		align-items: center;
+
+		.name{
+			margin: 0;
+		}
+
+		> *:not(:last-child):after{
+			content: '-';
+			display: inline-block;
+			margin: 0 3px;
+		}
+	}
+
+	&.farmart-icon-vertical {
+		display: flex;
+
+		.farmart-svg-icon{
+			margin-right: 40px;
+		}
+	}
+}

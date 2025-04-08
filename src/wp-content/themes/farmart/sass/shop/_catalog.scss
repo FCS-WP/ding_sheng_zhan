@@ -1,0 +1,823 @@
+/**
+ * Catalog
+ */
+
+.fm-catalog-page{
+	.catalog-sidebar,
+	.content-area {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.site-content {
+		padding-bottom: 110px;
+	}
+}
+
+// Catalog Product Carousel
+.fm-catalog-carousel {
+	margin-bottom: 30px;
+	clear: both;
+
+	.carousel-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		h3 {
+			margin: 0;
+
+			.farmart-svg-icon {
+				font-size: 21px;
+				color: var( --fm-color-primary );
+				margin-right: 14px;
+			}
+		}
+
+		.cat-all {
+			position: relative;
+			padding: 0 15px;
+			color: #888;
+			flex: none;
+
+			.farmart-svg-icon {
+				font-size: 10px;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.catalog-carousel__wrapper {
+		margin: 0;
+		border: 1px solid #eee;
+
+		> li {
+			list-style-type: none;
+			float: left;
+		}
+	}
+
+	.slick-list {
+		z-index: 1;
+	}
+
+	span.slick-prev-arrow, span.slick-next-arrow {
+		font-size: 20px;
+		border-color: transparent;
+		background-color: transparent;
+	}
+
+	.fm-elementor-product-carousel {
+		.slick-list{
+			padding: 0 2px 180px;
+			margin-bottom: -180px;
+		}
+	}
+}
+
+.fm-catalog-products{
+	.catalog-carousel__wrapper {
+		padding: 21px 30px 48px;
+	}
+
+	ul.products{
+		margin-left: -3px;
+		margin-bottom: 0;
+	}
+
+	span.slick-prev-arrow {
+		left: -15px;
+	}
+
+	span.slick-next-arrow {
+		right: -15px;
+	}
+
+	.slick-dots{
+		bottom: -2px;
+    	position: inherit;
+	}
+}
+
+// Catalog Banners Categories
+.fm-catalog-categories {
+	.catalog-categories__wrapper {
+		padding: 40px 40px 48px;
+
+		.cat-item{
+			padding: 0 15px;
+		}
+
+		.cat-content {
+			margin-bottom: 18px;
+
+			&:hover {
+				.box-title {
+					color: var( --fm-color-primary );
+					--farmart-color-box-shadow: var( --fm-color-primary );
+
+					&:before {
+						width: 100%;
+						left: 0;
+					}
+				}
+			}
+
+			.cat-thumbnail {
+				margin-bottom: 18px;
+				display: block;
+			}
+
+			.box-title {
+				font-weight: 700;
+				color: #222222;
+				text-transform: uppercase;
+				transition: ease .4s;
+
+				display: inline;
+				--farmart-color-box-shadow: white;
+				box-shadow: inset 0 -0.125em white, inset 0 -0.2em var(--farmart-color-box-shadow);
+			}
+		}
+
+		.child-list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 4px;
+
+				&:hover {
+					a {
+						color: var( --fm-color-primary );
+
+						&:before {
+							width: 100%;
+							left: 0;
+						}
+					}
+				}
+
+				a{
+					color: #888;
+					position: relative;
+
+					&:before {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 0;
+						width: 0;
+						right: 0;
+						border-bottom: 1px solid;
+						-webkit-transition: width ease .5s;
+						transition: width ease .5s;
+					}
+				}
+
+				&.parent {
+					margin-top: 15px;
+
+					a {
+						color: var( --fm-color-primary );
+
+						.farmart-svg-icon {
+							font-size: 9px;
+							margin-left: 5px;
+							position: relative;
+							top: -2px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	span.slick-prev-arrow {
+		left: 15px;
+	}
+
+	span.slick-next-arrow {
+		right: 15px;
+	}
+}
+
+.fm-catalog-categories--other-style{
+	.catalog-categories__wrapper{
+		border: none;
+		padding: 0;
+
+		.cat-thumbnail img{
+			margin: auto;
+		}
+
+		.cat-content{
+			text-align: center;
+		}
+
+		.cat-item{
+			border-left: 1px solid #eee;
+
+			&.slick-current{
+				border-color: transparent;
+			}
+		}
+	}
+
+	span.slick-prev-arrow {
+	    left: -15px;
+	}
+
+	span.slick-next-arrow {
+	    right: -15px;
+	}
+}
+
+/**
+ * Toolbar
+ */
+.catalog-toolbar {
+	margin-bottom: 20px;
+
+	.catalog-toolbar__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 21px;
+	}
+
+	.products-found,
+	+ .products-found {
+		color: $color__darker;
+		font-size: 21px;
+		font-weight: 700;
+
+		span {
+			color: var( --fm-color-primary );
+		}
+	}
+
+	.current-page {
+		color: #000;
+		display: flex;
+		align-items: center;
+
+		form {
+			margin: 0 6px;
+
+			input {
+				width: 30px;
+				height: 25px;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				text-align: center;
+				padding: 0;
+				color: #000;
+			}
+
+			input[type=number]::-webkit-inner-spin-button,
+			input[type=number]::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+	}
+
+	.catalog-toolbar__bottom {
+		padding: 15px 20px;
+		background-color: #f5f5f5;
+		border-radius: 3px;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		> .shop-view {
+			order: 2;
+		}
+
+		> .fm-catalog-ordering {
+			order: 1;
+		}
+	}
+
+	.woocommerce-ordering,
+	.per-page {
+		color: #000;
+		margin: 0 70px 0 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: 0;
+		}
+
+		& > li {
+			display: inline-block;
+			position: relative;
+			color: #999;
+
+			&.current {
+				color: #999;
+			}
+		}
+
+		.cancel-ordering {
+			display: none;
+		}
+
+		.current {
+			min-width: 60px;
+			display: inline-block;
+			cursor: pointer;
+			min-height: 44px;
+			line-height: 42px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			background-color: #fff;
+			padding: 0 35px 0 15px;
+
+			.farmart-svg-icon {
+				font-size: 12px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 12px;
+				color: #000;
+				font-weight: 700;
+			}
+		}
+
+		li > ul {
+			margin: 0;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			transition: top 0.5s;
+			border: 1px solid #cccccc;
+			border-radius: 3px;
+			background-color: #fff;
+			padding: 10px 0;
+			color: #999;
+			transform: scale(0);
+			z-index: -999;
+			line-height: 1.4;
+			min-width: 100%;
+
+			li {
+				padding: 5px 0;
+				a {
+					padding: 0 15px;
+					display: block;
+					color: #999;
+					white-space: nowrap;
+
+					&.active,
+					&:hover {
+						color: #000;
+					}
+				}
+
+			}
+
+		}
+
+		li.current:hover {
+			& > ul {
+				transform: scale(1);
+				z-index: 999;
+			}
+		}
+	}
+
+	.per-page{
+		&.empty-drop{
+			.current{
+				padding: 0;
+				background-color: transparent;
+				border:none;
+			    cursor: text;
+			    color: #999;
+		        min-height: auto;
+
+				&:hover > ul,
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.woocommerce-ordering {
+		float: right;
+
+		.current {
+			min-width: 240px;
+		}
+	}
+
+	.cancel-ordering {
+		display: none;
+	}
+
+	.shop-view {
+		display: flex;
+		align-items: center;
+		float: right;
+
+		label {
+			font-size: 13px;
+			color: #000;
+			font-weight: 700;
+			margin-right: 13px;
+		}
+
+
+
+		.shop-view__icon {
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			a {
+				color: #999;
+				display: inline-block;
+				position: relative;
+				padding-right: 7px;
+				margin-right: 7px;
+
+				&.grid {
+					font-size: 21px;
+				}
+
+				&.extended {
+					font-size: 26px;
+				}
+
+				&.list {
+					font-size: 28px;
+				}
+
+				&.current {
+					color: var( --fm-color-primary );
+				}
+
+				&:last-child {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.fm-shop-view {
+		display: flex;
+		align-items: center;
+
+		.text {
+			color: $color__darker;
+			font-size: 16px;
+			font-weight: 700;
+			margin-right: 30px;
+		}
+	}
+}
+
+.woocommerce-products-header{
+	> *{
+		clear: both;
+	}
+}
+
+// Catalog header
+.fm-catalog-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 35px 0 48px;
+
+	.fm-filter-mobile {
+		font-size: 16px;
+		color: $color__darker;
+
+		.farmart-svg-icon {
+			margin-right: 5px;
+		}
+	}
+
+	.search-form {
+		border-color: #ddd;
+
+		.search-field {
+			width: 270px;
+			padding: 9px 15px;
+
+			&::-webkit-input-placeholder {
+				color: #aaa;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: #aaa;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: #aaa;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+				color: #aaa;
+			}
+		}
+
+		&:after {
+			font-size: 15px;
+			color: #000;
+		}
+	}
+}
+
+.fm-catalog-header__title {
+	font-size: 30px;
+	line-height: 35px;
+	color: $color__dark;
+	margin: 0 35px 0 0;
+}
+
+.fm-catalog-header__right {
+	display: flex;
+	align-items: center;
+	margin: 0;
+
+	.text {
+		color: $color__darker;
+		font-size: 16px;
+		font-weight: 700;
+		margin-right: 30px;
+	}
+
+	.fm-catalog-ordering {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.tax-product_cat {
+	.woocommerce-products-header {
+		margin-bottom: 40px;
+	}
+
+	.primary-sidebar {
+		margin-top: 35px;
+	}
+}
+
+.fm-catalog-toolbar{
+	.widget_layered_nav_filters{
+	    margin: 17px 0;
+
+		.filter-title{
+			margin: 0 0 10px;
+		}
+
+		ul{
+			padding: 0;
+			margin-bottom: 0;
+
+			li{
+				display: inline-block;
+				list-style: none;
+
+				&:last-child{
+					margin-left: 10px;
+
+					&:hover{
+						border-bottom: 1px solid var( --fm-color-primary );
+
+						a{
+							color: var( --fm-color-primary );
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.fm-filter-mobile{
+		margin-right: 25px;
+		color: #222;
+
+		.farmart-svg-icon{
+			margin-right: 5px;
+		}
+	}
+}
+
+/* Swatches */
+.fm-attr-swatches {
+	.fm-attr-swatches__wrapper {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+
+	.fm-swatch-item {
+		display: inline-block;
+		margin-right: 3px;
+		cursor: pointer;
+		transition: 0.35s;
+		border: 1px solid #dddddd;
+		overflow: hidden;
+		border-radius: 3px;
+
+		&.swatch-image {
+			margin: 0 5px;
+		}
+
+		&.swatch-label {
+			padding: 0 5px;
+		}
+
+		&.swatch-color {
+			.sub-swatch {
+				display: block;
+				width: 15px;
+				height: 15px;
+			}
+		}
+
+		img {
+			max-width: 36px;
+			height: auto;
+			margin: auto;
+		}
+
+		&:hover {
+			border-color: var( --fm-color-primary );
+			color: var( --fm-color-primary );
+		}
+	}
+
+	.slick-arrow {
+		z-index: 10;
+		color: #999;
+		top: 55%;
+		transition: 0.5s;
+		width: inherit;
+		height: inherit;
+		background-color: transparent;
+		border: 0;
+
+		&:hover {
+			color: #000;
+		}
+	}
+
+	.slick-prev-arrow {
+		left: -10px;
+	}
+
+	.slick-next-arrow {
+		right: -12px;
+	}
+
+	&.slick-slider {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.catalog-banners-carousel {
+	margin-top: 30px;
+	margin-bottom: 70px;
+
+	&.banner-header-layout-3 {
+		margin-top: 0;
+		margin-bottom: 35px;
+	}
+
+	&.banner-has-bg {
+		padding: 50px 0;
+	}
+}
+
+.fm-catalog-banners-carousel {
+	list-style: none;
+	padding: 0;
+	display: flex;
+
+	&.slick-dotted.slick-slider {
+		margin: 0;
+	}
+}
+
+@media (min-width: 1024px) {
+	.fm-catalog-banners-carousel{
+		.slick-prev-arrow {
+    		left: 35px;
+    	}
+
+    	.slick-next-arrow {
+		    right: 20px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	// Catalog Page
+	.fm-catalog-products{
+		.catalog-carousel__wrapper{
+			padding:0;
+			border: none;
+
+			.slick-list{
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.slick-track {
+			display: table;
+		}
+
+		.slick-dots{
+			position: absolute;
+		}
+
+		ul.products{
+			margin-bottom: 60px;
+		    margin-left: -4px;
+			border-width: 1px 0 0 1px;
+			border-color: #eee;
+			border-style: solid;
+
+			li.product{
+				display: table-cell;
+				float: initial;
+				border-width: 0 1px 1px 0;
+				border-color: #eee;
+				border-style: solid;
+
+				.product-inner{
+					border:none;
+				}
+			}
+		}
+
+	}
+}
+
+@media (max-width: 767px) {
+	.fm-catalog-categories .catalog-categories__wrapper {
+	    padding: 40px 10px 60px;
+	}
+}
+
+@media (max-width: 414px) {
+	// Catalog Page
+	.fm-catalog-products ul.products{
+		margin-left: 0;
+	}
+
+	// Catalog header
+	.fm-catalog-header {
+	    flex-wrap: wrap;
+
+		.search-form {
+			width: 100%;
+			margin-top: 25px;
+
+			.search-field {
+				max-width: 270px;
+			    width: auto;
+			}
+		}
+	}
+
+	.catalog-toolbar__bottom{
+		display: flex;
+	    justify-content: space-between;
+
+		.shop-view{
+			order:2;
+		}
+	}
+
+	.fm-catalog-toolbar{
+		.fm-filter-mobile{
+			margin-right: 0;
+		}
+
+		 .woocommerce-ordering .current{
+			min-width: auto;
+		}
+	}
+}
+
+.archive {
+	.dokan-geolocation-location-filters,
+	.dokan-geolocation-locations-map-top,
+	.mapboxgl-map {
+		display: none;
+	}
+}

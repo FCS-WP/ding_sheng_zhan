@@ -1,0 +1,120 @@
+.footer-widgets {
+    > * {
+        padding: 80px 0 45px;
+    }
+
+    .widget-title {
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: capitalize;
+        letter-spacing: -.5px;
+        color: var( --farmart-footer-heading-color );
+        padding-bottom: 33px;
+    }
+
+    .textwidget {
+        color: #555;
+        line-height: 22px;
+    }
+
+    .widget {
+        margin-bottom: 30px;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                a {
+                    color: var( --farmart-footer-text-color );
+
+                    &:hover {
+                        color: var( --farmart-footer-hover-color );
+                    }
+                }
+            }
+        }
+    }
+
+    .row-flex {
+        justify-content: space-around;
+    }
+}
+
+.footer-widgets-area-diff {
+    .row-flex {
+        flex-wrap: inherit;
+    }
+}
+
+.footer-widgets-diff-item {
+    padding: 0 15px;
+}
+
+.footer-widget-description {
+    .farmart-svg-icon {
+        margin-right: 10px;
+    }
+
+    li {
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 25px;
+        margin: 8px 0 23px 30px;
+    }
+}
+
+.widget_mc4wp_form_widget {
+    .mc4wp-form-fields {
+        input {
+            margin: 0;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            border-right: none;
+
+            &::-webkit-input-placeholder {
+				color: #777;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: #777;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+				color: #777;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+				color: #777;
+			}
+        }
+
+        input[type='email']{
+            padding-left: 55px;
+            border-color: #ccc;
+        }
+
+        input[type='submit']{
+            flex: 1 1 130px;
+            background-color: var( --fm-background-color-secondary );
+            color: var( --fm-background-text-color-secondary );
+            line-height: 45px;
+            padding: 0;
+        }
+
+        label {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 25px;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NzkuMDU4IDQ3OS4wNTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCA0NzkuMDU4IDQ3OS4wNTgiIHdpZHRoPSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtNDM0LjE0NiA1OS44ODJoLTM4OS4yMzRjLTI0Ljc2NiAwLTQ0LjkxMiAyMC4xNDYtNDQuOTEyIDQ0LjkxMnYyNjkuNDdjMCAyNC43NjYgMjAuMTQ2IDQ0LjkxMiA0NC45MTIgNDQuOTEyaDM4OS4yMzRjMjQuNzY2IDAgNDQuOTEyLTIwLjE0NiA0NC45MTItNDQuOTEydi0yNjkuNDdjMC0yNC43NjYtMjAuMTQ2LTQ0LjkxMi00NC45MTItNDQuOTEyem0wIDI5Ljk0MWMyLjAzNCAwIDMuOTY5LjQyMiA1LjczOCAxLjE1OWwtMjAwLjM1NSAxNzMuNjQ5LTIwMC4zNTYtMTczLjY0OWMxLjc2OS0uNzM2IDMuNzA0LTEuMTU5IDUuNzM4LTEuMTU5em0wIDI5OS40MTFoLTM4OS4yMzRjLTguMjYgMC0xNC45NzEtNi43MS0xNC45NzEtMTQuOTcxdi0yNTEuNjQ4bDE5OS43NzggMTczLjE0MWMyLjgyMiAyLjQ0MSA2LjMxNiAzLjY1NSA5LjgxIDMuNjU1czYuOTg4LTEuMjEzIDkuODEtMy42NTVsMTk5Ljc3OC0xNzMuMTQxdjI1MS42NDljLS4wMDEgOC4yNi02LjcxMSAxNC45Ny0xNC45NzEgMTQuOTd6Ii8+PC9zdmc+");
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

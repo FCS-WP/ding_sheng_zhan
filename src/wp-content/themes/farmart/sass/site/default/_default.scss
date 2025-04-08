@@ -1,0 +1,52 @@
+.wp-block-table td,
+.wp-block-table th{
+	padding: 0.4375em;
+	border: 1px solid #e5e5e5;
+}
+
+.wp-block-cover-image p:not(.has-text-color){
+	color: #fff;
+}
+
+.entry-content {
+	&:after {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	body.full-content .site-content .entry-content {
+		> *.alignfull,
+		> *.alignwide{
+			width: -webkit-fill-available;
+			max-width: 1000%;
+		}
+
+		> *.alignfull{
+			margin-right: calc(50% - 50vw + 9px);
+			margin-left: calc(50% - 50vw + 8px);
+		}
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+	body.full-content .site-content .entry-content {
+		> *.alignwide{
+			max-width: 1240px;
+			width: 1240px;
+			margin-left: calc(-1240px/2 + 100%/2);
+			margin-right: calc(-1240px/2 + 100%/2);
+		}
+	}
+
+}
+
+@import "button";
+@import "quote";
+@import "image";
+@import "widget";
+@import "cover";
+@import "columns";
+@import "embeds";
+@import "layout-el";

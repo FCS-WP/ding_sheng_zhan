@@ -1,0 +1,193 @@
+.topbar {
+	--farmart-header-text-hover-color: var( --fm-color-primary );
+
+	display: flex;
+	height: 42px;
+	background-color: #f7f7f7;
+
+	.widget {
+		font-size: 13px;
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		a {
+			border-bottom: 1px solid transparent;
+			color: #666666;
+
+			&:hover,
+			&:focus {
+				color: var( --farmart-header-text-hover-color );
+				border-color: var( --farmart-header-text-hover-color );
+			}
+		}
+
+		> p {
+			margin: 0;
+		}
+
+		.farmart-svg-icon {
+			line-height: 1;
+		}
+	}
+
+	.container,
+	.row {
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	> * {
+		display: flex;
+		align-items: center;
+	}
+
+	.topbar-dropdown {
+		ul {
+			padding: 10px 20px;
+		}
+
+		a {
+			border: none;
+		}
+	}
+}
+
+.topbar--item {
+	display: flex;
+	align-items: center;
+
+	> * {
+		margin: 0;
+		padding: 0 15px;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 15px;
+			background-color: #ddd;
+		}
+
+		&:last-child {
+			padding-right: 0;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+.topbar--left {
+	flex: 1 1 45%;
+	width: 45%;
+}
+
+.topbar--right {
+	justify-content: flex-end;
+	flex: 1 1 55%;
+	width: 55%;
+}
+
+.topbar-mobile {
+	> * {
+		justify-content: center;
+	}
+}
+
+.topbar-dropdown {
+	&:hover {
+		ul {
+			opacity: 1;
+			z-index: 100;
+			transform: translate(0);
+		}
+
+		.current {
+			color: var( --farmart-header-text-hover-color );
+		}
+	}
+
+	img {
+		margin-right: 5px;
+	}
+
+	.farmart-svg-icon {
+		font-size: 10px;
+		line-height: 1;
+		margin-left: 5px;
+	}
+
+	a,
+	.current {
+		display: flex;
+		align-items: center;
+	}
+
+	.current {
+		padding: 5px 0;
+		cursor: pointer;
+		transition: .3s;
+	}
+
+	ul {
+		position: absolute;
+		right: 0;
+		top: calc( 100% + 1px);
+		opacity: 0;
+		z-index: -1;
+		text-align: left;
+		list-style: none;
+		margin: 0;
+		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+		transition: 0.3s;
+		transform: translate(0, 20px);
+		background-color: #fff;
+		min-width: 150px;
+	}
+
+	&.farmart-account-widget {
+		ul {
+			min-width: 200px;
+		}
+	}
+}
+
+.farmart-currency-widget {
+	ul {
+		li {
+			a {
+				height: auto;
+			}
+		}
+	}
+}
+
+.farmart-account-widget {
+	> a {
+		color: var(--farmart-header-text-color);
+		border-bottom: none;
+		padding: 5px 0;
+	}
+
+	b {
+		margin-left: 5px;
+	}
+
+	.farmart-svg-icon {
+		margin: 0 5px 0 0;
+	}
+}

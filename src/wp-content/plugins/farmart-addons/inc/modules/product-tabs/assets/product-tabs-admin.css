@@ -1,0 +1,32 @@
+.wp-list-table .farmart_product_tab_type-default .check-column input[type="checkbox"] {
+	display: none;
+}
+
+.wp-list-table .farmart_product_tab_type-default .row-actions > *:not('.inline') {
+	display: none;
+}
+
+.post-type-farmart_product_tab .wp-list-table .column-date {
+	display: none;
+}
+
+.wp-list-table .inline-edit-farmart_product_tab .inline-edit-status,
+.wp-list-table .inline-edit-farmart_product_tab .inline-edit-date,
+.wp-list-table .inline-edit-farmart_product_tab .inline-edit-group {
+	display: none;
+}
+
+.farmart-product-tabs-settings .form-field > label {
+	min-width: 150px;
+	font-weight: 500;
+	display: inline-block;
+}
+
+.farmart-product-tabs-settings .farmart-product-tabs--type > label {
+	padding-right: 30px;
+}
+
+.farmart-product-tabs-settings .farmart-product-tabs--categories,
+.farmart-product-tabs-settings .farmart-product-tabs--product {
+	display: none;
+}

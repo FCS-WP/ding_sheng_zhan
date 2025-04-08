@@ -1,0 +1,131 @@
+.wcboost-products-compare__table {
+	.product-remove {
+		.remove {
+			font-size: 28px;
+		}
+	}
+
+	.product-name {
+		a {
+			color: $color__blue;
+			transition: ease .3s;
+			font-size: 14px;
+			font-weight: 400;
+
+			&:hover {
+				color: var( --fm-color-primary );
+			}
+		}
+	}
+
+	.price {
+		color: #669900;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-size: 15px;
+
+		ins {
+			color: #fa532c;
+			background-color: transparent;
+			margin-right: 4px;
+			order: 1;
+		}
+
+		del {
+			font-weight: 400;
+			margin-right: 4px;
+			order: 2;
+			color: #888;
+			font-size: 13px;
+		}
+
+		.sale {
+			color: #e84506;
+			font-weight: 600;
+			order: 3;
+		}
+	}
+
+	.in-stock {
+		font-weight: 700;
+		color: $woocommerce__color-success;
+	}
+
+	.out-of-stock {
+		font-weight: 700;
+		color: $woocommerce__color-error;
+	}
+
+	.add_to_cart_button {
+		display: inline-block;
+		color: var( --fm-background-text-color-secondary );
+		font-size: 14px;
+		font-weight: 700;
+		background-color: var( --fm-background-color-secondary );
+		border-radius: 3px;
+		padding: 13.5px 25px;
+		text-align: center;
+		position: relative;
+		border: none;
+		line-height: 1.7;
+		width: 70%;
+
+		.farmart-svg-icon {
+			font-size: 12px;
+			margin-right: 6px;
+			display: none;
+		}
+
+		&:before {
+			content: " ";
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			border-width: 1px;
+			border-style: solid;
+			border-color: var( --fm-background-text-color-secondary ) transparent var( --fm-background-text-color-secondary ) transparent;
+			animation: lds-dual-ring 0.5s linear infinite;
+			margin-right: 6px;
+			position: absolute;
+			left: calc( 50% - 60px );
+			top: 36%;
+			transform: translateY(-36%);
+			display: none;
+		}
+
+		&.loading {
+			&:before {
+				display: inline-block;
+			}
+
+			.farmart-svg-icon {
+				display: none;
+			}
+		}
+	}
+
+	.wc-forward {
+		display: none;
+	}
+
+	tr:last-child {
+		th {
+			border: none;
+		}
+	}
+}
+
+.wcboost-products-compare__tools {
+	text-align: right;
+
+	.wcboost-products-compare-clear {
+		background-color: #000000;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 13.5px 25px;
+	}
+}

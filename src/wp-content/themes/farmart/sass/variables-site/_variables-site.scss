@@ -1,0 +1,15 @@
+:root {
+	--fm-color-primary: #26901b;
+	--fm-color-secondary: #ff7200;
+
+	--fm-background-color-primary: #26901b;
+	--fm-background-color-secondary: #ff7200;
+
+	--fm-background-text-color-primary: #fff;
+	--fm-background-text-color-secondary: #fff;
+}
+
+@import "colors";
+@import "typography";
+@import "structure";
+@import "columns";

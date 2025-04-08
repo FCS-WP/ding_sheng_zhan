@@ -1,0 +1,298 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+.farmart-first-letter{
+	font: 700 47px/.9 "Muli";
+	text-transform: uppercase;
+	color: #222222;
+	padding: 0 10px 0 0;
+	float: left;
+}
+
+.fm-color-primary{
+	color: var( --fm-color-primary );
+}
+
+.fm-color-blue{
+	color: #00ccff;
+}
+
+.farmart-list,
+ul.farmart-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li{
+		padding-left: 14px;
+		position: relative;
+		margin-bottom: 7px;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			border: 1px solid #666;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.slick-dots{
+	left: 0;
+	bottom: 0;
+}
+
+.loading-icon {
+	display: none;
+	vertical-align: middle;
+	text-align: center;
+	opacity: 0;
+	transition: 0.5s;
+	z-index: -999;
+	min-height: 27px;
+
+	.loading-bubbles {
+		display: inline-block;
+		transform: translateX(-5px);
+	}
+
+	.bubble {
+		display: inline-block;
+		width: 2px;
+		height: 2px;
+		margin: 0 1px;
+		transform: scaleY(-50%);
+
+		&:nth-child(2n) .dot {
+			animation-delay: -0.3s;
+		}
+
+		&:nth-child(3n) .dot {
+			animation-delay: 0s;
+		}
+	}
+
+	.dot {
+		display: block;
+		background-color: #888;
+		width: 100%;
+		height: 100%;
+		transform-origin: 50% 50%;
+		animation: fadein 1.2s -0.6s infinite ease-out;
+	}
+
+	.loading & {
+		display: inline-block;
+		opacity: 1;
+	}
+}
+
+// Tabs
+.farmart-tabs {
+	@-webkit-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@-moz-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.tabs-nav {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		list-style-type: none;
+
+		li {
+			float: left;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	.tabs-content {
+		position: relative;
+	}
+
+	.tabs-panel {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+		transform: translateY(10px);
+
+		&.active {
+			position: relative;
+			z-index: 2;
+			opacity: 1;
+			top: 0;
+			transform: translateY(0);
+			transition: all 0.2s ease;
+			transition-delay: 0.1s;
+		}
+	}
+}
+
+.farmart-loading {
+	@include fm-spinner;
+}
+
+.btn-primary {
+	@include btn-primary;
+}
+
+.slick-track{
+	margin: 0 !important;
+}
+
+.fm-elementor-ajax-wrapper {
+	.farmart-loading-wrapper {
+		min-height: 500px;
+		background-color: #fff;
+		position: relative;
+	}
+
+	.farmart-loading {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+
+		&:after {
+			width: 25px;
+    		height: 25px;
+			border-color: var( --fm-color-primary ) transparent var( --fm-color-primary ) transparent;
+		}
+	}
+}
+
+.fm-vertical-tab {
+	position: fixed;
+	top: 50px;
+	z-index: 9999;
+	display: none;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+
+		a {
+			color: #888888;
+			font-size: 16px;
+			background-color: #fff;
+			border: 1px solid #eee;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 34px;
+			height: 34px;
+
+			&.active {
+				color: var( --fm-background-text-color-primary );
+				background-color: var( --fm-background-color-primary );
+				border-color: var( --fm-color-primary );
+			}
+		}
+
+		li:not(:last-child) {
+			a {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+.fm-off-canvas-layer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	background-color: rgba( 0,0,0,0.25 );
+	display: none;
+}
+
+.farmart-map {
+	clear: both;
+	height: 350px;
+	position: relative;
+}
+
+@import "tables";
+@import "elementor";
+@import "shortcodes/shortcodes";
+@import "responsive";

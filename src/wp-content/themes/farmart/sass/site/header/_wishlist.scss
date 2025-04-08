@@ -1,0 +1,37 @@
+// Compare + Wishlish + Cart
+.header-element--compare,
+.header-element--wishlist {
+	margin-right: 15px;
+	line-height: 1;
+
+	a {
+		position: relative;
+		display: inline-block;
+		padding: 0 10px;
+	}
+}
+
+.header-element--compare,
+.header-element--wishlist,
+.header-element--cart {
+	.farmart-svg-icon {
+		font-size: 24px;
+		color: var( --farmart-header-text-color );
+	}
+
+	.mini-item-counter {
+		position: absolute;
+		right: 0;
+		top: -10px;
+		display: block;
+		text-align: center;
+		background-color: var( --farmart-header-background-color-primary );
+		border-radius: 3px;
+		font-size: 10px;
+		font-weight: 700;
+		color: var( --farmart-header-background-text-color-primary );
+		padding: 5px 5px 3px;
+		line-height: 1;
+		min-width: 18px;
+	}
+}

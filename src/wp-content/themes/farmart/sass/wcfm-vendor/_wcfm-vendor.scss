@@ -1,0 +1,895 @@
+// Wcfm Vendor Header
+.wcfm-template-themes {
+    #primary,
+    .content-area,
+    &.wcfm-store-list-page .content-area,
+    &.wcfm-store-list-page #primary{
+        padding-left: 15px !important;
+        padding-right: 15px !important;;
+    }
+
+    #wcfmmp-store,
+    #wcfmmp-stores-lists{
+        box-shadow: none;
+
+        h1, h2 {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        ul {
+            &.sub-menu{
+                padding: 0;
+                margin-left: 10px;
+            }
+        }
+
+        .banner_text h1 {font-size: 32px;}
+
+        .wcfmmp-store-list-map {
+            margin-bottom: 50px;
+        }
+
+        #wcfm_store_header {
+            background: #f5f5f5 !important;
+            padding: 20px 0;
+            border: 1px solid #e5e5e5;
+            min-height: 160px;
+        }
+
+        .product_area {
+            .products-wrapper {
+                ul {
+                    li.product {
+                        position: relative;
+                        padding-left: 0;
+                        padding-right: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .price {
+            color: #222;
+            font-weight: 700;
+            font-size: 15px;
+
+            ins {
+                color: var( --fm-color-primary );
+                background-color: transparent;
+                margin-right: 4px;
+                order: 1;
+            }
+
+            del {
+                font-weight: 400;
+                margin-right: 4px;
+                order: 2;
+                color: #888;
+                font-size: 13px;
+            }
+
+            .sale {
+                color: #e84506;
+                font-weight: 600;
+                order: 3;
+            }
+        }
+
+        .header_left {
+            margin-left: 30px;
+        }
+
+        .banner_img {
+            height: 210px;
+            max-height: 210px;
+        }
+
+        .logo_area {
+            width: 198px;
+            height: 198px;
+            border: 1px solid #e5e5e5;
+            box-shadow: none;
+            border-radius: 0;
+            top: -110px;
+
+            a img {
+                border-radius: 0;
+            }
+        }
+
+        .logo_area_after {
+            width: 200px;
+            top: 85px;
+            left: 0;
+            right: 0;
+
+            .wcfmmp-store-rating {
+                margin: 0 auto;
+
+                &:before{
+                    color: #ccc;
+                }
+
+                span:before{
+                    color: #ffbb28 !important;
+                }
+            }
+        }
+
+        .wcfmmp-store-rating {
+            &:before {
+                color: #ccc;
+            }
+            span:before {
+                color: #ffbb28 !important;
+            }
+        }
+
+        .address {
+            left: 230px;
+
+            h1, h2, span, a {
+                color: #555 !important;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            .wcfm_store_title {
+                margin: 0 0 20px 0;
+                color: $color__darker !important;
+            }
+
+            .wcfm-store-address {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 100%;
+                line-height: 1;
+
+                .wcfmfa{
+                    display: none;
+                }
+
+                label {
+                    color: $color__darker;
+                }
+
+                span{
+                    width: 100%;
+                }
+
+                .header_store_name {
+                    margin: 3px 0;
+                }
+            }
+        }
+
+        .bd_icon_area {
+            top: 0;
+            right: 20px;
+            margin: 0;
+            z-index: 1;
+
+            .wcfm_store_enquiry {
+                background-color: var( --fm-background-color-secondary ) !important;
+                color: var( --fm-background-text-color-secondary ) !important;
+
+                span{
+                    color: #fff !important;
+                }
+            }
+        }
+
+        .social_area {
+            background-color: transparent !important;
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                top: calc(100% - 25px);
+                right: 30px;
+                margin: 0 -4px;
+
+                li {
+                    background-color: transparent !important;
+
+                    a i{
+                        color: #fff !important;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 31px;
+                        border-radius: 3px;
+                        font-size: 13px;
+
+                        &.fa-facebook-f{
+                            background-color: #4267b2;
+                        }
+
+                        &.fa-twitter{
+                            background-color: #3eb0ff;
+                        }
+
+                        &.fa-google-plus-g{
+                            background-color: #d41b1b;
+                        }
+
+                        &.fa-linkedin-in{
+                            background-color: #2d55a7;
+                        }
+
+                        &.fa-instagram{
+                            background-color: #125688;
+                        }
+
+                        &.fa-pinterest{
+                            background-color: #a91111;
+                        }
+
+                        &.fa-youtube{
+                            background-color: #bb0000;
+                        }
+
+                        &.fa-snapchat{
+                            background-color: #F7F801;
+                        }
+                    }
+                }
+            }
+        }
+
+        .wcfmmp_store_hours {
+            .wcfmmp-store-hours-day {
+                color: $color__darker !important;
+            }
+        }
+
+        .body_area {
+            margin-top: 60px;
+        }
+
+        .left_sidebar {
+            width: 23%;
+            padding: 0;
+            border: none;
+            background-color: transparent !important;
+        }
+
+        .widget-area.sidebar {
+            .widget {
+                background-color: #f5f5f5;
+                padding: 25px 20px;
+                margin-bottom: 30px;
+                position: relative;
+                list-style: none;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .sidebar_heading {
+                    margin-bottom: 0;
+                }
+
+                .widget-title {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    margin-top: 0;
+                    color: $color__darker !important;
+                }
+
+                ul > li {
+                    padding: 5px 0;
+
+                    a{
+                        &:hover{
+                            box-shadow: none;
+                        }
+                    }
+
+                    .count {
+                        font-size: 13px;
+                    }
+
+                    &.menu-item-has-children {
+                        padding: 0;
+                    }
+                }
+            }
+
+            ul.product_list_widget {
+                li {
+                    margin-bottom: 15px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:after {
+                        clear: both;
+                        display: block;
+                        content: "";
+                    }
+                }
+                li img {
+                    float: left;
+                    margin-right: 15px;
+                    width: 80px;
+                    margin-left: 0;
+                    position: relative;
+                    top: 0;
+                    height: auto;
+                    margin-bottom: 15px;
+                }
+
+                li a {
+                    color: #000;
+                    display: inherit;
+                    margin-bottom: 5px;
+                    box-shadow: none;
+                    overflow: visible;
+                }
+
+                .product-title {
+                    color: #000;
+                    display: inherit;
+                    margin-bottom: 8px;
+                    line-height: 1.2;
+                    box-shadow: none;
+                }
+
+                .woocs_price_code {
+                    color: #000;
+                    font-weight: 700;
+                }
+
+                .woocommerce-Price-amount {
+                    display: inline-block;
+                }
+
+                li {
+                    del {
+                        font-weight: 400;
+                        margin-right: 4px;
+
+                        .woocommerce-Price-amount {
+                            text-decoration: line-through;
+                        }
+                    }
+
+                    ins {
+                        color: #2f8a33;
+                        margin-right: 4px;
+                    }
+
+                    span.sale {
+                        color: #e84506;
+                    }
+                }
+            }
+
+            .woocommerce-product-search {
+                .search-field {
+                    width: 100%;
+                }
+            }
+
+            .categories_list {
+                ul {
+                    li {
+                        background: none;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        padding: 2px 15px 2px 0;
+                        position: relative;
+
+                        a {
+                            color: #000 !important;
+                            box-shadow: none;
+                        }
+
+                        &.parent_cat {
+                            a {
+                                color: var( --fm-color-primary );
+                                font-size: 14px;
+                            }
+                        }
+
+                        .children {
+                            margin: 5px 0 9px 15px;
+
+                            li {
+                                a {
+                                    color: #555555;
+                                    font-weight: 400;
+
+                                    &:hover {
+                                        color: var( --fm-color-primary );
+                                        box-shadow: inset 0 0 0 transparent, inset 0 -1px 0 var( --fm-color-primary );
+                                    }
+                                }
+
+                                &.current-cat {
+                                    a {
+                                        color: var( --fm-color-primary );
+                                        box-shadow: inset 0 0 0 transparent, inset 0 -1px 0 var( --fm-color-primary );
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wcfmmp_sold_by_container_advanced {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .wcfmmp-store-product-search {
+
+                .woocommerce-product-search {
+                    position: relative;
+
+                    &:after {
+                        font-family: 'FarmartIcon';
+                        content: "\e922";
+                        position: absolute;
+                        top: 50%;
+                        right: 13px;
+                        transform: translateY(-50%);
+                        font-size: 18px;
+                        color: #000;
+                    }
+
+                    button {
+                        width: 38px;
+                        height: 38px;
+                        background: transparent;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        border: none;
+                        text-indent: -9999px;
+                        z-index: 10;
+                        padding: 0;
+                        display: block;
+                    }
+                }
+
+                .search-field{
+                    width: 100%;
+                }
+            }
+
+            .wcfmmp-store-lists-search {
+                position: relative;
+
+                &:before {
+                    font-family: 'FarmartIcon';
+                    content: "\e922";
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    font-size: 18px;
+                    color: #000;
+                }
+            }
+        }
+
+        .right_side {
+            padding: 0;
+
+            .tab_area {
+                .tab_links {
+                    background-color: #f5f5f5;
+                    box-shadow: none;
+                    border-bottom: none;
+
+                    li {
+                        border: none;
+                        background-color: transparent;
+                        a {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #999 !important;
+                            text-transform: none;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                        }
+
+                        &:after {
+                            display: none;
+                        }
+
+                        &.active {
+                            border-width: 0 !important;
+                            background-color: transparent;
+                        }
+
+                        &.active,
+                        &:hover {
+                            a {
+                                color: $color__darker !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fm-catalog-toolbar {
+                background-color: #f5f5f5;
+
+                .catalog-toolbar__bottom {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: transparent;
+                }
+
+                .products-found {
+                    font-size: 21px;
+                    margin: 0;
+                }
+
+                .shop-view__icon {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        font-size: 20px;
+                        color: #888;
+                        position: relative;
+                        padding-right: 7px;
+                        margin-right: 2px;
+
+                        &.extended {
+                            font-size: 19px;
+                        }
+
+                        &.list {
+                            font-size: 28px;
+                        }
+
+                        &.current {
+                            color: var( --fm-color-primary );
+                        }
+
+
+                        &:last-child {
+                            padding-right: 0;
+                            margin-right: 0;
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.right_side_full {
+                #wcfmmp-stores-wrap {
+                    ul.wcfmmp-store-wrap {
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    }
+                }
+
+                #wcfmmp-stores-lists {
+                    .wcfmmp-store-lists-sorting {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .reviews_area {
+            box-shadow: none;
+            border: 1px solid #d8d8d8;
+            margin-top: 0;
+
+            .reviews_heading,
+            .reviews_count a,
+            .user_name
+            {
+                color: $color__darker !important;
+            }
+
+            .rating_box {
+                i {
+                    color: #ccc;
+                }
+
+                i.selected {
+                    color: #ffbb28 !important;
+                }
+            }
+
+            .user_rated {
+                background-color: transparent !important;
+                color: #ffbb28 !important;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+
+        .wcfmmp-store-search-form {
+            margin-bottom: 45px;
+            box-shadow: none;
+            .select2-container,
+            .wcfmmp-search-box{
+                margin-right: 0;
+            }
+            .select2-container--default {
+                .select2-selection--single {
+                    padding: 0;
+
+                    .select2-selection__rendered {
+                        line-height: 48px;
+                    }
+                }
+            }
+        }
+
+        #wcfmmp-store-lists-sidebar {
+            .wcfmmp-store-search-form {
+                padding: 0;
+
+                div.wcfm_radius_filter_container,
+                input.wcfmmp-radius-addr,
+                div.wcfm_radius_slidecontainer,
+                input#search,
+                input.wcfm-search-field,
+                select#wcfmmp_store_category,
+                select#wcfmmp_store_country,
+                #wcfmmp_store_state,
+                .select2-container,
+                .wcfmmp-search-box {
+                    width: 100%;
+                }
+            }
+        }
+
+        .wcfmmp-store-lists-sorting {
+            display: flex;
+            align-items: center;
+        }
+
+        #wcfmmp-stores-wrap {
+            ul.wcfmmp-store-wrap {
+                li {
+                    margin-bottom: 30px;
+                    .store-content {
+                        border-bottom-color: var( --fm-color-primary ) !important;
+
+                        .store-info {
+                            opacity: .3;
+                        }
+                    }
+                    .store-data {
+                        h2 a {
+                            color: $color__darker !important;
+                        }
+
+                        .store-enquiry {
+                            margin: 0;
+                        }
+                    }
+
+                    .store-data-container {
+                        .store-address,
+                        .store-phone {
+                            color: $color__darker !important;
+                            font-size: 14px;
+                            background: transparent !important;
+
+                            i{
+                                background-color: var( --fm-color-primary ) !important;
+                                width: 25px;
+                                height: 25px;
+                                font-size: 12px;
+                                line-height: 25px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+
+                    .store-footer {
+                        min-height: 100px !important;
+                        height: 100px !important;
+                    }
+
+                    .wcfm_catalog_enquiry,
+                    .wcfmmp-visit-store{
+                        @include btn-primary;
+                        background-color: var( --fm-background-color-secondary ) !important;
+                        color: var( --fm-background-text-color-secondary ) !important;
+                        border-bottom: none;
+                        box-shadow: none;
+                        margin-top: 20px;
+
+                        &:hover span{
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Single Product More Offters
+.wcfm-template-themes {
+    .woocommerce-tabs {
+        .wcfmmp_product_mulvendor_container {
+            .woocommerce-spmv-ordering {
+                margin-bottom: 20px;
+            }
+
+            .wcfmmp_product_mulvendor_rowhead {
+                background-color: #f5f5f5;
+                box-shadow: none;
+
+                .wcfmmp_product_mulvendor_rowsub {
+                    font-size: 16px;
+                    color: #000;
+                    font-weight: 600;
+                }
+            }
+
+            .wcfmmp_product_mulvendor_rowbody {
+                border: 1px solid #ccc;
+                border-top: none;
+
+                .vendor_name {
+                    a {
+                        color: #000;
+
+                        &:hover {
+                            color: var( --fm-color-primary );
+                        }
+                    }
+                }
+
+                .button {
+                    @include btn-primary;
+                    background-color: var( --fm-background-color-secondary ) !important;
+                    color: var( --fm-background-text-color-secondary ) !important;
+                    border-bottom: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+.mobile-version {
+    #wcfmmp-store .sidebar {
+        position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 1600;
+		display: none;
+		margin-top: 0;
+
+		.wcfm-widget-area{
+			position: absolute;
+		    right: 0;
+		    top: 63px;
+		    height: 100%;
+		    width: 100%;
+		    max-width: 100%;
+		    margin: 0;
+		    background: #f7f7f7;
+		    transform: translateX(-100%);
+		    transition: transform .5s;
+            overflow: auto;
+
+            .widget {
+                margin-bottom: 0;
+            }
+		}
+
+		.fm_widget_product_categories{
+			margin-bottom: 0;
+			background-color: #f7f7f7;
+		}
+
+	    &.fm-filter-active{
+
+			.wcfm-widget-area{
+			    transform: none;
+			}
+
+			.fm-widget-products-carousel{
+				display: none;
+			}
+
+			.fm-vendor-close-sidebar {
+				transform: translate3d(100%, 0, 0);
+				opacity: 1;
+			}
+        }
+
+        .fm-vendor-close-sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            z-index: 99999;
+            margin-top: 0;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 15px 13px;
+            border-bottom: 1px solid #dedede;
+            opacity: 0;
+            transition: .5s;
+
+            h2 {
+                font-size: 16px;
+                margin: 0;
+            }
+
+            .close-sidebar {
+                color: #222;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .fm-catalog-toolbar {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+            width: 1px;
+            height: 60%;
+            background-color: #ccc;
+            z-index: 1;
+        }
+
+        .catalog-toolbar__bottom {
+            .shop-view__icon {
+                a.extended {
+                    display: none;
+                }
+            }
+        }
+
+        .fm-vendor-infor-mobile {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-right: 20px;
+
+            .farmart-svg-icon {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+
+            span {
+                margin-left: 5px;
+            }
+
+            .farmart-svg-icon {
+                font-size: 16px;
+            }
+        }
+    }
+}

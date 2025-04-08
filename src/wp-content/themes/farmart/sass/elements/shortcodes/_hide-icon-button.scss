@@ -1,0 +1,28 @@
+.fm-product-deals-day,
+.fm-products-brands,
+.fm-elementor-product-carousel,
+.fm-products-carousel-with-category,
+.fm-product-with-category{
+	&.hide-icon-button {
+		.yith-wcwl-add-to-wishlist {
+			.yith-wcwl-add-button,
+			.yith-wcwl-wishlistaddedbrowse,
+			.yith-wcwl-wishlistexistsbrowse{
+				> a i,
+				> a .farmart-svg-icon {
+					display: none;
+				}
+			}
+		}
+
+		.wcboost-wishlist-button {
+			.wcboost-wishlist-button__icon {
+				display: none;
+			}
+		}
+
+		ul.products li.product .compare-button a:before {
+			display: none;
+		}
+	}
+}

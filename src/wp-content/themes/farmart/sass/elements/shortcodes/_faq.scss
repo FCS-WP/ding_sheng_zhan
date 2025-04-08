@@ -1,0 +1,167 @@
+.farmart-faq{
+	.box-content{
+		padding: 19px 30px;
+		border-radius: 3px;
+		border: 1px solid #eeeeee;
+		margin-bottom: 10px;
+		cursor: pointer;
+		transition: ease-in-out .2s;
+		background-color: #fff;
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 5px;
+			height: 100%;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			transition: ease-in-out .3s;
+
+
+		}
+
+		&.active{
+			cursor: initial;
+			box-shadow: 0 0 40px rgba(0,0,0,.1);
+			padding: 28px 30px;
+
+			&:before{
+				background-color: var( --fm-background-color-primary );
+			}
+
+			.title{
+				.fm-icon {
+					.icon-normal {
+						opacity: 0;
+					}
+					.icon-active {
+						opacity: 1;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	.title{
+		margin: 0;
+		position: relative;
+
+		.fm-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			.farmart-svg-icon {
+				font-size: 10px;
+				font-weight: 600;
+				color: $color__dark;
+			}
+
+			.box-icon {
+				position: absolute;
+				top: 0;
+				right: 0;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.icon-active {
+				opacity: 0;
+			}
+		}
+	}
+
+	.desc{
+		margin-top: 13px;
+		position: relative;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.farmart-faqs {
+	ul.tabs-nav {
+		li {
+			float: none;
+			margin-bottom: 12px;
+		}
+
+
+		li.active a,
+		a:hover{
+			color: var( --fm-color-primary );
+		}
+
+		a {
+			font-size: 16px;
+			color: #888888;
+			line-height: 1.1;
+			font-weight: 700;
+			display: inline-block;
+		}
+	}
+
+	.faq-title {
+		margin: 0 0 12px;
+	}
+
+	.faq-tab {
+		.wrapper {
+			border-bottom: 1px solid #eeeeee;
+			padding-bottom: 27px;
+			margin-bottom: 33px;
+		}
+
+		&:last-child{
+			.wrapper {
+				border-bottom: none;
+			}
+		}
+	}
+
+	.col-left {
+		padding-right: 60px;
+	}
+
+	.col-right {
+		padding-left: 60px;
+	}
+
+	&.farmart-tabs {
+		.tabs-panel {
+			width: unset;
+			left: auto;
+		}
+	}
+
+	.button-wrapper {
+		margin-top: 34px;
+
+		.extra-text {
+			margin-bottom: 10px;
+		}
+
+		a {
+			color: #222222;
+			font-weight: 700;
+			background-color: #f7f7f7;
+			border: 1px solid #e5e5e5;
+			border-radius: 3px;
+			padding: 8px 51px;
+			text-align: center;
+			display: inline-block;
+
+			.farmart-svg-icon {
+				padding-right: 10px;
+			}
+		}
+	}
+}

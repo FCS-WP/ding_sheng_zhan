@@ -1,0 +1,130 @@
+.farmart-product-categories-list{
+	.product-cats{
+		display: flex;
+		padding: 0;
+		margin: 0;
+		border-style: solid;
+		border-color: #eeeeee;
+		border-width:  1px 0 0 1px;
+		color: #888888;
+		background-color: #fff;
+
+		.cat-count{
+			color: #888888;
+		}
+
+		.cat-name{
+			color: #222222;
+			transition: ease .4s;
+			position: relative;
+
+			display: inline;
+			--farmart-color-box-shadow: white;
+			box-shadow: inset 0 -0.125em white, inset 0 -0.2em var(--farmart-color-box-shadow);
+		}
+
+		.cat-item{
+			list-style: none;
+			position: relative;
+			border-style: solid;
+			border-color: #eeeeee;
+			border-width: 0 1px 1px 0;
+
+			&:hover{
+				.cat-name{
+					color: var( --fm-color-primary );
+					--farmart-color-box-shadow: var( --fm-color-primary );
+				}
+			}
+
+			> a{
+				position: relative;
+				z-index: 11;
+			}
+		}
+	}
+
+	.product-cats--big{
+		flex: 0 0 20%;
+
+		.cat-item{
+			height: 100%;
+
+			a{
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				flex-direction: column;
+			}
+
+		}
+
+		.cat-thumb{
+			margin-bottom: 15px;
+		}
+
+		.cat-name{
+			width: fit-content;
+			margin: auto;
+		}
+	}
+
+	.product-cats--lists{
+		display: flex;
+		flex-wrap: wrap;
+
+		.cat-item {
+			> a{
+				display: flex;
+				padding: 20px 18px 37px 20px;
+			}
+
+			.cat-thumb{
+				flex: 0 0 36%;
+				margin: 0 18px 0 0;
+			}
+
+			.cat-text{
+				margin: 10px 0 0 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 1920px) and (min-width: 1025px) {
+	@for $i from 1 through 5 {
+		.elementor-widget-farmart-product-categories-list.columns-#{$i} .product-cats--lists  {
+			.cat-item {
+				width: 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+	@for $i from 1 through 5 {
+		.elementor-widget-farmart-product-categories-list.columns--tablet#{$i} .product-cats--lists {
+			.cat-item {
+				width: 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	@for $i from 1 through 5 {
+		.elementor-widget-farmart-product-categories-list.columns--mobile#{$i} .product-cats--lists {
+			.cat-item {
+				width: 1 / $i * 100%;
+				max-width: 1 / $i * 100%;
+			}
+		}
+	}
+
+	.farmart-product-categories-list .product-cats{
+		display: block;
+	}
+}

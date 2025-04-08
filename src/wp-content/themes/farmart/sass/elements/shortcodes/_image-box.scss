@@ -1,0 +1,32 @@
+.farmart-image-box {
+
+}
+
+.farmart-image-box__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.farmart-image-box__items {
+	display: flex;
+	align-items: center;
+}
+
+.farmart-image-box__image {
+	margin-right: 23px;
+}
+
+.farmart-image-box__content--title {
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: -1px;
+	color: $color__darker;
+	margin: 0 0 3px 0;
+}
+
+.farmart-image-box__content--desc {
+	color: #777;
+	letter-spacing: -0.5px;
+}

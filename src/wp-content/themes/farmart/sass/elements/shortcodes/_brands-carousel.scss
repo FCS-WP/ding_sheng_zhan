@@ -1,0 +1,72 @@
+.farmart-brands-carousel{
+	padding-left: 30px;
+	padding-right: 30px;
+	border: 1px  solid #eeeeee;
+	background-color: #fff;
+
+	.heading{
+		display: flex;
+		justify-content: space-between;
+		padding: 25px 0 21px;
+		border-bottom: 1px  solid #eeeeee;
+	}
+
+	.title{
+		margin: 0;
+		padding-right: 25px;
+	}
+
+	.extra-link{
+		color: #888888;
+		margin-top: 5px;
+	    flex: none;
+
+		.farmart-svg-icon{
+			font-size: 9px;
+			margin-left: 3px;
+		}
+	}
+
+	.list-brands{
+		padding: 34px 10px 35px;
+	}
+
+	.brand-item{
+		padding: 0 20px;
+		img{
+			margin: auto;
+		}
+	}
+
+	.slick-track {
+		display: flex;
+	}
+
+	.slick-slider .slick-arrow {
+		opacity: 1;
+	}
+
+	.slick-arrow{
+		border-color: transparent;
+		font-size: 20px;
+		color: #888;
+		width: auto;
+	}
+
+	.slick-prev-arrow {
+	    left: 0;
+	}
+
+	.slick-next-arrow {
+	    right: 0;
+	}
+
+	.slick-dotted.slick-slider {
+		margin: 0;
+	}
+
+	.slick-dots {
+		bottom: 30px;
+	}
+
+}

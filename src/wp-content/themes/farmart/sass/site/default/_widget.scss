@@ -1,0 +1,255 @@
+.wp-block-group {
+	.wp-block-group__inner-container {
+		> h2 {
+			font-size: 24px;
+			line-height: 1.75;
+			margin: 0;
+			padding: 0 0 13px;
+			color: $color__darker;
+		}
+	}
+}
+
+.wp-block-archives{
+	margin-bottom: 35px;
+}
+
+.wp-block-archives ,
+ul.wp-block-categories {
+	overflow: hidden;
+	padding: 0;
+
+	li {
+		padding: 0 0 4px;
+		clear: both;
+		list-style: none;
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		a{
+			color: #666666;
+
+			&:hover {
+				color: var( --fm-color-primary );
+			}
+		}
+	}
+}
+
+.wp-block-categories {
+	margin-bottom: 30px;
+
+	select {
+		padding: 10px;
+		border: 1px solid #d9d9d9;
+	}
+}
+
+ul.wp-block-latest-posts {
+	list-style: none;
+	margin: 0 -5px 0;
+	padding: 0;
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		padding: 5px;
+		margin-bottom: 0;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	li a {
+		color: $color__dark;
+
+		&:hover {
+			color: var(--fm-color-primary);
+		}
+	}
+}
+
+.wp-block-latest-posts.is-grid{
+	li{
+		margin: 0;
+	}
+}
+
+ol.wp-block-latest-comments {
+	padding-left: 0;
+	color: #999;
+
+	li {
+		padding: 10px 0 10px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		&:first-child {
+			padding-top: 5px;
+		}
+	}
+
+	&:not(.has-avatars) li {
+
+		position: relative;
+		padding-left: 30px;
+		padding-bottom: 6px;
+
+		&:before{
+			content:'';
+			background-image: url('data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPgo8dGl0bGU+YnViYmxlPC90aXRsZT4KPHBhdGggZD0iTTAuNiAyMi44Yy0wLjI3IDAtMC41MDYtMC4xOC0wLjU3OC0wLjQ0czAuMDM4LTAuNTM2IDAuMjctMC42NzVjMi4wMjktMS4yMTcgMi44NzEtMi45ODYgMy4xNjktMy44MTUtMi4yMDUtMS42ODktMy40Ni00LjAyNS0zLjQ2LTYuNDcxIDAtMS4yMzUgMC4zMS0yLjQzMiAwLjkyMi0zLjU1NiAwLjU4NC0xLjA3MyAxLjQxNi0yLjAzNSAyLjQ3My0yLjg1NyAyLjE0NS0xLjY2OCA0Ljk4OC0yLjU4NyA4LjAwNS0yLjU4N3M1Ljg2IDAuOTE5IDguMDA1IDIuNTg3YzEuMDU3IDAuODIyIDEuODkgMS43ODQgMi40NzMgMi44NTcgMC42MTIgMS4xMjUgMC45MjIgMi4zMjEgMC45MjIgMy41NTZzLTAuMzEgMi40MzItMC45MjIgMy41NTZjLTAuNTg0IDEuMDczLTEuNDE2IDIuMDM1LTIuNDczIDIuODU3LTIuMTQ1IDEuNjY4LTQuOTg4IDIuNTg3LTguMDA1IDIuNTg3LTEuMjQgMC0yLjQ1Ni0wLjE1NS0zLjYyLTAuNDYyLTAuNTE1IDAuMzQzLTEuNDc4IDAuOTUyLTIuNjI3IDEuNTI0LTEuNzg1IDAuODg4LTMuMzE3IDEuMzM4LTQuNTUzIDEuMzM4ek0xMS40IDMuNmMtNS42MjQgMC0xMC4yIDMuNDk5LTEwLjIgNy44IDAgMi4xNzggMS4yMDUgNC4yNzUgMy4zMDcgNS43NTEgMC4yMDYgMC4xNDUgMC4zIDAuNDAzIDAuMjM1IDAuNjQ2LTAuMTQgMC41MjMtMC42MTggMS45NTktMS44OTYgMy4zNDUgMS41NjItMC41NDcgMy4yNDQtMS40OTYgNC40ODctMi4zNSAwLjE0OC0wLjEwMSAwLjMzMy0wLjEzMiAwLjUwNS0wLjA4MiAxLjEzOCAwLjMyNiAyLjMzNyAwLjQ5MSAzLjU2MiAwLjQ5MSA1LjYyNCAwIDEwLjItMy40OTkgMTAuMi03LjhzLTQuNTc2LTcuOC0xMC4yLTcuOHoiPjwvcGF0aD4KPC9zdmc+Cg==');
+			display: inline-block;
+			width:16px;
+			height:16px;
+			background-size: cover;
+			vertical-align: middle;
+			position: absolute;
+			top:15px;
+			left: 0;
+		}
+
+		&:first-child::before {
+			top: 8px;
+		}
+	}
+
+
+	.wp-block-latest-comments__comment-author {
+		color: #000;
+	}
+
+	.wp-block-latest-comments__comment-link {
+		color: #0066ff;
+	}
+}
+
+.wp-block-latest-comments__comment {
+	margin-bottom: 0;
+	line-height: 1.35;
+}
+
+.wp-block-latest-comments__comment-excerpt {
+	> p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.wp-block-tag-cloud {
+	a {
+		color: #666666;
+		font-size: 14px !important;
+		margin: 0 4px 6px 0;
+		padding: 4px 15px;
+		display: inline-block;
+		vertical-align: middle;
+		background-color: #f7f7f7;
+		transition: all 0.5s;
+		border-radius: 3px;
+
+		&:hover {
+			color: var( --fm-background-text-color-primary );
+			background-color: var( --fm-background-color-primary );
+		}
+	}
+}
+
+.wp-block-search {
+	position: relative;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	color: $color__darker;
+	position: relative;
+	margin-bottom: 50px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 13px;
+		transform: translateY(-50%);
+		background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMS4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAzMiAzMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGQ9Ik0zMC4xOSAzMC42NTlsLTkuNTA5LTEwLjM3NGMyLjE0My0yLjI0MiAzLjMyLTUuMTczIDMuMzItOC4yODYgMC0zLjIwNS0xLjI0OC02LjIxOS0zLjUxNS04LjQ4NXMtNS4yOC0zLjUxNS04LjQ4NS0zLjUxNS02LjIxOSAxLjI0OC04LjQ4NSAzLjUxNS0zLjUxNSA1LjI4LTMuNTE1IDguNDg1IDEuMjQ4IDYuMjE5IDMuNTE1IDguNDg1IDUuMjggMy41MTUgOC40ODUgMy41MTVjMi43NjEgMCA1LjM4LTAuOTI3IDcuNTAxLTIuNjMzbDkuNTA5IDEwLjM3M2MwLjE1OCAwLjE3MiAwLjM3NCAwLjI1OSAwLjU5IDAuMjU5IDAuMTkzIDAgMC4zODctMC4wNzAgMC41NC0wLjIxIDAuMzI2LTAuMjk5IDAuMzQ4LTAuODA1IDAuMDQ5LTEuMTN6TTEuNiAxMmMwLTUuNzM1IDQuNjY1LTEwLjQgMTAuNC0xMC40czEwLjQgNC42NjUgMTAuNCAxMC40LTQuNjY1IDEwLjQtMTAuNCAxMC40LTEwLjQtNC42NjUtMTAuNC0xMC40eiI+PC9wYXRoPg0KPC9zdmc+DQo=");
+		width: 18px;
+		height: 18px;
+	}
+
+	.wp-block-search__label {
+		display: none;
+	}
+
+	.search-field ,
+	.wp-block-search__input {
+		border: none;
+		color: $color__darker;
+		width: 100%;
+		background-color: #fff;
+		padding: 9px 20px;
+
+		&:focus {
+			border: none;
+			outline: none;
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: #777777;
+	}
+
+	:-moz-placeholder {
+		color: #777777;
+	}
+
+	::-moz-placeholder {
+		color: #777777;
+	}
+
+	:-ms-input-placeholder {
+		color: #777777;
+	}
+
+	.wp-block-search__button {
+		width: 42px;
+		height: 42px;
+		background: transparent;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		border: none;
+		text-indent: -9999px;
+		z-index: 10;
+		padding: 0;
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+}
+
+.wp-block-page-list {
+	ul {
+		padding-left: 1.5em;
+
+		li:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	@for $i from 2 through 6 {
+		.wp-block-latest-posts.columns-#{$i} {
+			li {
+				@include column-width($i);
+			}
+		}
+	}
+}

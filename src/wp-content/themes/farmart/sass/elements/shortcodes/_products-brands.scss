@@ -1,0 +1,181 @@
+.fm-products-brands{
+	.product-brands{
+		background-color: #fff;
+	}
+
+	.brand-item-wrapper{
+		padding: 20px 40px 4px 40px;
+		position: relative;
+	    border: 1px solid #eee;
+    	border-top-width: 0;
+
+		&:first-child{
+			border-top-width: 1px;
+		}
+
+		&:hover{
+		    z-index: 2;
+		}
+	}
+
+	.brand-item{
+		display: flex;
+	}
+
+	.brand-item__header{
+		flex: 0 0 18%;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    padding-right: 20px;
+
+	    .brand-info{
+	    	margin-top: 15px;
+	    }
+
+		.farmart-svg-icon  {
+			font-size: 10px;
+		}
+	}
+
+	.brand-item__content{
+		flex: 0 0 82%;
+		width: 82%;
+
+		ul.products{
+			margin-bottom: 0;
+		}
+	}
+
+	.brand-info__name{
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #222;
+	}
+
+	.brand-info__desc{
+		color: #e84506;
+	}
+
+	.brand-logo{
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.brand-btn{
+	    margin-bottom: 28px;
+
+		i{
+			font-size: 10px;
+		}
+
+		&:hover{
+			color: #222;
+		}
+	}
+
+	.load-more {
+		position: relative;
+		z-index: 1;
+
+		a{
+			display: inline-block;
+			margin-top: 35px;
+			font-size: 13px;
+			letter-spacing: 4.8px;
+			color: #666;
+			text-transform: uppercase;
+			position: relative;
+
+			.farmart-svg-icon,
+			.farmart-loading{
+				position: absolute;
+				top: 4px;
+				right: -24px;
+			}
+
+			&.loading{
+				.farmart-svg-icon{
+					opacity: 0;
+				}
+
+				.farmart-loading:after{
+					border-color: #694a4a transparent #694a4a transparent;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px){
+	.fm-products-brands{
+		ul.products{
+			border-width: 1px 0 0 1px;
+			border-color: #eee;
+			border-style: solid;
+
+			li.product{
+				border-width: 0 1px 1px 0;
+				border-color: #eee;
+				border-style: solid;
+			}
+		}
+
+		.brand-item-wrapper{
+		    margin-bottom: 40px;
+   	 		padding-bottom: 60px;
+		}
+
+		.brand-item__header{
+			flex: 0 0 100%;
+		    padding-right: 0;
+		    flex-direction: row;
+	        margin-bottom: 20px;
+
+		    .brand-info{
+		    	margin-top: 0;
+		    }
+
+		    .brand-btn{
+	    	    display: block;
+		    	margin-bottom: 0;
+		    	margin-top: 10px;
+		    }
+		}
+
+		.brand-item__content{
+		    flex: 0 0 100%;
+    		width: 100%;
+		}
+
+		.brand-item{
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 414px){
+	.fm-products-brands{
+		.product-brands{
+			background-color: initial;
+		}
+
+		.brand-item-wrapper{
+			padding: 0;
+			border:none;
+			background-color: #fff;
+		}
+
+		.brand-item__header{
+			display: block;
+			padding: 30px;
+			margin-bottom: 0;
+			border: 1px solid #eee;
+			border-bottom: none;
+		}
+
+		ul.products li.product .product-inner{
+			padding:10px;
+		}
+	}
+}

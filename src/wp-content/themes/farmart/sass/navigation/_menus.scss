@@ -1,0 +1,985 @@
+.main-navigation {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 9999;
+			background-color: #fff;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:before{
+					display: none;
+				}
+
+				&:hover > ul,
+				&.focus > ul {
+					top: 0;
+					left: 100%;
+				}
+
+				&:hover {
+					> a {
+						color: $color__darker;
+					}
+				}
+
+				&.dropdown{
+
+					> a{
+						padding: 10px 20px 10px 0;
+					}
+
+					&:hover{
+						> a:before{
+							display: none;
+						}
+
+						> a:after{
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+
+			li {
+				&.menu-item-has-children,
+				&.dropdown {
+					.toggle-menu-children {
+						transform: rotate(-90deg);
+						font-weight: 400;
+						position: absolute;
+						top: 7px;
+						right: 7px;
+						line-height: 1;
+						transition: ease .5s;
+						.farmart-svg-icon {
+							font-size: 9px;
+						}
+					}
+				}
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+
+		.item-badge{
+			position: absolute;
+			top: -5px;
+			right: 0;
+			font-size: 12px;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 3px 5px;
+			background-color: var( --fm-background-color-primary );
+			color: var( --fm-background-text-color-primary );
+			min-width: 36px;
+			line-height: 1;
+		}
+
+		a {
+			padding: 13px 15px;
+			color: #888;
+			position: relative;
+			cursor: pointer;
+			display: block;
+			text-decoration: none;
+    		white-space: nowrap;
+			.farmart-svg-icon {
+				font-size: 18px;
+				margin-right: 5px;
+			}
+		}
+
+		&:hover {
+			> a,
+			> .toggle-menu-children {
+				color: var( --fm-color-primary );
+				transition: .5s;
+			}
+		}
+
+		// custom weight
+		&.weight-bold > a{
+			font-weight: 700!important;
+		}
+
+		&.weight-medium > a{
+			font-weight: 500!important;
+		}
+
+		&.weight-regular > a{
+			font-weight: 400 !important;
+		}
+
+		&.is-mega-menu{
+			&.mega-fullwidth {
+				position: static;
+				> .dropdown-submenu {
+					width: 100%;
+					left: 0;
+				}
+			}
+			.menu-item-mega {
+				padding-left: 30px;
+				padding-right: 30px;
+				border-right: 1px solid #eeeeee;
+				&:last-child {
+					border-right: none;
+				}
+			}
+			.dropdown-submenu{
+				padding: 40px 0;
+				z-index: 999;
+
+				a {
+					font-weight: 700;
+					color: #222222;
+					padding: 0;
+				}
+
+				li {
+					margin: 0;
+				}
+
+				.sub-menu li {
+					a {
+						font-weight: normal;
+						&:hover {
+							color: var(--fm-background-color-primary);
+						}
+					}
+				}
+				ul {
+					position: relative;
+					left: 0;
+					top: 0;
+					box-shadow: none;
+					background-color: transparent;
+					opacity: 1;
+					visibility: visible;
+					float: none;
+					transform: inherit;
+					border: none;
+
+					li {
+						padding: 0;
+						display: block;
+						width: 100%;
+
+						a {
+							padding: 0;
+							line-height: 1.4;
+							display: inline-block;
+							color: $color__dark;
+						}
+					}
+				}
+			}
+
+			&.align-right {
+				.dropdown-submenu {
+					left: auto;
+					right: 0;
+				}
+			}
+
+			&.align-center {
+				.dropdown-submenu {
+					margin: auto;
+				}
+			}
+		}
+	}
+	> li {
+		> a {
+			padding: 11px 21px;
+			border-style: none;
+			color: $color__darker;
+			font-weight: 700;
+		}
+		&.menu-item-has-children {
+			> ul {
+				top: 110%;
+			}
+
+			> a {
+				padding-right: 36px;
+				&:before {
+					content: '';
+					position: absolute;
+					width: 12px;
+					height: 12px;
+					border: 1px solid transparent;
+					border-bottom-color: #ccc;
+					border-left-color: #ccc;
+					top: 120%;
+					margin: auto;
+					background-color: #fff;
+					z-index: 100;
+					transform: translate(-50%,-5px) rotate(135deg);
+					left: calc(50% - 7px);
+					opacity: 0;
+					z-index: 1000;
+					transition: top .2s;
+				}
+				.toggle-menu-children{
+					position: absolute;
+					right: 13px;
+					top: 50%;
+					transform: translateY(-50%);
+					font-weight: 700;
+					.farmart-svg-icon {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	li {
+		&.menu-item-has-children {
+			&:hover{
+				> ul.dropdown-submenu,
+				> ul.sub-menu {
+					opacity: 1;
+					visibility: visible;
+					transform: scaleX(1);
+				}
+
+				> ul{
+					top: 100%;
+					opacity: 1;
+
+					ul {
+						opacity: 1;
+					}
+				}
+				> a {
+					&:before {
+						top: 100%;
+						opacity: 1;
+					}
+				}
+			}
+
+			ul {
+				li {
+					&.menu-item-has-children {
+						a {
+							justify-content: space-between;
+						}
+						&:hover{
+							ul{
+								top: 0;
+								left: 100%;
+							}
+						}
+					}
+					&.dropdown {
+						ul{
+							left: calc( 100% + 10px);
+							transition: left ease .3s, opacity ease .4s ;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	li.current-menu-item {
+		> a,
+		.toggle-menu-children {
+			color: var( --fm-color-primary );
+		}
+	}
+
+	ul.dropdown-submenu,
+	ul.sub-menu {
+		position: absolute;
+		top: 120%;
+		left: 0;
+		transition: top ease .3s;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 99;
+		padding: 10px 0;
+		border: 1px solid #cccccc;
+		background-color: #fff;
+		box-shadow: none;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	    transform: scaleX(0);
+		min-width: 200px;
+
+		li {
+			float: none;
+			a {
+				font-weight: 400;
+				padding: 10px 20px;
+				line-height: 1;
+			}
+
+			.item-badge {
+				right: -40px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		ul {
+			opacity: 0;
+			top: 0;
+			left: calc(100% + 20px);
+		}
+	}
+
+	li > a {
+		display: flex;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+}
+
+// Menu Mobile
+.fm-menu-mobile {
+	line-height: 1;
+
+	&.menu-active {
+		background-color: var( --fm-background-color-primary );
+	}
+
+	.top-content {
+		color: var( --fm-background-text-color-primary );
+		background-color: var( --fm-background-color-primary );
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 23px 20px 23px;
+		a {
+			color: var( --fm-background-text-color-primary );
+		}
+		.farmart-svg-icon {
+			color: var( --fm-background-text-color-primary );
+		}
+		.go-back {
+			font-size: 20px;
+			cursor: pointer;
+		}
+		.author {
+			font-weight: 700;
+			.farmart-svg-icon {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.menu-icon {
+		display: inline-flex;
+		font-size: 24px;
+		cursor: pointer;
+	}
+
+	.menu-mobile-wrapper {
+		width: 82%;
+		position: fixed;
+		top: 0;
+		left: -82%;
+		background-color: #fff;
+		bottom: 0;
+		overflow: hidden;
+		z-index: 9999;
+		transition: transform .25s ease;
+
+		&.open {
+			transform: translate3d( 100%,0,0);
+
+			~ .fm-off-canvas-layer {
+				display: block;
+				z-index: 999;
+			}
+		}
+
+		&:after {
+			content: '';
+			width: 100%;
+			height: 20px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 99;
+			background-color: #fff;
+		}
+	}
+
+	.primary-menu-mobile {
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	nav {
+		padding: 25px 20px 28px;
+		> ul {
+			> li {
+				> a {
+					text-transform: uppercase;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		ul {
+			display: none;
+			padding: 10px 0 0 10px;
+
+			ul {
+				padding-left: 10px;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	li {
+		&.menu-item-has-children {
+			position: relative;
+			padding-right: 23px;
+
+			li a{
+				color: #888888;
+			}
+
+			.toggle-menu-children {
+				position: absolute;
+				right: 0;
+				top: 12px;
+				display: block;
+				width: 23px;
+				height: 23px;
+				line-height: 23px;
+				text-align: right;
+				font-size: 10px;
+				cursor: pointer;
+				.farmart-svg-icon {
+					display: inline-block;
+					line-height: 1;
+				}
+			}
+
+			&.active {
+				> a {
+					> .toggle-menu-children {
+						transform: translate( 50%, 0 ) rotate(-180deg);
+					}
+				}
+
+				> ul {
+					display: block;
+				}
+			}
+		}
+
+		li {
+			padding: 10px 0;
+
+			&.menu-item-has-children {
+				> .toggle-menu-children {
+					top: 6px;
+				}
+			}
+
+			&.current_page_item{
+				a{
+					color: var( --fm-color-primary );
+				}
+			}
+		}
+	}
+
+	ul.menu {
+		> li:not(.fm-menu-item__magic-line) {
+			border-bottom: 1px solid #eee;
+			padding: 20px 0;
+
+			> a {
+				color: #000;
+				font-weight: 700;
+			}
+
+			&.menu-item-has-children {
+				> a > .toggle-menu-children {
+					top: 12px;
+				}
+			}
+
+			&.active {
+				> a {
+					color: var( --fm-color-primary );
+				}
+			}
+
+			&.last-child,
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+
+	.bottom-content {
+		background-color: #f5f5f5;
+		padding: 40px 20px;
+		.bottom-content--item {
+			display: flex;
+			margin-bottom: 12px;
+			color: #666666;
+			a {
+				color: #666666;
+			}
+			.farmart-svg-icon {
+				color: $color__dark;
+				transform: translateY(1px);
+    			padding-right: 15px;
+			}
+		}
+	}
+}
+
+// Menu Department
+.farmart-menu-department {
+	cursor: pointer;
+	transition: .5s;
+	padding: 13px 24px 13px 21px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: var( --fm-background-color-primary );
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: var( --fm-background-text-color-primary );
+	line-height: 1.5;
+
+	.menu-icon {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		.farmart-icon-menu {
+			font-size: 24px;
+		}
+	}
+
+	.farmart-svg-icon {
+		font-size: 9px;
+		margin-left: 6px;
+	}
+
+	.farmart-title {
+		display: block;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 2px 0 0 18px;
+		white-space: nowrap;
+	}
+
+	.farmart-dropdown-arrow {
+		font-size: 9px;
+		color: #777777;
+		transition: .3s;
+	}
+	&.menu-show {
+		.department-menu {
+			top: 100%;
+			opacity: 1;
+			pointer-events: initial;
+		}
+		.farmart-dropdown-arrow {
+			transform: rotate(180deg);
+		}
+	}
+	.header-department {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #fff;
+		padding: 0 20px;
+		.close-btn {
+			.farmart-svg-icon {
+				font-size: 20px;
+			}
+		}
+	}
+	.department-menu {
+		position: absolute;
+		top: 120%;
+		left: 0;
+		z-index: 999;
+		width: 270px;
+		border-top: 15px solid transparent;
+		opacity: 0;
+		transition: .3s;
+		pointer-events: none;
+		ul.dropdown-submenu {
+			border-color: #eee;
+		}
+		.farmart-department-menu--dropdown {
+			background-color: #fff;
+		}
+		li {
+			> a {
+				color: #222222;
+				font-weight: 600;
+				padding: 9px 0;
+				transition: ease .3s;
+			}
+			> a.has-icon {
+				i {
+					margin-right: 5px;
+				}
+			}
+			&.dropdown,
+			&.menu-item-has-children {
+				> a:before {
+					display: none;
+				}
+				a {
+					.toggle-menu-children {
+						transform: translateY(50%) rotate(0deg);
+						position: absolute;
+						top: 3px;
+						right: 0;
+						transition: ease .5s;
+						line-height: 1;
+						.farmart-svg-icon {
+							font-size: 9px;
+							color: #888888;
+						}
+					}
+					&:hover .toggle-menu-children {
+						transform: translateY(50%) rotate(180deg);
+					}
+				}
+			}
+		}
+		ul {
+			padding: 15px 0;
+			ul {
+				&.sub-menu,
+				&.dropdown-submenu {
+					top: 0;
+					left: calc(100% + 10px);
+					opacity: .7;
+					transform: scale(0);
+					transition: left ease 0.3s, opacity cubic-bezier(0.65, 0.8, 0.44, 0.99) 0.6s;
+				}
+				li {
+					&.dropdown,
+					&.menu-item-has-children {
+						> a:after {
+							transform: translateY(0) rotate(0deg);
+						}
+						&:hover {
+							> a:after {
+								transform: rotate(180deg);
+							}
+						}
+					}
+
+					&:hover {
+						> a {
+							color: var( --fm-color-primary );
+						}
+					}
+				}
+			}
+			li {
+				padding: 0 28px;
+				transition: 0.5s;
+				&.is-mega-menu {
+					position: static;
+					&.mega-fullwidth {
+						> .dropdown-submenu {
+							left: calc( 100% - 1px);
+							top: 0;
+						}
+					}
+				}
+				&:hover {
+					> ul {
+						&.dropdown-submenu {
+							left: calc( 100% - 1px);
+							top: 0;
+							transform: scale(1);
+							opacity: 1;
+							li {
+								background-color: transparent;
+							}
+						}
+					}
+				}
+				a {
+					line-height: normal;
+				}
+			}
+		}
+		.is-mega-menu {
+			ul,
+			li {
+				padding: 0;
+			}
+		}
+	}
+	&.show {
+		.department-menu {
+			top: 100%;
+			opacity: 1;
+			pointer-events: initial;
+		}
+	}
+	ul {
+		&.farmart-department-menu {
+			display: flex;
+			flex-direction: column;
+			border: 2px solid #eeeeee;
+			> li {
+				> a {
+					border-bottom: 1px solid #eeeeee;
+					&:before {
+						content: '';
+						display: block;
+						position: absolute;
+						bottom: 0;
+						width: 0;
+						right: 0;
+						border-bottom: 1px solid;
+						transition: width ease .5s;
+					}
+				}
+				&:last-child {
+					> a {
+						border-bottom: 0;
+					}
+				}
+				&:hover {
+					> a {
+						color: var( --fm-color-primary );
+						&:before {
+							width: 100%;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	&:not(.menu-click) {
+		&:hover{
+			.farmart-dropdown-arrow {
+				transform: rotate(180deg);
+			}
+			.department-menu {
+				top: 100%;
+				opacity: 1;
+				pointer-events: initial;
+			}
+		}
+	}
+	.main-navigation {
+		li {
+			&.dropdown {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+	&.menu-click {
+		.department-menu {
+			position: fixed;
+			top: 0;
+			left: -100%;
+			bottom: 0;
+			opacity: .8;
+			transition: ease .3s;
+			z-index: 9999;
+			pointer-events: inherit;
+			border: none;
+			.farmart-department-menu--dropdown {
+				height: 100%;
+			}
+			ul {
+				&.farmart-department-menu {
+					border: none;
+					padding: 30px 0;
+				}
+				> li {
+					&:hover {
+						background-color: #f7f7f7;
+						a {
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.active {
+			.department-menu {
+				left: 0;
+				opacity: 1;
+			}
+		}
+	}
+	&.menu-hover {
+		.department-menu {
+			ul {
+				&.farmart-department-menu {
+					> li {
+						> a {
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	ul {
+		li {
+			&.is-mega-menu{
+				.dropdown-submenu{
+					padding: 30px;
+					h4 {
+						color: #222;
+						font-size: 17px;
+						font-weight: 700;
+						text-transform: uppercase;
+						line-height: 1.5em;
+					}
+					p{
+						color: #888;
+						font-size: 14px;
+						font-weight: 500;
+						line-height: 1.5em;
+					}
+					.button {
+						font-size: 14px;
+						font-weight: 700;
+						background-color: var( --fm-background-color-secondary );
+						border-radius: 5px;
+						padding: 12px 18px 12px 20px;
+						color: var( --fm-background-text-color-secondary );
+						&:hover {
+							color: var( --fm-background-text-color-secondary );
+						}
+						.farmart-svg-icon {
+							margin-left: 3px;
+							color: var( --fm-background-text-color-secondary );
+						}
+					}
+					.spacing {
+						display: block;
+					}
+					a {
+						padding: 0;
+						margin: 0 10px 22px 0;
+						font-weight: 700;
+						color: #222222;
+						border-right: 1px solid #eeeeee;
+
+						&.primary-color {
+							color: var( --fm-color-primary );
+							margin-top: 30px;
+							font-weight: normal;
+						}
+					}
+					.menu-item-mega {
+						&:last-child {
+							a {
+								border: none;
+							}
+						}
+					}
+					ul {
+						position: relative;
+						left: 0;
+						top: 0;
+						box-shadow: none;
+						background-color: transparent;
+						opacity: 1;
+						visibility: visible;
+						float: none;
+						transform: inherit;
+						border: none;
+
+						li {
+							padding: 0;
+							display: block;
+							width: 100%;
+
+							a {
+								border: none;
+								padding: 0;
+								margin: 0 0 12px 0;
+								font-weight: normal;
+								line-height: 1.4;
+								display: inline-block;
+								&:hover {
+									color: var( --fm-color-primary );
+								}
+							}
+						}
+					}
+				}
+
+				&.align-right {
+					.dropdown-submenu {
+						left: auto;
+						right: 0;
+					}
+				}
+
+				&.align-center {
+					.dropdown-submenu {
+						margin: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+.admin-bar {
+	.farmart-menu-department {
+		&.menu-click {
+			.department-menu {
+				top: 32px;
+			}
+		}
+	}
+}

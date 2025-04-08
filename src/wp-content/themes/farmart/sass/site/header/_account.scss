@@ -1,0 +1,138 @@
+// Account
+.header-element--account {
+	position: relative;
+	margin: 0 26px 0 108px;
+	line-height: 1;
+
+	> a {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		color: --farmart-header-text-color;
+	}
+
+	.login-text {
+		display: flex;
+		flex-direction: column;
+		margin-left: 12px;
+		font-weight: 700;
+
+		span {
+			display: block;
+			line-height: 1.45;
+		}
+	}
+
+	.farmart-svg-icon {
+		font-size: 24px;
+		padding: 0 0 0 3px;
+		color: #000;
+	}
+
+	.preamble {
+		color: #000;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	.dropdown {
+		border-width: 1px 0 0 1px;
+		border-style: solid;
+		border-color: #cccccc;
+		width: 15px;
+		height: 15px;
+		display: block;
+		transform: translateX(-50%) rotate(45deg) scale(0);
+		background-color: #fff;
+		position: absolute;
+		left: 50%;
+		top: calc( 100% + 50px );
+		z-index: 1000;
+		opacity: 0;
+		transition: top ease .3s;
+	}
+
+	.dropdown-submenu {
+		border-top: 35px solid transparent;
+		position: absolute;
+		opacity: 0;
+		width: 270px;
+		top: calc( 100% + 15px );
+		right: 0;
+		transform: scaleX(0);
+		transition: top ease .3s;
+		z-index: 999;
+
+		.wrapper {
+			border: 1px solid #ddd;
+			padding: 20px 25px;
+			border-radius: 3px;
+			background-color: #fff;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			a {
+				color: #555555;
+
+				&:hover {
+					color: var( --fm-color-primary );
+					box-shadow: inset 0 0 0 transparent, inset 0 -1px 0 var( --fm-color-primary );
+				}
+			}
+
+			li {
+				margin-bottom: 13px;
+			}
+		}
+
+		a.logout {
+			color: #555555;
+			display: flex;
+			align-items: center;
+			line-height: 1;
+			border-top: 1px solid #ddd;
+			padding-top: 15px;
+			margin-top: 24px;
+			margin-bottom: 9px;
+			&:hover {
+				box-shadow: none;
+				.farmart-svg-icon {
+					color: var( --fm-color-primary );
+				}
+			}
+			.farmart-svg-icon {
+				padding-right: 2px;
+				font-size: 15px;
+				color: #555555;
+			}
+		}
+	}
+
+	&:hover {
+		.dropdown-submenu {
+			transform: scaleX(1);
+			opacity: 1;
+			top: 100%;
+		}
+
+		.dropdown {
+			transform: translateX(-50%) rotate(45deg) scale(1);
+			opacity: 1;
+			top: calc( 100% + 27px );
+		}
+	}
+
+	.header-account--text {
+		color: var( --farmart-header-text-color );
+		margin-left: 17px;
+
+		span {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}

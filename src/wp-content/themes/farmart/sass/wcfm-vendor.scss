@@ -1,0 +1,22 @@
+/*
+Theme Name: farmart
+
+WCFM Vendor styles override
+*/
+
+@import "variables-site/colors";
+@import "variables-site/typography";
+@import "variables-site/structure";
+@import "variables-site/columns";
+
+@import "mixins/mixins-master";
+
+/**
+ * WCFM Vendor
+ */
+@import "wcfm-vendor/wcfm-vendor";
+
+/**
+ * WCFM Vendor Responsive
+ */
+@import "wcfm-vendor/responsive";
