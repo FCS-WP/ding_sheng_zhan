@@ -231,6 +231,7 @@ function prebuild_header( $version = 'v1' ) {
 				),
 				'right'  => array(
 					array( 'item' => 'header-bar' ),
+					array( 'item' => 'contact-info' ),
 					array( 'item' => 'account' ),
 					array( 'item' => 'wishlist' ),
 					array( 'item' => 'cart' ),
