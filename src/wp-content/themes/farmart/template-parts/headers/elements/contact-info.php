@@ -5,6 +5,5 @@
 
 ?>
 <div class="contact-info-wrapped">
-	<h4 class="contact-info-title">+65 2314 5644</h4>
-    <p class="contact-info-desc">Support 24/7</p>
+	<h4 class="contact-info-title"><a class="text-black" href="tel:97487550">9748 7550</a></h4>
 </div>
