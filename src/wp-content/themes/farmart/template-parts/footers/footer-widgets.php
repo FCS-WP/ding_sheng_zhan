@@ -30,7 +30,7 @@ if ( ! apply_filters( 'farmart_footer_widget_section', true ) ) {
 
 <div class="footer-widgets widgets-area">
 	<div class="<?php echo esc_attr( farmart_get_option( 'footer_width' ) ) ?>">
-		<div class="row-flex">
+		<div class="row-flex ">
 			<?php if( farmart_get_option( 'footer_widgets_style' ) == 2 ) : ?>
 				<div class="footer-widgets-area-1 footer-widgets-area col-flex col-flex-xs-12 col-flex-sm-6 col-flex-md-6">
 					<?php
@@ -90,8 +90,8 @@ if ( ! apply_filters( 'farmart_footer_widget_section', true ) ) {
 							echo apply_filters( 'farmart_footer_widgets_1', $output );
 						?>
 					</div>
-					<div class="footer-widgets-area-diff footer-widgets-area col-flex col-flex-xs-12 col-flex-sm-7 <?php echo esc_attr( $column_class_2 ) ?>">
-						<div class="row-flex">
+					<div class="footer-widgets-area-diff footer-widgets-area col-flex col-flex-xs-12 col-flex-sm-7">
+						<div class="row-flex flex-sm-column">
 						<?php
 							for ( $i = 2; $i <= $columns - 1; $i++ ) {
 
@@ -109,15 +109,6 @@ if ( ! apply_filters( 'farmart_footer_widget_section', true ) ) {
 							}
 						?>
 						</diV>
-					</div>
-					<div class="footer-widgets-area-2 footer-widgets-area col-flex col-flex-xs-12 col-flex-sm-5 <?php echo esc_attr( $column_class_1 ) ?>">
-						<?php
-							ob_start();
-							dynamic_sidebar( 'footer-5' );
-							$output = ob_get_clean();
-
-							echo apply_filters( 'farmart_footer_widgets_5', $output );
-						?>
 					</div>
 				<?php } ?>
 			<?php endif; ?>
